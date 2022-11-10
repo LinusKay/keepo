@@ -1,0 +1,1 @@
+if global.autoSave scr_save_game()

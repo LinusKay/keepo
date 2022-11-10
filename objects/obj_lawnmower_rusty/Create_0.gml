@@ -1,0 +1,1 @@
+if global.quest_mow_problem_mower_explode instance_destroy();

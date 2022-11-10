@@ -1,0 +1,1 @@
+image_blend = global.trailColour[0][irandom_range(0, array_length(global.trailColour[0]) - 1)]

@@ -1,0 +1,1 @@
+text_id = "desc_bed_1";

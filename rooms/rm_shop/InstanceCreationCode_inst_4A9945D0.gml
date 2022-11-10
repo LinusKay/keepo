@@ -1,0 +1,1 @@
+text_id = "speak_blue_1";

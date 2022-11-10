@@ -1,0 +1,1 @@
+draw_sprite_tiled(transition, image_index, 0, 0);

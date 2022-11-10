@@ -1,0 +1,21 @@
+if instance_exists(object)
+{
+	print(object.image_alpha);
+	if object.image_alpha > 0
+		object.image_alpha -= rate;
+	else
+		task_done = true;
+}
+
+if task_done 
+{
+	if instance_exists(obj_parent_queue)
+	{
+		with obj_parent_queue ticket--;	
+	}
+	else {
+		PLAYER_OBJ.move_freeze = false;	
+		camera_reset();
+	}
+	instance_destroy();
+}

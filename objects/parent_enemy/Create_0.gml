@@ -1,0 +1,2 @@
+hp = hpMax;
+shotHit = false;
