@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_decor_misc_tiles",
   "spriteId": {
     "name": "spr_tiles_decor",
     "path": "sprites/spr_tiles_decor/spr_tiles_decor.yy",
@@ -215,8 +218,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_decor_misc_tiles",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

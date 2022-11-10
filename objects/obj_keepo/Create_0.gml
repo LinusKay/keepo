@@ -453,7 +453,9 @@ global.dialogue_presets_array = [
 	[obj_hotdog_friend, spr_hotdog_friend_portrait, fnt_pixellari, spr_hotdog_friend, noone, true, c_black],
 	[obj_starhead, spr_starhead_portrait, fnt_pixellari, spr_starhead, noone, true, c_black],
 	[obj_starhead, spr_starhead_portrait_smile, fnt_pixellari, spr_starhead, noone, true, c_black],
-	[obj_starhead, spr_starhead_portrait_blush, fnt_pixellari, spr_starhead, noone, true, c_black]
+	[obj_starhead, spr_starhead_portrait_blush, fnt_pixellari, spr_starhead, noone, true, c_black],
+	[obj_boots, spr_boots_portrait, fnt_pixellari, spr_boots, noone, true, c_black],
+	[obj_boots, spr_boots_portrait, fnt_kaomoji, spr_boots, noone, true, c_black]
 ]
 
 enum dialogue_presets 
@@ -493,7 +495,9 @@ enum dialogue_presets
 	hotdog_default,
 	star_default,
 	star_smile,
-	star_blush
+	star_blush,
+	boots,
+	boots_kaomoji,
 }
 #endregion
 

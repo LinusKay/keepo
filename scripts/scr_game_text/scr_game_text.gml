@@ -471,6 +471,23 @@ function dialogueResponses(){
 			break
 		#endregion
 		
+		#region BOOTS
+		case "boots_calm":
+			dialogue_textbox("bllblblbllbllblblbll", 0, dialogue_presets.boots)
+			dialogue_textbox("lllbllblbllbll, blblllb?", 0, dialogue_presets.boots)
+			dialogue_textbox(" 	♡( ◡‿◡ )", 0, dialogue_presets.boots_kaomoji)
+			dialogue_change_obj_script(obj_boots, dialogueResponses, ["boots_smooch"])
+			break
+		case "boots_smooch":
+			dialogue_textbox("(っ˘з(˘⌣˘ ) ♡", 0, dialogue_presets.boots_kaomoji)
+			dialogue_change_obj_script(obj_boots, dialogueResponses, ["boots_cute"])
+			break
+		case "boots_cute":
+			dialogue_textbox("♡(｡- ω -)", 0, dialogue_presets.boots_kaomoji)
+			dialogue_change_obj_script(obj_boots, dialogueResponses, ["boots_smooch"])
+			break
+		#endregion
+		
 		#region TRENCHCOAT KIDS
 		case "trenchkid_1":
 			dialogue_textbox("I am just one adult man enjoying my long trenchcoat for men")
