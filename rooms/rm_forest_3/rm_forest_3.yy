@@ -21,6 +21,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"entityActivateScript","path":"objects/parent_entity/parent_entity.yy",},"objectId":{"name":"parent_entity","path":"objects/parent_entity/parent_entity.yy",},"value":"dialogueResponses",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"entityActivateArgs","path":"objects/parent_entity/parent_entity.yy",},"objectId":{"name":"parent_entity","path":"objects/parent_entity/parent_entity.yy",},"value":"[\"man_intro\"]",},
           ],"isDnd":false,"objectId":{"name":"obj_man","path":"objects/obj_man/obj_man.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":144.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1C6A7A25","properties":[],"isDnd":false,"objectId":{"name":"obj_keepo","path":"objects/obj_keepo/obj_keepo.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":144.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"decor","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_49EA4766_1_1_1_1","properties":[
@@ -88,6 +89,7 @@
     {"name":"inst_2B86452E_1_1","path":"rooms/rm_forest_3/rm_forest_3.yy",},
     {"name":"inst_481BE3E3_1_1","path":"rooms/rm_forest_3/rm_forest_3.yy",},
     {"name":"inst_406CBF7A_1_1","path":"rooms/rm_forest_3/rm_forest_3.yy",},
+    {"name":"inst_1C6A7A25","path":"rooms/rm_forest_3/rm_forest_3.yy",},
     {"name":"inst_344AA716","path":"rooms/rm_forest_3/rm_forest_3.yy",},
     {"name":"inst_53199AD0","path":"rooms/rm_forest_3/rm_forest_3.yy",},
     {"name":"inst_148DCA5A","path":"rooms/rm_forest_3/rm_forest_3.yy",},

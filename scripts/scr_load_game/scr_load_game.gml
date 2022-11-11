@@ -38,6 +38,7 @@ function scr_load_game(){
 		global.tutorialMail = _json[? "tutorialMail"]
 		global.mailUnread = _json[? "mailUnread"];
 		global.autoSave = _json[? "autoSave"];
+		if(instance_exists(obj_time)) {instance_find(obj_time, 0).time = _json[? "time"]}
 		
 		PLAYER_OBJ.holding_item = _json[? "holdingItem"];
 		if PLAYER_OBJ.holding_item PLAYER_OBJ.held_item = _json[? "heldItem"];

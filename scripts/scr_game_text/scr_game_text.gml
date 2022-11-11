@@ -219,7 +219,7 @@ function dialogueResponses(){
 			dialogue_change_obj_script(obj_bull, dialogueResponses, ["bull_stare_2"])
 			break
 		case "bull_stare_2":
-			dialogue_textbox("Quiet please. I am staring off into the horizon.", 0, dialogue_presets.bull_default)
+			dialogue_textbox("Do you mind? I am staring off into the horizon.", 0, dialogue_presets.bull_default)
 			dialogue_change_obj_script(obj_bull, dialogueResponses, ["bull_stare"])
 			break
 		#endregion
@@ -514,6 +514,36 @@ function dialogueResponses(){
 	#endregion
 	#endregion
 	#region OBJECTS
+		case "drawer_1":
+			dialogue_textbox("open the first draw?", 0, noone, ["drawer_1_open:sure", "blank:no way"])
+			break
+		case "drawer_1_open":
+			dialogue_textbox("its full of ___")
+			dialogue_change_obj_script(obj_drawers, dialogueResponses, ["drawer_2"])
+			break
+		case "drawer_2":
+			dialogue_textbox("open the second draw?", 0, noone, ["drawer_2_open:sure", "blank:no way"])
+			break
+		case "drawer_2_open":
+			dialogue_textbox("its full of ___")
+			dialogue_change_obj_script(obj_drawers, dialogueResponses, ["drawer_3"])
+			break
+		case "drawer_3":
+			dialogue_textbox("open the third draw?", 0, noone, ["drawer_3_open:sure", "blank:no way"])
+			break
+		case "drawer_3_open":
+			dialogue_textbox("there is no third draw")
+			dialogue_change_obj_script(obj_drawers, dialogueResponses, ["drawer_4"])
+			break
+		case "drawer_4":
+			dialogue_textbox("...try to open the third draw anyway?", 0, noone, ["drawer_4_open:sure", "blank:no way"])
+			break
+		case "drawer_4_open":
+			dialogue_textbox("you claw and grasp at the air")
+			dialogue_textbox("to your surprise, nothing happens")
+			dialogue_textbox("incredible")
+			break
+			
 		case "sign_hat": scr_new_textbox("hat") break
 		case "sign_hat_2": 
 			dialogue_textbox("a grand abstract painting hangs on the wall") 
@@ -584,6 +614,7 @@ function dialogueResponses(){
 			break
 	#endregion
 		
+	case "blank": break
 	case "no_access":
 		dialogue_textbox(". . .")
 		dialogue_textbox("it doesn't look like you can go any further")

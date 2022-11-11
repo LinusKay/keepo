@@ -9,6 +9,15 @@ function scr_save_game()
 	_map[? "coins"] = global.coins;
 	_map[? "musicTeleportSecret"] = global.musicTeleportSecret;
 	
+	if(instance_exists(obj_time)) {
+		_map[? "time"] = obj_time.time	
+		_map[? "timeDirection"] = obj_time.timeDirection
+	}
+	else {
+		_map[? "time"] = 0
+		_map[? "timeDirection"] = 0
+	}
+	
 	ds_map_add_map(_map, "relationships", global.relationships);
 	
 	_map[? "tutorialMail"] = global.tutorialMail;

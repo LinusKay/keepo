@@ -1,15 +1,19 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_drawers",
   "spriteId": {
     "name": "spr_drawers",
     "path": "sprites/spr_drawers/spr_drawers.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_wall",
-    "path": "objects/obj_wall/obj_wall.yy",
+    "name": "parent_entity",
+    "path": "objects/parent_entity/parent_entity.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,17 +27,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "furniture",
     "path": "folders/Objects/decor/furniture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_drawers",
-  "tags": [],
-  "resourceType": "GMObject",
 }

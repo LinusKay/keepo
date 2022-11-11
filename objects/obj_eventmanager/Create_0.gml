@@ -22,5 +22,9 @@ enum event
 	questEnd,
 	outfitChange,
 	playerDamageEnemy,
-	playerTakeDamage
+	playerTakeDamage,
+	timeNightStart,
+	timeNightEnd,
+	timeSunsetStart,
+	timeSunsetEnd
 }

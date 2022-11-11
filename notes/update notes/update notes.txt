@@ -21,6 +21,7 @@ added additional room transition animations
 item pickup notification displayed more cleanly
 NPCs now have water reflections 
 game now opens in 1280 x 720
+added day/night cycle
 
 BUGS
 fixed calculation of character camera-zoom point

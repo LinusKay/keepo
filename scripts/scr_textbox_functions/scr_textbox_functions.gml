@@ -78,7 +78,7 @@ function dialogue_textbox(){
 		message = argument[0];
 		if instance_exists(other) originInstance = other.id else originInstance = noone;
 		if argument_count > 1 background = argument[1] else background = 0;
-		if argument_count > 2 && argument[2] != -1
+		if argument_count > 2 && argument[2] != -1 && argument[2] != noone
 		{
 			var character_preset = global.dialogue_presets_array[argument[2]];
 			var preset_args = array_length(character_preset);
