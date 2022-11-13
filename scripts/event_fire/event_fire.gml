@@ -38,7 +38,7 @@ function event_fire(){
 					{
 						args = array_create(lenArgs, 0);
 						array_copy(args, 0, listenerInfo, 2, lenArgs);
-						with(listener) unregister = script_execute_alt(script, args);
+						with(listener) unregister = scr_execute_alt(script, args);
 					}
 					else unregister = true;
 				}

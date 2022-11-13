@@ -80,6 +80,53 @@ function dialogueResponses(){
 		#endregion
 		
 		#region LUCO
+		
+		case "luco_discover_1":
+			dialogue_textbox("...")
+			dialogue_emote_bubble(obj_pyramid_blank, obj_emote_exclaim)
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_shock)
+			dialogue_textbox("!!!")
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_walk_shock)
+			dialogue_move_obj(obj_pyramid_blank, rm_ext_town, 1296, 560)
+			dialogue_change_obj_script(obj_pyramid_blank, dialogueResponses, ["luco_discover_2"])
+			dialogue_path_start(obj_pyramid_blank, pth_luco_run_1, 2, path_action_stop, true)
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank)
+			dialogue_fade_out(obj_pyramid_blank, 0.1)
+			dialogue_despawn(obj_pyramid_blank)
+			break
+		case "luco_discover_2":
+			dialogue_textbox("......")
+			dialogue_emote_bubble(obj_pyramid_blank, obj_emote_exclaim)
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_shock)
+			dialogue_textbox("!!!!!!")
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_walk_shock)
+			dialogue_move_obj(obj_pyramid_blank, rm_ext_town, 1296, 560)
+			dialogue_change_obj_script(obj_pyramid_blank, dialogueResponses, ["luco_discover_3"])
+			var _path = path_create( 
+				[
+					[obj_pyramid_blank.x, obj_pyramid_blank.y],
+					[obj_pyramid_blank.x + 200, obj_pyramid_blank.y]
+				],
+				false
+			)
+			dialogue_path_start(obj_pyramid_blank, _path, 2, path_action_stop, true)
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank)
+			dialogue_despawn(obj_pyramid_blank)
+			break
+		case "luco_discover_3":
+			dialogue_textbox("......")
+			dialogue_emote_bubble(obj_pyramid_blank, obj_emote_exclaim)
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_shock)
+			dialogue_textbox("!!!!!!")
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_walk_shock)
+			dialogue_move_obj(obj_pyramid_blank, rm_ext_town, 1296, 560)
+			dialogue_change_obj_script(obj_pyramid_blank, dialogueResponses, ["luco_discover_3"])
+			dialogue_path_start(obj_pyramid_blank, pth_luco_run_1, 2, path_action_stop, true)
+			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank)
+			dialogue_despawn(obj_pyramid_blank)
+			break
+		
+		
 		case "luco_ravioli_1": 
 			dialogue_textbox("Hello!", 0, dialogue_presets.luco_default, -1)
 			dialogue_emote_bubble(obj_pyramid, obj_emote_heart)

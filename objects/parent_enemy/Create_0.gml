@@ -1,2 +1,0 @@
-hp = hpMax;
-shotHit = false;

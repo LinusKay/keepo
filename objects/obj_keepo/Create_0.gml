@@ -217,7 +217,8 @@ camHeight = camera_get_view_height(view_camera[0]);
 xModifier = 0;
 yModifier = 0;
 zoomModifier = 1;
-zoomSpeed = 0.05;
+zoomSpeed = 0.1;
+viewSpeed = 0.1;
 
 xspd = 0;
 yspd = 0;
@@ -455,7 +456,9 @@ global.dialogue_presets_array = [
 	[obj_starhead, spr_starhead_portrait_smile, fnt_pixellari, spr_starhead, noone, true, c_black],
 	[obj_starhead, spr_starhead_portrait_blush, fnt_pixellari, spr_starhead, noone, true, c_black],
 	[obj_boots, spr_boots_portrait, fnt_pixellari, spr_boots, noone, true, c_black],
-	[obj_boots, spr_boots_portrait, fnt_kaomoji, spr_boots, noone, true, c_black]
+	[obj_boots, spr_boots_portrait, fnt_kaomoji, spr_boots, noone, true, c_black],
+	[obj_pyramid_blank, spr_luco_blank_portrait, fnt_pixellari, spr_luco_blank, noone, true, c_black],
+	[obj_pyramid_blank, spr_luco_blank_portrait_shock, fnt_pixellari, spr_luco_blank_shock, noone, true, c_black]
 ]
 
 enum dialogue_presets 
@@ -498,6 +501,8 @@ enum dialogue_presets
 	star_blush,
 	boots,
 	boots_kaomoji,
+	luco_blank,
+	luco_blank_shock
 }
 #endregion
 

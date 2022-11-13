@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_jenkins",
   "spriteId": {
     "name": "spr_jenkins",
     "path": "sprites/spr_jenkins/spr_jenkins.yy",
@@ -27,14 +30,10 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"entityNPC","path":"objects/parent_entity/parent_entity.yy",},"objectId":{"name":"parent_entity","path":"objects/parent_entity/parent_entity.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"entityNPC","path":"objects/parent_entity/parent_entity.yy",},"objectId":{"name":"parent_entity","path":"objects/parent_entity/parent_entity.yy",},"value":"True",},
   ],
   "parent": {
     "name": "npc",
     "path": "folders/Objects/npc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_jenkins",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -6,6 +6,6 @@ function camera_reset(){
 
 function camera_zoom_character(_target){
 	global.camera_target = _target;
-	global.camera_width = 192;
-	global.camera_height = 108;
+	global.camera_width = 250;
+	global.camera_height = 140;
 }

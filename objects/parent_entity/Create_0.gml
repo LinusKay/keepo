@@ -27,12 +27,12 @@ if charName != 0 && ds_map_exists(global.characterOptions, charName) && entityNP
 	
 	// commented out for now
 	// prevents followers from staying spawned when enter new room
-	//if _room != room instance_destroy()
-	//else 
-	//{
-	//	if _x != x x = _x;
-	//	if _y != y y = _y;
-	//}
+	if _room != room instance_destroy()
+	else 
+	{
+		if _x != x x = _x;
+		if _y != y y = _y;
+	}
 	
 	if _script != entityActivateScript entityActivateScript = _script;
 	if _args != entityActivateArgs entityActivateArgs = _args;

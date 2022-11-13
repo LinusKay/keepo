@@ -1,1 +1,0 @@
-print(parent_entity)

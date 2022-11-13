@@ -52,14 +52,13 @@ if (keyboard_check_pressed(vk_space))
 	var _messageLength = string_length(message);
 	if textProgress >= _messageLength
 	{
-		
 		if responses[0] != -1
 		{
 			with originInstance	dialogueResponses(other.responseScripts[other.responseSelected]);
 		}
 		if instance_exists(obj_parent_queue)
 		{
-			with obj_parent_queue {ticket--; if variable_instance_exists(id, "message") print(message)}
+			with obj_parent_queue {ticket--;}
 		}
 		else {
 			PLAYER_OBJ.move_freeze = false;	

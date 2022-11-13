@@ -56,7 +56,7 @@ centre_y = y + sprite_get_height(sprite_index)/2;
 
 bottom_y = y + sprite_get_height(sprite_index)
 
-if in_sequence move_freeze = true else move_freeze = false
+//if in_sequence move_freeze = true else move_freeze = false
 if instance_exists(obj_textbox) || instance_exists(obj_pause_settings){
 	move_freeze = true
 }
@@ -66,107 +66,7 @@ if instance_exists(obj_textbox) || instance_exists(obj_pause_settings){
 mask_index = spr_keepo_down;
 image_blend = c_white;
 
-// restart game on player death
-if hp <= 0 game_restart();
 
-// damage keepo on touch enemy
-if distance_to_object(parent_enemy) < 5
-{
-	if damageCooldown == 0
-	{
-		damageCooldown = damageCooldownMax;
-		with instance_nearest(centre_x, centre_y, parent_enemy)
-		{
-			damageInflicted = irandom_range(damage - global.bulletDamageVariation, damage + global.bulletDamageVariation);
-			PLAYER_OBJ.hp -= damageInflicted;
-			print("keepo took " + string(damageInflicted) + " damage from " + enemyName + "(" + string(PLAYER_OBJ.hp) + "/" + string(PLAYER_OBJ.hpMax) + ")");
-			event_fire(event.playerTakeDamage)
-		}
-	}
-	if damageCooldown > 0 damageCooldown--;	
-}
-
-
-#region combat
-if combatAllowed
-{
-	if key_click_right {
-		secondary_weapons[secondary_selected]();
-	}
-	if keyboard_check_pressed(ord("Z"))
-	{
-		secondary_selected++;
-		if secondary_selected > array_length(secondary_weapons) - 1 secondary_selected = 0;
-	}	
-
-#region combat shoot
-	if key_shoot_mode
-	{
-		if shootMode == "continuous" shootMode = "precise"
-		else shootMode = "continuous"
-	}
-
-	if shootMode == "continuous"
-	{
-		if key_click_left && bulletCooldown == 0
-		{
-
-			bulletCooldown = bulletCooldownMax;
-			with (instance_create_layer(centre_x, centre_y, "Instances", obj_bullet))
-			{
-				direction = point_direction(PLAYER_OBJ.centre_x, PLAYER_OBJ.centre_y, irandom_range(mouse_x - global.bulletSpread, mouse_x + global.bulletSpread), irandom_range(mouse_y - global.bulletSpread, mouse_y + global.bulletSpread));
-				speed = global.bulletSpeed;
-			}
-		}
-	}
-	else if shootMode == "precise"
-	{
-		if key_click_left_release && bulletCooldown == 0
-		{
-			bulletCooldown = bulletCooldownMax;
-			with (instance_create_layer(centre_x, centre_y, "Instances", obj_bullet))
-			{
-				direction = point_direction(PLAYER_OBJ.centre_x, PLAYER_OBJ.centre_y, mouse_x, mouse_y);
-				speed = global.bulletSpeed;
-			}
-		}
-	}
-
-#endregion
-// frozen code for melee attack
-	if attacking
-	{
-		sprite_index = spr_keepo_attack_right;
-		if key_click_left print("attack left");
-		ds_list_clear(hitByAttack);
-		mask_index = spr_keepo_attack_right_hitbox;
-		var hitByAttackNow = ds_list_create();
-		var hits = instance_place_list(x, y, parent_entity, hitByAttackNow, false);
-		if hits > 0
-		{
-			for (var i = 0; i < hits; i++)
-			{
-				var hitID = hitByAttackNow[| i];
-				if (ds_list_find_index(hitByAttack, hitID) == -1)
-				{
-					ds_list_add(hitByAttack, hitID);
-					with (hitID)
-					{
-						print("hit " + hitID.charName);	
-					}
-				}
-			}
-		}
-	
-		if image_index >= (image_number - 1) attacking = false;
-		print(image_index);
-	}
-}
-
-if bulletCooldown > 0 bulletCooldown--;
-if bombCooldown > 0 bombCooldown--;
-
-#endregion
 if key_pause
 {
 	if !instance_exists(obj_textbox) && !instance_exists(obj_pause_settings)
@@ -250,8 +150,8 @@ if key_camera
 if !instance_exists(global.camera_target) global.camera_target = PLAYER_OBJ;
 // set up smooth follow camera
 // clamp disallows moving camera outside of room bounds
-viewx = clamp(lerp(viewx, global.camera_target.x, 0.05) + xModifier, 0 + camera_get_view_width(view_camera[0])/2, room_width - camera_get_view_width(view_camera[0])/2);
-viewy = clamp(lerp(viewy, global.camera_target.y, 0.05) - yModifier, 0 + camera_get_view_height(view_camera[0])/2, room_height - camera_get_view_height(view_camera[0])/2);
+viewx = clamp(lerp(viewx, global.camera_target.x, viewSpeed) + xModifier, 0 + camera_get_view_width(view_camera[0])/2, room_width - camera_get_view_width(view_camera[0])/2);
+viewy = clamp(lerp(viewy, global.camera_target.y, viewSpeed) - yModifier, 0 + camera_get_view_height(view_camera[0])/2, room_height - camera_get_view_height(view_camera[0])/2);
 camWidth = lerp(camWidth, global.camera_width * zoomModifier, zoomSpeed);
 camHeight = lerp(camHeight, global.camera_height * zoomModifier, zoomSpeed);
 vm = matrix_build_lookat(viewx, viewy, -10, viewx, viewy,  0, 0, 1, 0);
@@ -737,3 +637,11 @@ for(var i = follow_movement_array_size-1; i > 0; i--){
 pos_x[0] = centre_x;
 pos_y[0] = bottom_y;
 #endregion
+
+
+
+var _room = room_get_name(global.characterOptions[? "luco_blank"][? "room"])
+var _x = global.characterOptions[? "luco_blank"][? "x"]
+var _y = global.characterOptions[? "luco_blank"][? "y"]
+
+print(string(_room) + ", " + string(_x) + ", "  + string(_y))
