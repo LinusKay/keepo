@@ -1,5 +1,5 @@
-if(!layer_exists(tintNightLayer)){ layer_create(0,tintNightLayer) }
-if(!layer_exists(tintSunsetLayer)){ layer_create(0,tintSunsetLayer) }
+if(!layer_exists(tintNightLayer)){ layer_create(-1000,tintNightLayer) }
+if(!layer_exists(tintSunsetLayer)){ layer_create(-1000,tintSunsetLayer) }
 
 // init night
 var _fx_night_tint = fx_create("_filter_tintfilter");

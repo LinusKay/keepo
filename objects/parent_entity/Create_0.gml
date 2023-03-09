@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 depth = -bbox_bottom;
+z = 0
+jumping = false
+jumpHeight = 5
+jumpSpeed = 1
+yJump = y
 
 accept_gift_love = false;
 accept_gift_like = false;

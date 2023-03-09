@@ -13,7 +13,7 @@ colourSunrise = [255, 7, 7, 0]
 sunColour = colourSunset
 colourNight = [0.4, 0.5, 1, 1]
 
-// [start time, duration
+// [start time, duration]
 timeMarkerSunset = [timeCycle/2, timeCycle/3]
 timeMarkerNight = timeMarkerSunset[0]
 

@@ -385,6 +385,20 @@ function dialogue_fade_out(_object, _rate)
 		rate = _rate;
 	}
 }
+///@description queue an object fade in
+///@arg object id
+///@arg fade in rate
+function dialogue_fade_in(_object, _rate)
+{
+	var _obj;
+	if instance_exists(obj_textbox) _obj = obj_dialogue_fade_in_queue; else _obj =  obj_dialogue_fade_in;
+	if(!layer_exists("text")){ layer_create(0, "text") }
+	with instance_create_layer(0, 0, "text", _obj)
+	{
+		object = _object;
+		rate = _rate;
+	}
+}
 
 ///@description queue an object to start following a path
 ///@arg object id
@@ -443,6 +457,15 @@ function dialogue_wait(_frames) {
 		waitTime = _frames
 	}
 }	
+
+function dialogue_npc_jump(_object) {
+	var _obj;
+	if instance_exists(obj_textbox) _obj = obj_dialogue_npc_jump_queue; else _obj =  obj_dialogue_npc_jump;
+	if(!layer_exists("text")){ layer_create(0, "text") }
+	with instance_create_layer(0, 0, "text", _obj) {
+		object = _object
+	}
+}
 
 //function scr_set_defaults_for_text(){
 //	//fonts

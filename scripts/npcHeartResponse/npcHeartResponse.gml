@@ -1,6 +1,8 @@
 function npcHeartResponse(_entity){
+	print("a")
 	if point_distance(PLAYER_OBJ.x + sprite_get_width(PLAYER_OBJ.sprite_index)/2, PLAYER_OBJ.y + sprite_get_height(PLAYER_OBJ.sprite_index)/2, _entity.x, _entity.y - sprite_get_height(_entity.sprite_index)/2) < 25 + sprite_get_height(_entity.sprite_index)/2 
 	{
+		print("b")
 		if global.relationships[? _entity.charName] != undefined
 		{
 			var relationshipLevel = global.relationships[? _entity.charName];

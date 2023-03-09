@@ -174,11 +174,7 @@ global.characterOptions = ds_map_create()
 
 global.latestGift = [];
 
-global.volumeMusic = 1;
-global.textSpeed = .75;
-global.game_paused = false;
-global.musicPlaying = noone;
-global.musicTeleportSecret = false;
+
 
 global.relationshipLevelDislike = -3;
 global.relationshipLevelNeutral = 0;
@@ -458,7 +454,13 @@ global.dialogue_presets_array = [
 	[obj_boots, spr_boots_portrait, fnt_pixellari, spr_boots, noone, true, c_black],
 	[obj_boots, spr_boots_portrait, fnt_kaomoji, spr_boots, noone, true, c_black],
 	[obj_pyramid_blank, spr_luco_blank_portrait, fnt_pixellari, spr_luco_blank, noone, true, c_black],
-	[obj_pyramid_blank, spr_luco_blank_portrait_shock, fnt_pixellari, spr_luco_blank_shock, noone, true, c_black]
+	[obj_pyramid_blank, spr_luco_blank_portrait_shock, fnt_pixellari, spr_luco_blank_shock, noone, true, c_black],
+	[obj_villain, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
+	[obj_villain, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
+	[obj_villain, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
+	[obj_villain, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
+	[obj_robot, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
+	[obj_moody, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
 ]
 
 enum dialogue_presets 
@@ -502,7 +504,13 @@ enum dialogue_presets
 	boots,
 	boots_kaomoji,
 	luco_blank,
-	luco_blank_shock
+	luco_blank_shock,
+	villain_default,
+	villain_shock,
+	villain_happy,
+	villain_diabolical,
+	robot_default,
+	moody_default
 }
 #endregion
 

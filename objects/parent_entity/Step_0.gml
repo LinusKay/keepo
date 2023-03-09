@@ -1,3 +1,16 @@
+if jumping {
+	if z = 0 yJump = y // store initial y
+	if z < jumpHeight z+= jumpSpeed // if less than jump height, increase z level
+	if z >= jumpHeight jumping = false // if reached peak jump height, stop jump
+	y = yJump - z // set y to jump level
+}	
+else if z > 0 {
+	z-=jumpSpeed // if no longer jumping up, decrease height
+	y = yJump - z // set y to jump level
+}
+//if z == 0 jumping = true
+
+
 
 if charName != 0 && ds_map_exists(global.characterOptions, charName) && entityNPC && frameCount > 0
 {

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_outside_tiles_green",
   "spriteId": {
     "name": "spr_tiles_outside_yellow",
     "path": "sprites/spr_tiles_outside_yellow/spr_tiles_outside_yellow.yy",
@@ -20,18 +23,18 @@
   "tile_count": 200,
   "autoTileSets": [],
   "tileAnimationFrames": [
-    {"frames":[
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_2","frames":[
         120,
         130,
         140,
         150,
-      ],"resourceVersion":"1.0","name":"animation_2","tags":[],"resourceType":"GMTileAnimation",},
-    {"frames":[
+      ],},
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_1","frames":[
         121,
         131,
         141,
         151,
-      ],"resourceVersion":"1.0","name":"animation_1","tags":[],"resourceType":"GMTileAnimation",},
+      ],},
   ],
   "tileAnimationSpeed": 15.0,
   "tileAnimation": {
@@ -848,8 +851,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_outside_tiles_green",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_sightseeing",
   "spriteId": {
     "name": "Sprite116",
     "path": "sprites/Sprite116/Sprite116.yy",
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -27,8 +31,4 @@
     "name": "util",
     "path": "folders/Objects/util.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_sightseeing",
-  "tags": [],
-  "resourceType": "GMObject",
 }

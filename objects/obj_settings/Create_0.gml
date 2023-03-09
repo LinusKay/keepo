@@ -5,7 +5,6 @@ global.textSpeed = .75;
 
 global.autoSave = false;
 
-global.musicPaused = true;
 surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 
 global.window_size_selected = 2;
@@ -19,3 +18,9 @@ global.hmac_key = "Ujxt8QY#ai$AuRmdKa@ypYbGnJ"
 
 global.verifySaveIntegrity = true;
 
+global.textSpeed = .75;
+
+global.musicPaused = false;
+global.volumeMusic = 1;
+global.musicPlaying = noone;
+global.musicTeleportSecret = false;

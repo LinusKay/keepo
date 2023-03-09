@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_outside_grey",
   "spriteId": {
     "name": "spr_tiles_outside_grey",
     "path": "sprites/spr_tiles_outside_grey/spr_tiles_outside_grey.yy",
@@ -19,7 +22,7 @@
   "out_columns": 14,
   "tile_count": 200,
   "autoTileSets": [
-    {"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
         21,
         54,
         53,
@@ -67,21 +70,21 @@
         0,
         0,
         0,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"autotile_1","tags":[],"resourceType":"GMAutoTileSet",},
+      ],"closed_edge":false,},
   ],
   "tileAnimationFrames": [
-    {"frames":[
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_2","frames":[
         120,
         130,
         140,
         150,
-      ],"resourceVersion":"1.0","name":"animation_2","tags":[],"resourceType":"GMTileAnimation",},
-    {"frames":[
+      ],},
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_1","frames":[
         121,
         131,
         141,
         151,
-      ],"resourceVersion":"1.0","name":"animation_1","tags":[],"resourceType":"GMTileAnimation",},
+      ],},
   ],
   "tileAnimationSpeed": 15.0,
   "tileAnimation": {
@@ -898,8 +901,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_outside_grey",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

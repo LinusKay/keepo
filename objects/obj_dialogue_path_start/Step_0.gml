@@ -8,6 +8,7 @@ with (object) {
 		}
 		else {
 			PLAYER_OBJ.move_freeze = false;	
+			path_delete(other.path)
 			camera_reset();
 		}
 		instance_destroy(other)

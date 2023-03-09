@@ -1,4 +1,4 @@
-key_debug = keyboard_check_pressed(vk_f10);
+                                          key_debug = keyboard_check_pressed(vk_f10);
 if key_debug
 {
 	if global.debugMode 
@@ -637,11 +637,3 @@ for(var i = follow_movement_array_size-1; i > 0; i--){
 pos_x[0] = centre_x;
 pos_y[0] = bottom_y;
 #endregion
-
-
-
-var _room = room_get_name(global.characterOptions[? "luco_blank"][? "room"])
-var _x = global.characterOptions[? "luco_blank"][? "x"]
-var _y = global.characterOptions[? "luco_blank"][? "y"]
-
-print(string(_room) + ", " + string(_x) + ", "  + string(_y))
