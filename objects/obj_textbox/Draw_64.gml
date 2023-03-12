@@ -5,9 +5,9 @@ draw_set_valign(fa_top);
 
 var _bg = background
 var _c
-if global.highContrast { 
+if global.high_contrast { 
 	_c = c_white 
-	_bg = global.highContrast
+	_bg = global.high_contrast
 }
 else {
 	if colour == noone colour = c_black

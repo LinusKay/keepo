@@ -1,7 +1,7 @@
-hpMax = 10000000;
-hp = hpMax;
-damageCooldown = 0;
-damageCooldownMax = 50;
+hp_max = 10000000;
+hp = hp_max;
+damage_cooldown = 0;
+damage_cooldown_max = 50;
 
 reflection_inst = noone
 
@@ -12,26 +12,26 @@ bottom_y = y + sprite_get_height(sprite_index)
 
 #region combat
 attacking = false;
-hitByAttack = ds_list_create();
+hit_by_attack = ds_list_create();
 
-global.criticalChance = 0.10;
-global.criticalModifier = 1.10;
+global.critical_chance = 0.10;
+global.critical_modifier = 1.10;
 
-combatAllowed = false;
-global.bulletSpeed = 7;
-bulletCooldown = 0;
-bulletCooldownMax = 20;
-global.bulletDamage = 20;
-global.bulletDamageVariation = 10;
-global.bulletRange = 15;
-global.bulletSpread = 10;
-shootMode = "continuous";
+combat_allowed = false;
+global.bullet_speed = 7;
+bullet_cooldown = 0;
+bullet_cooldown_max = 20;
+global.bullet_damage = 20;
+global.bullet_damage_variation = 10;
+global.bullet_range = 15;
+global.bullet_spread = 10;
+shoot_mode = "continuous";
 
-bombCooldown = 0;
-bombCooldownMax = 20;
-global.bombDamage = 50;
-global.bombDamageVariation = 10;
-global.bombDistanceMax = 30;
+bomb_cooldown = 0;
+bomb_cooldown_max = 20;
+global.bomb_damage = 50;
+global.bomb_damage_variation = 10;
+global.bomb_distance_max = 30;
 
 
 #region SECONDARY WEAPONS
@@ -53,14 +53,14 @@ secondary_weapons[secondaries.bomb] = function()
 {
 	// throw a bomb in the direction of the mouse, up to a certain range
 	// bomb will slide along the ground slightly upon landing
-	if bombCooldown == 0
+	if bomb_cooldown == 0
 	{
-		bombCooldown = bombCooldownMax;
+		bomb_cooldown = bomb_cooldown_max;
 		with instance_create_depth(centre_x, centre_y, -9999, obj_bomb)
 		{
 			direction =	point_direction(other.centre_x, other.centre_y, mouse_x + irandom_range(-2,2), mouse_y + irandom_range(-2,2));
 			speed = 5
-			shootDistance = clamp(point_distance(other.centre_x, other.centre_y, mouse_x, mouse_y), 0, global.bombDistanceMax);
+			shootDistance = clamp(point_distance(other.centre_x, other.centre_y, mouse_x, mouse_y), 0, global.bomb_distance_max);
 			shootOrigin_x = other.centre_x;
 			shootOrigin_y = other.centre_y;
 		}
@@ -68,9 +68,9 @@ secondary_weapons[secondaries.bomb] = function()
 }
 secondary_weapons[secondaries.bombScatter] = function()
 {
-	if bombCooldown == 0
+	if bomb_cooldown == 0
 	{
-		bombCooldown = bombCooldownMax;
+		bomb_cooldown = bomb_cooldown_max;
 		for(i = 0; i < 10; i++)
 		{
 			with instance_create_depth(centre_x, centre_y, -9999, obj_bomb)
@@ -86,9 +86,9 @@ secondary_weapons[secondaries.bombScatter] = function()
 }
 secondary_weapons[secondaries.bombCircle] = function()
 {
-	if bombCooldown == 0
+	if bomb_cooldown == 0
 	{
-		bombCooldown = bombCooldownMax;
+		bomb_cooldown = bomb_cooldown_max;
 		with instance_create_depth(centre_x, centre_y, -9999, obj_bomb_circle)
 		{
 			target = PLAYER_OBJ;
@@ -97,11 +97,11 @@ secondary_weapons[secondaries.bombCircle] = function()
 }
 secondary_weapons[secondaries.bombCircleSurround] = function()
 {
-	if bombCooldown == 0
+	if bomb_cooldown == 0
 	{
 		bombCount = 5;
 		angleDivision = 360/bombCount
-		bombCooldown = bombCooldownMax;
+		bomb_cooldown = bomb_cooldown_max;
 		for(var i = 0; i < bombCount; i++)
 		{
 			with instance_create_depth(centre_x, centre_y, -9999, obj_bomb_circle)
@@ -116,14 +116,14 @@ secondary_weapons[secondaries.bombSuck] = function()
 {
 	// throw a bomb in the direction of the mouse, up to a certain range
 	// bomb will slide along the ground slightly upon landing
-	if bombCooldown == 0
+	if bomb_cooldown == 0
 	{
-		bombCooldown = bombCooldownMax;
+		bomb_cooldown = bomb_cooldown_max;
 		with instance_create_depth(centre_x, centre_y, -9999, obj_bomb_suck)
 		{
 			direction =	point_direction(other.centre_x, other.centre_y, mouse_x + irandom_range(-2,2), mouse_y + irandom_range(-2,2));
 			speed = 2
-			shootDistance = clamp(point_distance(other.centre_x, other.centre_y, mouse_x, mouse_y), 0, global.bombDistanceMax);
+			shootDistance = clamp(point_distance(other.centre_x, other.centre_y, mouse_x, mouse_y), 0, global.bomb_distance_max);
 			shootOrigin_x = other.centre_x;
 			shootOrigin_y = other.centre_y;
 		}
@@ -131,11 +131,11 @@ secondary_weapons[secondaries.bombSuck] = function()
 }
 secondary_weapons[secondaries.bulletCircleSurround] = function()
 {
-	if bombCooldown == 0
+	if bomb_cooldown == 0
 	{
 		bulletCount = 5;
 		angleDivision = 360/bulletCount
-		bombCooldown = bombCooldownMax;
+		bomb_cooldown = bomb_cooldown_max;
 		for(var i = 0; i < bulletCount; i++)
 		{
 			with instance_create_depth(centre_x, centre_y, -9999, obj_bullet_circle)
@@ -150,8 +150,8 @@ secondary_selected = secondaries.bulletCircleSurround;
 #endregion
 #endregion
 
-global.debugMode = false;
-global.highContrast = false
+global.debug_mode = false;
+global.high_contrast = false
 
 global.monument_teleport_unlocked = false;
 dashUnlocked = true;

@@ -1,4 +1,4 @@
-if global.debugMode && entityNPC {
+if global.debug_mode && entityNPC {
 	draw_circle(x, y - sprite_get_height(sprite_index)/2, 25 + sprite_get_height(sprite_index)/2, true)
 }
 

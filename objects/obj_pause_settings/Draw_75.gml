@@ -1,8 +1,8 @@
 draw_set_font(fnt_pixellari_small);
 
-var _bg = global.highContrast
+var _bg = global.high_contrast
 var _c
-if global.highContrast _c = c_white else _c = c_black
+if global.high_contrast _c = c_white else _c = c_black
 
 scr_nineslice_box_stretch(spr_textbox, invx1, invy1, invx2, invy2, _bg);
 
@@ -80,14 +80,14 @@ if itemSelected = _item
 else draw_text_colour(invx1 + border * 2, invy1 + border + 36 * _item, "Autosave: " + autoSaveStatus, _c, _c, _c, _c, 1);
 
 _item = 4
-if global.highContrast highContrastStatus = "on" else highContrastStatus = "off"
+if global.high_contrast highContrastStatus = "on" else highContrastStatus = "off"
 if itemSelected = _item 
 { 
 	draw_text_colour(invx1 + border * 2, invy1 + border + 36 * _item, " High Contrast: " + highContrastStatus, _c, _c, _c, _c, 1);
 	keyLeft = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"));
 	keyRight = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"));
 	if keyLeft || keyRight {
-		global.highContrast = !global.highContrast;
+		global.high_contrast = !global.high_contrast;
 	}
 }
 else draw_text_colour(invx1 + border * 2, invy1 + border + 36 * _item, "High Contrast: " + highContrastStatus, _c, _c, _c, _c, 1);
@@ -113,10 +113,10 @@ else { draw_text_colour(invx1 + border * 2, invy1 + border + 36 * _item, "Exit G
 
 if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("F"))
 {
-	if itemSelected == 0 { instance_destroy(); PLAYER_OBJ.move_freeze = false; }
-	if itemSelected == 4 { scr_save_game() }	
-	if itemSelected == 5 { scr_load_game() }	
-	if itemSelected == 6 { game_end() }	
+	if itemSelected == 0 { close_windows_all(); PLAYER_OBJ.move_freeze = false; }
+	if itemSelected == 5 { scr_save_game() }	
+	if itemSelected == 6 { scr_load_game() }	
+	if itemSelected == 7 { game_end() }	
 }
 
 

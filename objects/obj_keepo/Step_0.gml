@@ -1,22 +1,22 @@
                                           key_debug = keyboard_check_pressed(vk_f10);
 if key_debug
 {
-	if global.debugMode 
+	if global.debug_mode 
 	{
 		//global.debugEmoteReactionRange = false;
 		//global.debugInventoryQuestItemStage = false;
-		global.debugMode = false;
+		global.debug_mode = false;
 		notification("debug mode disabled")
 	}
 	else
 	{
 		//global.debugEmoteReactionRange = true;
 		//global.debugInventoryQuestItemStage = true;
-		global.debugMode = true;
+		global.debug_mode = true;
 		notification("debug mode enabled")
 	}
 }
-if keyboard_check_pressed(vk_f3) global.highContrast = !global.highContrast
+if keyboard_check_pressed(vk_f3) global.high_contrast = !global.high_contrast
 
 // check for movement keys. if key pressed, value = 1, otherwise 0
 right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));

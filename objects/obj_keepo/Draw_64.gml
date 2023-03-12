@@ -44,4 +44,4 @@ else if global.notification_timer == 0
 		}
 	}
 }
-if global.debugMode draw_text_ext(50, RESOLUTION_H - 50, "coins: " + string(global.coins), 0, string_width("coins: " + string(global.coins)))
+if global.debug_mode draw_text_ext(50, RESOLUTION_H - 50, "coins: " + string(global.coins), 0, string_width("coins: " + string(global.coins)))

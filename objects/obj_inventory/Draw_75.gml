@@ -73,7 +73,7 @@ if inventory_get_size() > 0 {
 			{
 				draw_text_ext(x1 + sideLeftWidth, y2 - 150, "Quest item: ???", 30, sideRightWidth);
 			}
-			if global.debugMode
+			if global.debug_mode
 			{
 				draw_text(20, 20, "Quest ID: " + obj_quests.ds_quests[# 0, inventory_get_item_quest_id(itemSelected)] );
 				draw_text(20, 50, "Quest Stage: " + string(inventory_get_item_quest_stage(itemSelected)));
@@ -86,7 +86,7 @@ if inventory_get_size() > 0 {
 		}
 		
 		// DISPLAY SPRITES SHOWING WHO LOVES/LIKES/ETC THE GIVEN ITEM
-		if global.debugMode
+		if global.debug_mode
 		{
 			var lovedBy = json_parse(string(inventory_get_item_love(itemSelected)));
 			if array_length(lovedBy) > 0 {

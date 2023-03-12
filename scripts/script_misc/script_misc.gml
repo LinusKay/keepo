@@ -11,6 +11,7 @@ function close_windows_all()
 	if instance_exists(obj_relationship_tracker) with obj_relationship_tracker instance_destroy();
 	if instance_exists(obj_journal) with obj_journal instance_destroy();
 	if instance_exists(obj_outfits) with obj_outfits instance_destroy();
+	if instance_exists(obj_pause_settings) with obj_pause_settings instance_destroy();
 	global.windowOpen = false;
 	PLAYER_OBJ.move_freeze = false;
 }

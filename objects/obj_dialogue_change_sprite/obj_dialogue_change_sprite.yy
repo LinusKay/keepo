@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_queue_play",
+    "path": "objects/obj_parent_queue_play/obj_parent_queue_play.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
