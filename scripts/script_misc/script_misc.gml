@@ -23,6 +23,7 @@ function close_windows_except(_window)
 	if _window != obj_relationship_tracker if instance_exists(obj_relationship_tracker) with obj_relationship_tracker instance_destroy();
 	if _window != obj_journal if instance_exists(obj_journal) with obj_journal instance_destroy();
 	if _window != obj_outfits if instance_exists(obj_outfits) with obj_outfits instance_destroy();
+	if _window != obj_pause_settings if instance_exists(obj_pause_settings) with obj_pause_settings instance_destroy();
 }
 
 function create_painting(_image)

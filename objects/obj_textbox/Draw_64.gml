@@ -35,10 +35,16 @@ if responses[0] != -1
 	_print += "\n";
 	for (var i = 0; i < array_length(responses); i++) 
 	{
+		var response = responses[i]
+		y_offset = (response_y_buffer * (i+1)) - response_y_buffer_gap
+		x_offset = (x2 - x1)/1.4
+		if (i == responseSelected) { 
+			x_offset -= response_selected_x_offset
+			response = "> " + response
+		}
+		 scr_nineslice_box_stretch(spr_textbox, x1 + x_offset, y1 - y_offset, x2, y1 - y_offset + response_height, _bg);
 		_print += "\n";
-		if i == responseSelected _print += "> "	
-		_print += responses[i];
-		if i == responseSelected _print += " <"
+		draw_text_ext_color( x1 + x_offset + response_text_x_offset, y1 - y_offset + response_text_y_offset, response, 65, x2 - x1, _c, _c, _c, _c, 1)
 	}
 }
 messageLength = string_length(_print);

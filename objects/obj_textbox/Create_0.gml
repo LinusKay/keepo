@@ -25,3 +25,10 @@ frameIndex = 0;
 shakeInterval = 10;
 shakeLeft = true;
 shakeRight = false;
+
+response_height = 150
+response_y_buffer = 200
+response_y_buffer_gap = 20
+response_selected_x_offset = 0
+response_text_x_offset = 250
+response_text_y_offset = 40
