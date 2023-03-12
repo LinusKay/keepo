@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_parent_queue_play",
-    "path": "objects/obj_parent_queue_play/obj_parent_queue_play.yy",
+    "name": "obj_parent_queue223",
+    "path": "objects/obj_parent_queue223/obj_parent_queue223.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

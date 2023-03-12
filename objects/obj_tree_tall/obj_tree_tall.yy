@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_tree_tall",
-  "spriteId": {
-    "name": "spr_tree_tall",
-    "path": "sprites/spr_tree_tall/spr_tree_tall.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

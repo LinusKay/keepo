@@ -111,7 +111,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "cutscenes",
-    "path": "folders/Sprites/cutscenes.yy",
+    "name": "paintings",
+    "path": "folders/Sprites/paintings.yy",
   },
 }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_parent_queue_play",
+  "name": "obj_parent_queue223",
   "spriteId": null,
   "solid": false,
   "visible": true,
