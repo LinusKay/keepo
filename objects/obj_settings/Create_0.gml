@@ -16,7 +16,7 @@ global.window_sizes = [
 
 global.hmac_key = "Ujxt8QY#ai$AuRmdKa@ypYbGnJ"
 
-global.verifySaveIntegrity = true;
+global.verifySaveIntegrity = false;
 
 global.textSpeed = .75;
 

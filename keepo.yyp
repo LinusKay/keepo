@@ -109,7 +109,7 @@
     {"id":{"name":"obj_dialogue_path_start","path":"objects/obj_dialogue_path_start/obj_dialogue_path_start.yy",},"order":1,},
     {"id":{"name":"spr_vase","path":"sprites/spr_vase/spr_vase.yy",},"order":15,},
     {"id":{"name":"spr_lawnmower","path":"sprites/spr_lawnmower/spr_lawnmower.yy",},"order":12,},
-    {"id":{"name":"obj_parent_queue223","path":"objects/obj_parent_queue223/obj_parent_queue223.yy",},"order":18,},
+    {"id":{"name":"obj_parent_queue_play","path":"objects/obj_parent_queue_play/obj_parent_queue_play.yy",},"order":18,},
     {"id":{"name":"spr_drawers","path":"sprites/spr_drawers/spr_drawers.yy",},"order":3,},
     {"id":{"name":"rm_ext_keepo_house_south","path":"rooms/rm_ext_keepo_house_south/rm_ext_keepo_house_south.yy",},"order":2,},
     {"id":{"name":"spr_keepo_christmas_sprint_left","path":"sprites/spr_keepo_christmas_sprint_left/spr_keepo_christmas_sprint_left.yy",},"order":3,},

@@ -3,26 +3,7 @@ if holding_item {
 	draw_sprite(ds_list_find_value(held_item, 3), image_index, x + 4, y - 7);
 }
 
-// reflections
-//if distance_to_object(obj_water_circles) <= 25 
-//{
-//	if reflection_inst == noone {
-//		reflection_inst = instance_create_layer(x, y + 32, "water_effects", obj_reflection)
-//	}
-//	reflection_inst.x = x
-//	reflection_inst.y = y + 32
-//	reflection_inst.sprite_index = sprite_index
-//	reflection_inst.image_index = image_index
-//	reflection_inst.image_xscale = image_xscale
-//	reflection_inst.image_yscale = image_yscale
-	
-//}
-//else {
-//	if reflection_inst != noone {
-//		instance_destroy(reflection_inst)
-//		reflection_inst	= noone
-//	}
-//}
+
 
 if global.debug_mode
 {

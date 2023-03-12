@@ -17,7 +17,7 @@ hit_by_attack = ds_list_create();
 global.critical_chance = 0.10;
 global.critical_modifier = 1.10;
 
-combat_allowed = false;
+combat_allowed = true;
 global.bullet_speed = 7;
 bullet_cooldown = 0;
 bullet_cooldown_max = 20;
