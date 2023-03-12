@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_space_tiles",
   "spriteId": {
     "name": "spr_tiles_space",
     "path": "sprites/spr_tiles_space/spr_tiles_space.yy",
@@ -20,7 +23,7 @@
   "tile_count": 20,
   "autoTileSets": [],
   "tileAnimationFrames": [
-    {"frames":[
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_1","frames":[
         4,
         4,
         4,
@@ -37,8 +40,8 @@
         16,
         16,
         16,
-      ],"resourceVersion":"1.0","name":"animation_1","tags":[],"resourceType":"GMTileAnimation",},
-    {"frames":[
+      ],},
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_2","frames":[
         2,
         1,
         5,
@@ -71,7 +74,7 @@
         2,
         2,
         2,
-      ],"resourceVersion":"1.0","name":"animation_2","tags":[],"resourceType":"GMTileAnimation",},
+      ],},
   ],
   "tileAnimationSpeed": 16.0,
   "tileAnimation": {
@@ -728,8 +731,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_space_tiles",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "bgm_moonrain",
   "conversionMode": 0,
   "compression": 3,
   "volume": 0.35,
@@ -17,8 +20,4 @@
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bgm_moonrain",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "bgm_swallowed_cave",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "bgm_swallowed_cave.wav",
-  "duration": 36.9230843,
+  "duration": 36.923084,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bgm_swallowed_cave",
-  "tags": [],
-  "resourceType": "GMSound",
 }

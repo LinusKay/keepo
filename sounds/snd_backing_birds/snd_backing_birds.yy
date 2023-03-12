@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_backing_birds",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_backing_birds.ogg",
-  "duration": 16.6802044,
+  "duration": 16.680204,
   "parent": {
     "name": "sfx",
     "path": "folders/Sounds/sfx.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_backing_birds",
-  "tags": [],
-  "resourceType": "GMSound",
 }

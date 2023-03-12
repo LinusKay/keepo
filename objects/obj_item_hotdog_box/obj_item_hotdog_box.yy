@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_item_hotdog_box",
   "spriteId": {
     "name": "spr_hotdog_box",
     "path": "sprites/spr_hotdog_box/spr_hotdog_box.yy",
@@ -27,21 +30,17 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"hotdog box","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_blue","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"likedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves, obj_hat_man","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"hatedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Chockfull of protein. And mystery. It's... very wet.","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"questItem","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"questID","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"quest.hotdog_hunt","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"questStage","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"hotdog box",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_blue",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"likedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves, obj_hat_man",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"hatedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Chockfull of protein. And mystery. It's... very wet.",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"questItem","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"questID","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"quest.hotdog_hunt",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"questStage","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"1",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/Objects/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_item_hotdog_box",
-  "tags": [],
-  "resourceType": "GMObject",
 }

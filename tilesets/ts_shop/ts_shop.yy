@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_shop",
   "spriteId": {
     "name": "spr_shop_space",
     "path": "sprites/spr_shop_space/spr_shop_space.yy",
@@ -135,8 +138,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_shop",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

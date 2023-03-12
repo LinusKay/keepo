@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_item_lawnmower",
   "spriteId": {
     "name": "spr_lawnmower",
     "path": "sprites/spr_lawnmower/spr_lawnmower.yy",
@@ -27,18 +30,14 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"lawnmower","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"VRRRVRRVRRVRRRRNMNRNMNRRRRRRR","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"questItem","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"questID","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"quest.mow_problem","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"questStage","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"lawnmower",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"VRRRVRRVRRVRRRRNMNRNMNRRRRRRR",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"questItem","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"questID","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"quest.mow_problem",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"questStage","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"1",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/Objects/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_item_lawnmower",
-  "tags": [],
-  "resourceType": "GMObject",
 }

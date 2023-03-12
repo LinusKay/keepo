@@ -21,6 +21,6 @@ global.verifySaveIntegrity = true;
 global.textSpeed = .75;
 
 global.musicPaused = false;
-global.volumeMusic = 1;
+global.volumeMusic = 0;
 global.musicPlaying = noone;
 global.musicTeleportSecret = false;

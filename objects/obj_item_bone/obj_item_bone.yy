@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_item_bone",
   "spriteId": {
     "name": "spr_dino_bone",
     "path": "sprites/spr_dino_bone/spr_dino_bone.yy",
@@ -27,19 +30,15 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"bone","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"likedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid, obj_hat_man","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_blue, obj_hat_man","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"lovedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"hatedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Eek! Whose bone is this??","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"bone",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"likedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid, obj_hat_man",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_blue, obj_hat_man",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"lovedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"hatedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Eek! Whose bone is this??",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/Objects/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_item_bone",
-  "tags": [],
-  "resourceType": "GMObject",
 }

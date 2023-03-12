@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_voice_2",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "voice",
     "path": "folders/Sounds/voice.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_voice_2",
-  "tags": [],
-  "resourceType": "GMSound",
 }

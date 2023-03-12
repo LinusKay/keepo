@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_item_rock",
   "spriteId": {
     "name": "spr_item_rock",
     "path": "sprites/spr_item_rock/spr_item_rock.yy",
@@ -27,17 +30,13 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"rock","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"likedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves, obj_blue, obj_hat_man","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Its a rock. U pick a rock off a ground. goob job.","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"rock",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"likedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves, obj_blue, obj_hat_man",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Its a rock. U pick a rock off a ground. goob job.",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/Objects/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_item_rock",
-  "tags": [],
-  "resourceType": "GMObject",
 }

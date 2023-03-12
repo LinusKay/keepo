@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_item_jar_of_slime",
   "spriteId": {
     "name": "spr_jar_slime",
     "path": "sprites/spr_jar_slime/spr_jar_slime.yy",
@@ -27,18 +30,14 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"jar of slime","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves, obj_hat_man","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"hatedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_blue","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"lovedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Green and goopy. Did something just move inside?","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemName","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"jar of slime",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"dislikedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_sleeves, obj_hat_man",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"hatedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_blue",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"lovedBy","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"obj_pyramid",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemDescription","path":"objects/parent_item/parent_item.yy",},"objectId":{"name":"parent_item","path":"objects/parent_item/parent_item.yy",},"value":"Green and goopy. Did something just move inside?",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/Objects/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_item_jar_of_slime",
-  "tags": [],
-  "resourceType": "GMObject",
 }

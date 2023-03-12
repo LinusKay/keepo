@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_emote_confuse",
   "spriteId": {
     "name": "spr_emote_confuse",
     "path": "sprites/spr_emote_confuse/spr_emote_confuse.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "emote",
     "path": "folders/Objects/emote.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_emote_confuse",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_pop",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "sfx",
     "path": "folders/Sounds/sfx.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_pop",
-  "tags": [],
-  "resourceType": "GMSound",
 }

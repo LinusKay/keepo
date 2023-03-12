@@ -160,6 +160,10 @@ function dialogueResponses(){
 			dialogue_textbox("so feel free to take what you like", 0, dialogue_presets.blue_default)
 			dialogue_textbox("please . . .", 0, dialogue_presets.blue_default)
 			break
+		
+		case "blue_hello":
+			dialogue_textbox("hey kip!", 0, dialogue_presets.blue_default)
+			break
 			
 		case "blue_gift_hate": 
 			camera_zoom_character(obj_blue) 

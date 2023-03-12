@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_man",
   "spriteId": {
     "name": "spr_man",
     "path": "sprites/spr_man/spr_man.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "npc",
     "path": "folders/Objects/npc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_man",
-  "tags": [],
-  "resourceType": "GMObject",
 }

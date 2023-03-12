@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_letter_sleeves",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -27,8 +31,4 @@
     "name": "letters",
     "path": "folders/Objects/items/letters.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_letter_sleeves",
-  "tags": [],
-  "resourceType": "GMObject",
 }

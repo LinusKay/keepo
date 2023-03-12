@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMFont",
+  "resourceVersion": "1.0",
+  "name": "fnt_block_sans_ui",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -21,6 +24,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":7,"h":47,"character":32,"shift":7,"offset":0,},
     "33": {"x":499,"y":51,"w":3,"h":47,"character":33,"shift":7,"offset":0,},
@@ -131,8 +135,4 @@
     "name": "Fonts",
     "path": "folders/Fonts.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "fnt_block_sans_ui",
-  "tags": [],
-  "resourceType": "GMFont",
 }

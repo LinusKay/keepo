@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_jazz_bar_tiles",
   "spriteId": {
     "name": "spr_tiles_jazz_bar",
     "path": "sprites/spr_tiles_jazz_bar/spr_tiles_jazz_bar.yy",
@@ -19,7 +22,7 @@
   "out_columns": 6,
   "tile_count": 32,
   "autoTileSets": [
-    {"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
         9,
         9,
         9,
@@ -67,7 +70,7 @@
         0,
         0,
         0,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"autotile_1","tags":[],"resourceType":"GMAutoTileSet",},
+      ],"closed_edge":false,},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 4.0,
@@ -117,8 +120,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_jazz_bar_tiles",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

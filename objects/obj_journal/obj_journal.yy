@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_journal",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -22,19 +25,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":75,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":75,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"menuTitle","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"objectId":{"name":"obj_menu_parent","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"value":"Journal","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"menuTitle","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"objectId":{"name":"obj_menu_parent","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"value":"Journal",},
   ],
   "parent": {
     "name": "GUI",
     "path": "folders/Objects/GUI.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_journal",
-  "tags": [],
-  "resourceType": "GMObject",
 }

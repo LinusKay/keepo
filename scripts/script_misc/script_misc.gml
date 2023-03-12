@@ -3,6 +3,8 @@ function print(_msg){
 	show_debug_message(_msg);
 }
 
+function placeholder() {}
+
 function close_windows_all()
 {
 	if instance_exists(obj_inventory) with obj_inventory instance_destroy();

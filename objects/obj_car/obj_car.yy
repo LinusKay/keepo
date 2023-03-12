@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_car",
   "spriteId": {
     "name": "spr_car",
     "path": "sprites/spr_car/spr_car.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "misc",
     "path": "folders/Objects/misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_car",
-  "tags": [],
-  "resourceType": "GMObject",
 }

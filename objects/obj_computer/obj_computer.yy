@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_computer",
   "spriteId": {
     "name": "spr_computer",
     "path": "sprites/spr_computer/spr_computer.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "furniture",
     "path": "folders/Objects/decor/furniture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_computer",
-  "tags": [],
-  "resourceType": "GMObject",
 }

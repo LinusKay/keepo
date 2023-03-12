@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "click5",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "ui",
     "path": "folders/Sounds/sfx/ui.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "click5",
-  "tags": [],
-  "resourceType": "GMSound",
 }

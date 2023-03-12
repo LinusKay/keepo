@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_caw",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "sfx",
     "path": "folders/Sounds/sfx.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_caw",
-  "tags": [],
-  "resourceType": "GMSound",
 }

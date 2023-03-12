@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_book",
   "spriteId": {
     "name": "spr_book",
     "path": "sprites/spr_book/spr_book.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -27,8 +31,4 @@
     "name": "furniture",
     "path": "folders/Objects/decor/furniture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_book",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_mailbox_other",
   "spriteId": {
     "name": "spr_mailbox",
     "path": "sprites/spr_mailbox/spr_mailbox.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "misc",
     "path": "folders/Objects/misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_mailbox_other",
-  "tags": [],
-  "resourceType": "GMObject",
 }

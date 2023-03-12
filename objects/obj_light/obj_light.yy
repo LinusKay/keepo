@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_light",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -25,8 +28,4 @@
     "name": "lighting",
     "path": "folders/Objects/util/lighting.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_light",
-  "tags": [],
-  "resourceType": "GMObject",
 }

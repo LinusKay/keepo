@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_plants",
   "spriteId": {
     "name": "spr_tiles_plants",
     "path": "sprites/spr_tiles_plants/spr_tiles_plants.yy",
@@ -51,8 +54,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_plants",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

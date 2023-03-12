@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_cauldron_empty",
   "spriteId": {
     "name": "spr_cauldron_empty",
     "path": "sprites/spr_cauldron_empty/spr_cauldron_empty.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -29,7 +33,7 @@
     {"x":0.0,"y":28.0,},
   ],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -37,8 +41,4 @@
     "name": "furniture",
     "path": "folders/Objects/decor/furniture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_cauldron_empty",
-  "tags": [],
-  "resourceType": "GMObject",
 }

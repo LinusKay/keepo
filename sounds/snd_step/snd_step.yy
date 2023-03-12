@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_step",
   "conversionMode": 0,
   "compression": 0,
   "volume": 0.02,
@@ -17,8 +20,4 @@
     "name": "sfx",
     "path": "folders/Sounds/sfx.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_step",
-  "tags": [],
-  "resourceType": "GMSound",
 }

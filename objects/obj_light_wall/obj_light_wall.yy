@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_light_wall",
   "spriteId": {
     "name": "Sprite339",
     "path": "sprites/Sprite339/Sprite339.yy",
@@ -28,8 +31,4 @@
     "name": "lighting",
     "path": "folders/Objects/util/lighting.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_light_wall",
-  "tags": [],
-  "resourceType": "GMObject",
 }

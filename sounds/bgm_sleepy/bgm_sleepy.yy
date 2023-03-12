@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "bgm_sleepy",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "bgm_sleepy.wav",
-  "duration": 27.4285717,
+  "duration": 27.428572,
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bgm_sleepy",
-  "tags": [],
-  "resourceType": "GMSound",
 }

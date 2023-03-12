@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_shadow_highlight",
   "spriteId": {
     "name": "spr_shadow_highlight",
     "path": "sprites/spr_shadow_highlight/spr_shadow_highlight.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -27,8 +31,4 @@
     "name": "misc",
     "path": "folders/Objects/misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_shadow_highlight",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_painting_wide",
   "spriteId": {
     "name": "spr_painting_wide",
     "path": "sprites/spr_painting_wide/spr_painting_wide.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "furniture",
     "path": "folders/Objects/decor/furniture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_painting_wide",
-  "tags": [],
-  "resourceType": "GMObject",
 }

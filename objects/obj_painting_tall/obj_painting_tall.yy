@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_painting_tall",
   "spriteId": {
     "name": "spr_painting_tall",
     "path": "sprites/spr_painting_tall/spr_painting_tall.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "furniture",
     "path": "folders/Objects/decor/furniture.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_painting_tall",
-  "tags": [],
-  "resourceType": "GMObject",
 }

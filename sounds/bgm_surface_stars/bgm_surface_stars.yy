@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "bgm_surface_stars",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bgm_surface_stars",
-  "tags": [],
-  "resourceType": "GMSound",
 }

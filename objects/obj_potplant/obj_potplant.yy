@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_potplant",
   "spriteId": {
     "name": "spr_potted_plant",
     "path": "sprites/spr_potted_plant/spr_potted_plant.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "plants",
     "path": "folders/Objects/decor/plants.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_potplant",
-  "tags": [],
-  "resourceType": "GMObject",
 }

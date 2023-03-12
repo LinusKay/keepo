@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_emote_frown",
   "spriteId": {
     "name": "spr_emote_frown",
     "path": "sprites/spr_emote_frown/spr_emote_frown.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -30,8 +34,4 @@
     "name": "emote",
     "path": "folders/Objects/emote.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_emote_frown",
-  "tags": [],
-  "resourceType": "GMObject",
 }
