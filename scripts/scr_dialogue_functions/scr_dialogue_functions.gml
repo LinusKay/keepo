@@ -8,7 +8,7 @@
 /// @param sprite to change to
 function scr_new_textbox(){
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_text_queued; else _obj = obj_textbox;
+	if instance_exists(obj_parent_queue_play) _obj = obj_text_queued; else _obj = obj_textbox;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -64,7 +64,8 @@ function scr_new_textbox(){
 ///@arg colour
 function dialogue_textbox(){
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_text_queued; else _obj = obj_textbox;
+	if instance_exists(obj_parent_queue_play) _obj = obj_text_queued; else _obj = obj_textbox;
+	
 	// pause sequence whilst text
 	if(!instance_exists(obj_seq_manager)){ instance_create_layer(0, 0, "Instances", obj_seq_manager) }
 	with instance_find(obj_seq_manager, 0) {
@@ -136,7 +137,7 @@ function dialogue_textbox(){
 function dialogue_print(_string)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_print_queue; else _obj =  obj_dialogue_print;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_print_queue; else _obj =  obj_dialogue_print;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -150,7 +151,7 @@ function dialogue_print(_string)
 function dialogue_quest_start(_quest_id)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_quest_start_queue; else _obj =  obj_dialogue_quest_start;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_quest_start_queue; else _obj =  obj_dialogue_quest_start;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -164,7 +165,7 @@ function dialogue_quest_start(_quest_id)
 function dialogue_quest_advance(_quest_id)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_quest_advance_queue; else _obj =  obj_dialogue_quest_advance;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_quest_advance_queue; else _obj =  obj_dialogue_quest_advance;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -178,7 +179,7 @@ function dialogue_quest_advance(_quest_id)
 function dialogue_quest_finish(_quest_id)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_quest_finish_queue; else _obj =  obj_dialogue_quest_finish;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_quest_finish_queue; else _obj =  obj_dialogue_quest_finish;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -192,7 +193,7 @@ function dialogue_quest_finish(_quest_id)
 function dialogue_despawn(_object)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_despawn_queue; else _obj =  obj_dialogue_despawn;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_despawn_queue; else _obj =  obj_dialogue_despawn;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -210,7 +211,7 @@ function dialogue_despawn(_object)
 function dialogue_spawn(_x, _y, _objDepth, _object)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_spawn_queue; else _obj =  obj_dialogue_spawn;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_spawn_queue; else _obj =  obj_dialogue_spawn;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -228,7 +229,7 @@ function dialogue_spawn(_x, _y, _objDepth, _object)
 function dialogue_script(_script, _args)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_script_queue; else _obj =  obj_dialogue_script;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_script_queue; else _obj =  obj_dialogue_script;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -250,7 +251,7 @@ function dialogue_script(_script, _args)
 function dialogue_item_add(_itemName, _itemDescription, _itemCost, _itemSprite, _canGift, _lovedBy, _likedBy, _dislikedBy, _hatedBy)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_item_add_queue; else _obj =  obj_dialogue_item_add;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_item_add_queue; else _obj =  obj_dialogue_item_add;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -282,7 +283,7 @@ function dialogue_item_add(_itemName, _itemDescription, _itemCost, _itemSprite, 
 function dialogue_item_remove(_itemName)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_item_remove_queue; else _obj =  obj_dialogue_item_remove;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_item_remove_queue; else _obj =  obj_dialogue_item_remove;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -297,7 +298,7 @@ function dialogue_item_remove(_itemName)
 function dialogue_change_sprite(_object, _sprite)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_change_sprite_queue; else _obj =  obj_dialogue_change_sprite;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_change_sprite_queue; else _obj =  obj_dialogue_change_sprite;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -314,7 +315,7 @@ function dialogue_change_sprite(_object, _sprite)
 function dialogue_change_obj_script(_object, _script, _args)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_change_obj_script_queue; else _obj =  obj_dialogue_change_obj_script;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_change_obj_script_queue; else _obj =  obj_dialogue_change_obj_script;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -333,7 +334,7 @@ function dialogue_change_obj_script(_object, _script, _args)
 function dialogue_move_obj(_object, _room, _x, _y)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_move_obj_queue; else _obj =  obj_dialogue_move_obj;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_move_obj_queue; else _obj =  obj_dialogue_move_obj;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -350,7 +351,7 @@ function dialogue_move_obj(_object, _room, _x, _y)
 function dialogue_focus(_obj_zoom_id)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_focus_queue; else _obj =  obj_dialogue_focus;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_focus_queue; else _obj =  obj_dialogue_focus;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -363,7 +364,7 @@ function dialogue_focus(_obj_zoom_id)
 function dialogue_emote_bubble(_object, _emote)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_emote_bubble_queue; else _obj =  obj_dialogue_emote_bubble;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_emote_bubble_queue; else _obj =  obj_dialogue_emote_bubble;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -377,7 +378,7 @@ function dialogue_emote_bubble(_object, _emote)
 function dialogue_fade_out(_object, _rate)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_fade_out_queue; else _obj =  obj_dialogue_fade_out;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_fade_out_queue; else _obj =  obj_dialogue_fade_out;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -391,7 +392,7 @@ function dialogue_fade_out(_object, _rate)
 function dialogue_fade_in(_object, _rate)
 {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_fade_in_queue; else _obj =  obj_dialogue_fade_in;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_fade_in_queue; else _obj =  obj_dialogue_fade_in;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -408,7 +409,7 @@ function dialogue_fade_in(_object, _rate)
 ///@arg pathAbsolute whether path absolute or not
 function dialogue_path_start(_object, _path, _pathSpeed, _pathEndAction, _pathAbsolute) {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_path_start_queue; else _obj =  obj_dialogue_path_start;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_path_start_queue; else _obj =  obj_dialogue_path_start;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
@@ -435,7 +436,7 @@ function path_create(_points, _loop) {
 
 function dialogue_shake_start(_magnitude, _speed) {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_shake_start_queue; else _obj =  obj_dialogue_shake_start;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_shake_start_queue; else _obj =  obj_dialogue_shake_start;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj) {
 		shakeMagnitude = _magnitude
@@ -444,14 +445,14 @@ function dialogue_shake_start(_magnitude, _speed) {
 }
 function dialogue_shake_stop() {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_shake_stop_queue; else _obj =  obj_dialogue_shake_stop;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_shake_stop_queue; else _obj =  obj_dialogue_shake_stop;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	instance_create_layer(0, 0, "text", _obj)
 }
 
 function dialogue_wait(_frames) {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_wait_queue; else _obj =  obj_dialogue_wait;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_wait_queue; else _obj =  obj_dialogue_wait;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj) {
 		waitTime = _frames
@@ -460,7 +461,7 @@ function dialogue_wait(_frames) {
 
 function dialogue_npc_jump(_object) {
 	var _obj;
-	if instance_exists(obj_textbox) _obj = obj_dialogue_npc_jump_queue; else _obj =  obj_dialogue_npc_jump;
+	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_npc_jump_queue; else _obj =  obj_dialogue_npc_jump;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj) {
 		object = _object

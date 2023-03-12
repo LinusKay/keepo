@@ -197,6 +197,7 @@ function dialogueResponses(){
 		
 		#region HAT MAN
 		case "hat_man_1":
+			dialogue_emote_bubble(obj_hat_man, obj_emote_frog)
 			dialogue_textbox("hat hat hat hat", 0, dialogue_presets.hat_default)
 			dialogue_textbox("hahahahahahahhahahahhaa", 0, dialogue_presets.hat_default)
 			dialogue_textbox("hat :) hat hat", 0, dialogue_presets.hat_default, ["hat_man_1_what:what?", "hat_man_1_hat:hat"])
