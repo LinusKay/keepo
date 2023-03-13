@@ -1,1 +1,1 @@
-ds_map_destroy(eventMap);
+ds_map_destroy(event_map);

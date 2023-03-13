@@ -12,7 +12,7 @@ function close_windows_all()
 	if instance_exists(obj_journal) with obj_journal instance_destroy();
 	if instance_exists(obj_outfits) with obj_outfits instance_destroy();
 	if instance_exists(obj_pause_settings) with obj_pause_settings instance_destroy();
-	global.windowOpen = false;
+	global.window_open = false;
 	PLAYER_OBJ.move_freeze = false;
 }
 
@@ -33,66 +33,66 @@ function create_painting(_image)
 		painting = instance_create_depth(0, 0, 0, obj_view_painting);
 		painting.image = _image;
 	}
-	global.windowOpen = true;
+	global.window_open = true;
 }
 
-// initialise mailbox
+// initialise mail_box
 function mail_init()
 {
-	global.mailBox = ds_list_create();
+	global.mail_box = ds_list_create();
 }
 
-// add item to mailbox
-function mail_create(_itemName, _itemDescription, _itemCost, _itemSprite, _canGift, _letterSenderObj, _letterSenderName, letterRecipientObj, _letterRecipientName, _letterResponse)
+// add item to mail_box
+function mail_create(_item_name, _item_description, _item_cost, _item_sprite, _can_gift, _letter_sender_obj, _letter_sender_name, letter_recipient_obj, _letter_recipient_name, _letter_response)
 {
-	var newMail = ds_list_create();
-	ds_list_add(newMail, _itemName, _itemDescription, _itemCost, _itemSprite, _canGift, _letterSenderObj, _letterSenderName, letterRecipientObj, _letterRecipientName, _letterResponse);
-	ds_list_add(global.mailBox, newMail);
+	var new_mail = ds_list_create();
+	ds_list_add(new_mail, _item_name, _item_description, _item_cost, _item_sprite, _can_gift, _letter_sender_obj, _letter_sender_name, letter_recipient_obj, _letter_recipient_name, _letter_response);
+	ds_list_add(global.mail_box, new_mail);
 }
 
-// add all mailbox items to inventory
+// add all mail_box items to inventory
 function mail_add_inventory()
 {
-	for(var i = 0; i < ds_list_size(global.mailBox); i++)
+	for(var i = 0; i < ds_list_size(global.mail_box); i++)
 	{
-		scr_new_textbox("Received \"" + ds_list_find_value(ds_list_find_value(global.mailBox, i), 0) + "\"")
-		var _itemName = ds_list_find_value(ds_list_find_value(global.mailBox, i), 0);
-		var _itemDescription = ds_list_find_value(ds_list_find_value(global.mailBox, i), 1);
-		var _itemCost = ds_list_find_value(ds_list_find_value(global.mailBox, i), 2);
-		var _itemSprite = ds_list_find_value(ds_list_find_value(global.mailBox, i), 3);
-		var _canGift = ds_list_find_value(ds_list_find_value(global.mailBox, i), 4);
-		var _letterSenderObj = ds_list_find_value(ds_list_find_value(global.mailBox, i), 5);
-		var _letterSenderName = ds_list_find_value(ds_list_find_value(global.mailBox, i), 6);
-		var _letterRecipientObj = ds_list_find_value(ds_list_find_value(global.mailBox, i), 7);
-		var _letterRecipientName = ds_list_find_value(ds_list_find_value(global.mailBox, i), 8);
-		var _letterResponse = ds_list_find_value(ds_list_find_value(global.mailBox, i), 9);
-		inventory_add_letter(_itemName, _itemDescription, _itemCost, _itemSprite, _canGift, _letterSenderObj, _letterSenderName, _letterRecipientObj, _letterRecipientName, _letterResponse);
+		scr_new_textbox("Received \"" + ds_list_find_value(ds_list_find_value(global.mail_box, i), 0) + "\"")
+		var _item_name = ds_list_find_value(ds_list_find_value(global.mail_box, i), 0);
+		var _item_description = ds_list_find_value(ds_list_find_value(global.mail_box, i), 1);
+		var _item_cost = ds_list_find_value(ds_list_find_value(global.mail_box, i), 2);
+		var _item_sprite = ds_list_find_value(ds_list_find_value(global.mail_box, i), 3);
+		var _can_gift = ds_list_find_value(ds_list_find_value(global.mail_box, i), 4);
+		var _letter_sender_obj = ds_list_find_value(ds_list_find_value(global.mail_box, i), 5);
+		var _letter_sender_name = ds_list_find_value(ds_list_find_value(global.mail_box, i), 6);
+		var _letter_recipient_obj = ds_list_find_value(ds_list_find_value(global.mail_box, i), 7);
+		var _letter_recipient_name = ds_list_find_value(ds_list_find_value(global.mail_box, i), 8);
+		var _letter_response = ds_list_find_value(ds_list_find_value(global.mail_box, i), 9);
+		inventory_add_letter(_item_name, _item_description, _item_cost, _item_sprite, _can_gift, _letter_sender_obj, _letter_sender_name, _letter_recipient_obj, _letter_recipient_name, _letter_response);
 	}
 }
 
 // check/receive unread mail
 function mail_check()
 {
-	if global.tutorialMail
+	if global.tutorial_mail
 	{
-		scr_new_textbox("There's a note taped to the front of the mailbox.");	
+		scr_new_textbox("There's a note taped to the front of the mail_box.");	
 		scr_new_textbox("\"[Mail Tutorial]\"");	
 		scr_new_textbox("\"Alright, listen here kid. This here's mail. People LOVE mail.\"");	
 		scr_new_textbox("\"Check what's inside, and take it to whoever it belongs to!\"");	
 		scr_new_textbox("\"Most friends will happily reward you for bringing them their mail\"");	
-		global.tutorialMail = false;
+		global.tutorial_mail = false;
 	}
 	
-	if global.mailUnread
+	if global.mail_unread
 	{
-		dialogueResponses("mail_open");
-		// for every item in global.mailbox, print out mail name and add to inventory
+		dialogue_responses("mail_open");
+		// for every item in global.mail_box, print out mail name and add to inventory
 		mail_add_inventory();
-		global.mailUnread = false;
+		global.mail_unread = false;
 	}
 	else
 	{
-		dialogueResponses("mail_none");	
+		dialogue_responses("mail_none");	
 	}
 }
 
@@ -103,7 +103,7 @@ function mail_check()
 ///@arg item name
 function gift_check(_recipient, _item)
 {
-	return object_get_name(global.latestGift[0].object_index) == _recipient && ds_list_find_value(global.latestGift[1], 0) == _item;
+	return object_get_name(global.latest_gift[0].object_index) == _recipient && ds_list_find_value(global.latest_gift[1], 0) == _item;
 }
 
 ///@description play a sound effect
@@ -112,7 +112,7 @@ function gift_check(_recipient, _item)
 function play_sfx(_sound)
 {
 	audio_play_sound(_sound, 90, false);
-	audio_sound_gain(_sound, global.volumeMusic, 0);
+	audio_sound_gain(_sound, global.volume_music, 0);
 	if argument_count > 1 audio_sound_pitch(_sound, argument[1]) else audio_sound_pitch(_sound, 1)
 }
 

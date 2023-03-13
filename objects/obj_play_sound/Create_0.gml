@@ -8,6 +8,6 @@ if place_meeting(x,y,PLAYER_OBJ)
 		audio_play_sound(sound, 1000, false);
 		audio_sound_gain(sound, 0, 0);
 		audio_sound_gain(sound, 1, 20000);
-		if global.musicPaused { audio_pause_sound(sound); }
+		if global.music_paused { audio_pause_sound(sound); }
 	}
 }

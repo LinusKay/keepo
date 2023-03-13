@@ -1,6 +1,6 @@
 with (object) {
 	print(path_position)
-	if (path_index == -1) path_start(other.path, other.pathSpeed, other.pathEndAction, other.pathAbsolute)
+	if (path_index == -1) path_start(other.path, other.path_speed, other.path_end_action, other.path_absolute)
 	if(path_position == 1) {
 		if instance_exists(obj_parent_queue)
 		{

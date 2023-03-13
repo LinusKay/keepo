@@ -1,6 +1,6 @@
-if inventory_find_name(itemName) 
+if inventory_find_name(item_name) 
 {
-	inventory_remove_item(itemName);
+	inventory_remove_item(item_name);
 	PLAYER_OBJ.holding_item = false;
 	PLAYER_OBJ.held_item = [];
 }

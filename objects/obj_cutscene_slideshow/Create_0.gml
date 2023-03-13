@@ -1,5 +1,5 @@
-frameCount = 0;
-cutsceneFrame = 0;
-cutsceneWidth = sprite_get_width(cutscene);
-fadeTime = 150;
+frame_count = 0;
+cutscene_frame = 0;
+cutscene_width = sprite_get_width(cutscene);
+fade_time = 150;
 opacity = 0;

@@ -10,7 +10,7 @@ function quest_hotdog_hunt_get_dogs(){
 function quest_hotdog_hunt_deliver_dogs(){
 	if inventory_find_name("hotdog box")
 	{
-		dialogueResponses("kevin_quest_deliver");
+		dialogue_responses("kevin_quest_deliver");
 		return true;
 	}
 	else 

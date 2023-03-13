@@ -6,7 +6,7 @@ function scr_load_game(){
 		//var _json = load_json_from_file(_file);
 		
 		
-		if (global.verifySaveIntegrity)
+		if (global.verify_save_integrity)
 		{
 			var _buffer = buffer_load(_file);
 			var _string = buffer_read(_buffer, buffer_string);
@@ -29,15 +29,15 @@ function scr_load_game(){
 		PLAYER_OBJ.x = _json[? "playerX"];
 		PLAYER_OBJ.y = _json[? "playerY"];
 		global.coins = _json[? "coins"];
-		global.musicTeleportSecret = _json[? "musicTeleportSecret"]
-		var loadRelationships = _json[? "relationships"]
-		global.relationships[? "sleeves"] = loadRelationships[? "sleeves"];
-		global.relationships[? "luco"] = loadRelationships[? "luco"];
-		global.relationships[? "blue"] = loadRelationships[? "blue"];
-		global.relationships[? "hat man"] = loadRelationships[? "hat man"];
-		global.tutorialMail = _json[? "tutorialMail"]
-		global.mailUnread = _json[? "mailUnread"];
-		global.autoSave = _json[? "autoSave"];
+		global.music_teleport_secret = _json[? "music_teleport_secret"]
+		var load_relationships = _json[? "relationships"]
+		global.relationships[? "sleeves"] = load_relationships[? "sleeves"];
+		global.relationships[? "luco"] = load_relationships[? "luco"];
+		global.relationships[? "blue"] = load_relationships[? "blue"];
+		global.relationships[? "hat man"] = load_relationships[? "hat man"];
+		global.tutorial_mail = _json[? "tutorial_mail"]
+		global.mail_unread = _json[? "mail_unread"];
+		global.auto_save = _json[? "auto_save"];
 		if(instance_exists(obj_time)) {instance_find(obj_time, 0).time = _json[? "time"]}
 		
 		PLAYER_OBJ.holding_item = _json[? "holdingItem"];
@@ -49,41 +49,41 @@ function scr_load_game(){
 		//dude im so fucking sorry
 		//i dont even need to point out how fucked up this is
 		//i do not know how to manage nested maps and i sure hope you do
-		ds_list_copy(global.pickedUpItems, _json[? "pickedUpItems"]);
-		ds_map_destroy(global.characterOptions);
-		global.characterOptions = ds_map_create();
-		var keys = ds_map_keys_to_array(_json[? "characterOptions"]);
+		ds_list_copy(global.picked_up_items, _json[? "picked_up_items"]);
+		ds_map_destroy(global.character_options);
+		global.character_options = ds_map_create();
+		var keys = ds_map_keys_to_array(_json[? "character_options"]);
 		for(var i = 0; i < array_length(keys); i++)
 		{
 			print(string_upper(keys[i]));
-			print(_json[? "characterOptions"][? keys[i]])
-			print(json_decode(_json[? "characterOptions"][? keys[i]])[? "room"])
-			global.characterOptions[? keys[i]] = ds_map_create();
-			global.characterOptions[? keys[i]][? "room"] = json_decode(_json[? "characterOptions"][? keys[i]])[? "room"];
-			print(json_decode(_json[? "characterOptions"][? keys[i]])[? "x"])
-			global.characterOptions[? keys[i]][? "x"] = json_decode(_json[? "characterOptions"][? keys[i]])[? "x"];
-			print(json_decode(_json[? "characterOptions"][? keys[i]])[? "y"])
-			global.characterOptions[? keys[i]][? "y"] = json_decode(_json[? "characterOptions"][? keys[i]])[? "y"];
-			print(json_decode(_json[? "characterOptions"][? keys[i]])[? "script"])
-			global.characterOptions[? keys[i]][? "script"] = json_decode(_json[? "characterOptions"][? keys[i]])[? "script"];
+			print(_json[? "character_options"][? keys[i]])
+			print(json_decode(_json[? "character_options"][? keys[i]])[? "room"])
+			global.character_options[? keys[i]] = ds_map_create();
+			global.character_options[? keys[i]][? "room"] = json_decode(_json[? "character_options"][? keys[i]])[? "room"];
+			print(json_decode(_json[? "character_options"][? keys[i]])[? "x"])
+			global.character_options[? keys[i]][? "x"] = json_decode(_json[? "character_options"][? keys[i]])[? "x"];
+			print(json_decode(_json[? "character_options"][? keys[i]])[? "y"])
+			global.character_options[? keys[i]][? "y"] = json_decode(_json[? "character_options"][? keys[i]])[? "y"];
+			print(json_decode(_json[? "character_options"][? keys[i]])[? "script"])
+			global.character_options[? keys[i]][? "script"] = json_decode(_json[? "character_options"][? keys[i]])[? "script"];
 			//like look at this. 
 			//taking a json string as a string, splitting it, grabbing the value then turning it into a single-length array?
 			//wow
 			//genius, honestly
-			var _data = scr_string_split(_json[? "characterOptions"][? keys[i]], ",");
+			var _data = scr_string_split(_json[? "character_options"][? keys[i]], ",");
 			var _strstart = string_delete(_data[0], string_length(_data[0]) - 2, 4);
 			var _strend = string_delete(_strstart, 1, 13);
-			global.characterOptions[? keys[i]][? "args"] = [_strend]
+			global.character_options[? keys[i]][? "args"] = [_strend]
 			
-			print(json_decode(_json[? "characterOptions"][? keys[i]])[? "sprite"])
-			global.characterOptions[? keys[i]][? "sprite"] = json_decode(_json[? "characterOptions"][? keys[i]])[? "sprite"];
+			print(json_decode(_json[? "character_options"][? keys[i]])[? "sprite"])
+			global.character_options[? keys[i]][? "sprite"] = json_decode(_json[? "character_options"][? keys[i]])[? "sprite"];
 		}
 		
 		
-		var loadQuests = json_parse(_json[? "quests"])
-		for(var i = 0; i < array_length(loadQuests); i++)
+		var load_quests = json_parse(_json[? "quests"])
+		for(var i = 0; i < array_length(load_quests); i++)
 		{
-			obj_quests.ds_quests[# 1, i] = loadQuests[i];
+			obj_quests.ds_quests[# 1, i] = load_quests[i];
 		}
 		
 
@@ -93,27 +93,27 @@ function scr_load_game(){
 		print(_json[? "inventory"]);
 		if _json[? "inventory"] != "" 
 		{
-			var _invArray = scr_string_split(_json[? "inventory"], "|")
+			var _inv_array = scr_string_split(_json[? "inventory"], "|")
 			
-			for(var i = 0; i < array_length(_invArray); i++)
+			for(var i = 0; i < array_length(_inv_array); i++)
 			{
-				//var _itemArray = scr_string_split(_invArray[i], ",");
-				var _itemArray = json_parse(_invArray[i]);
+				//var _item_array = scr_string_split(_inv_array[i], ",");
+				var _item_array = json_parse(_inv_array[i]);
 				
-				print("loading item: " + string(_itemArray));
-				for(var a = 0; a < array_length(_itemArray); a++)
+				print("loading item: " + string(_item_array));
+				for(var a = 0; a < array_length(_item_array); a++)
 				{	
-					_itemArray[a] = scr_string_trim(_itemArray[a]);
-					if scr_check_num(_itemArray[a]) _itemArray[a] = real(_itemArray[a]);
+					_item_array[a] = scr_string_trim(_item_array[a]);
+					if scr_check_num(_item_array[a]) _item_array[a] = real(_item_array[a]);
 				}
 				
-				//if array_length(_itemArray) > 13
+				//if array_length(_item_array) > 13
 				//{
-				//	inventory_add_letter(_itemArray[0], _itemArray[1],_itemArray[2],_itemArray[3],_itemArray[4],_itemArray[5],_itemArray[6],_itemArray[7],_itemArray[8],_itemArray[9],_itemArray[10])
+				//	inventory_add_letter(_item_array[0], _item_array[1],_item_array[2],_item_array[3],_item_array[4],_item_array[5],_item_array[6],_item_array[7],_item_array[8],_item_array[9],_item_array[10])
 				//}
 				//else
 				//{
-					inventory_add(_itemArray[0], _itemArray[1],_itemArray[2],_itemArray[3],_itemArray[4],_itemArray[5],json_parse(_itemArray[6]),json_parse(_itemArray[7]),json_parse(_itemArray[8]),json_parse(_itemArray[9]), _itemArray[10], _itemArray[11], _itemArray[12]);
+					inventory_add(_item_array[0], _item_array[1],_item_array[2],_item_array[3],_item_array[4],_item_array[5],json_parse(_item_array[6]),json_parse(_item_array[7]),json_parse(_item_array[8]),json_parse(_item_array[9]), _item_array[10], _item_array[11], _item_array[12]);
 				//}
 			}
 		}

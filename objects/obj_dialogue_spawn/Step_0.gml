@@ -1,4 +1,4 @@
-instance_create_depth(objX, objY, objDepth, obj);
+instance_create_depth(obj_x, obj_y, obj_depth, obj);
 
 if instance_exists(obj_parent_queue)
 {

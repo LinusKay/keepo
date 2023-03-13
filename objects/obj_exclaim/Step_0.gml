@@ -1,2 +1,2 @@
-y = y + (dsin(frameCount*2)/30);
-frameCount++;
+y = y + (dsin(frame_count*2)/30);
+frame_count++;

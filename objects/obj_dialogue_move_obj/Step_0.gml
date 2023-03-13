@@ -1,6 +1,6 @@
-global.characterOptions[? object.charName][? "x"] = newX
-global.characterOptions[? object.charName][? "y"] = newY
-global.characterOptions[? object.charName][? "room"] = newRoom
+global.character_options[? object.char_name][? "x"] = new_x
+global.character_options[? object.char_name][? "y"] = new_y
+global.character_options[? object.char_name][? "room"] = new_room
 
 if instance_exists(obj_parent_queue)
 {

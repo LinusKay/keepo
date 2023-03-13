@@ -1,7 +1,7 @@
 function quest_skull_delivery(){
 	if inventory_find_name("lost skull")
 	{
-		dialogueResponses("skull_delivered");
+		dialogue_responses("skull_delivered");
 		return true;
 	}
 	else 
@@ -15,7 +15,7 @@ function quest_skull_delivery_wizard()
 {
 	if inventory_find_name("lost skull")
 	{
-		dialogueResponses("skull_argue");
+		dialogue_responses("skull_argue");
 		return true;
 	}
 	else 

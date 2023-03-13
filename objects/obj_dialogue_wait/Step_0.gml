@@ -1,4 +1,4 @@
-if(frameCount >= waitTime) {
+if(frame_count >= waitTime) {
 	if instance_exists(obj_parent_queue)
 	{
 		with obj_parent_queue ticket--;	
@@ -9,4 +9,4 @@ if(frameCount >= waitTime) {
 	}
 	instance_destroy();
 }
-frameCount++
+frame_count++

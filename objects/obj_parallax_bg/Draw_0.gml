@@ -3,10 +3,10 @@
 
 
 var _p = .4;
-var _camWidth = camera_get_view_width(view_camera[0]);
-var _camHeight = camera_get_view_height(view_camera[0]);
-var _camx = PLAYER_OBJ.viewx - _camWidth/2;
-var _camy = PLAYER_OBJ.viewy - _camHeight/2;
+var _cam_width = camera_get_view_width(view_camera[0]);
+var _cam_height = camera_get_view_height(view_camera[0]);
+var _camx = PLAYER_OBJ.view_x - _cam_width/2;
+var _camy = PLAYER_OBJ.view_y - _cam_height/2;
 draw_sprite_tiled_ext(
 	image, 
 	0, 

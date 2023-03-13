@@ -1,2 +1,2 @@
 event_inherited()
-followDistance = 16
+follow_distance = 16

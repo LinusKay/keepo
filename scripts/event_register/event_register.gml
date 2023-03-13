@@ -13,35 +13,35 @@ function event_register_script(){
 		var ev = argument[0];
 		var objID = argument[1];
 	
-		if(!ds_map_exists(eventMap, ev))
+		if(!ds_map_exists(event_map, ev))
 		{
 			//add event to event map
-			var listenerList = ds_list_create();
+			var listener_list = ds_list_create();
 			
-			//add listener info to eventMap
-			ds_map_add_list(eventMap, ev, listenerList);
+			//add listener info to event_map
+			ds_map_add_list(event_map, ev, listener_list);
 		} 
 		else
 		{
-			var listenerList = eventMap[? ev];	
+			var listener_list = event_map[? ev];	
 		}
 		
 		//add listener info
-		var listenerInfo;
+		var listener_info;
 		
 		//add listenerID
-		listenerInfo[0] = objID;
+		listener_info[0] = objID;
 		
 		//add script and arguments
 		var len = argument_count - 2;
 		var i = 0; repeat(len)
 		{
-			listenerInfo[i+1] = argument[i+2];
+			listener_info[i+1] = argument[i+2];
 			i++;
 		}
 		
 		//add listener info to listener list
-		ds_list_add(listenerList, listenerInfo);
+		ds_list_add(listener_list, listener_info);
 	}
 
 }

@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.game_paused = false;
-global.textSpeed = .75;
+global.text_speed = .75;
 
-global.autoSave = false;
+global.auto_save = false;
 
 surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 
@@ -16,11 +16,11 @@ global.window_sizes = [
 
 global.hmac_key = "Ujxt8QY#ai$AuRmdKa@ypYbGnJ"
 
-global.verifySaveIntegrity = false;
+global.verify_save_integrity = false;
 
-global.textSpeed = .75;
+global.text_speed = .75;
 
-global.musicPaused = false;
-global.volumeMusic = 0;
-global.musicPlaying = noone;
-global.musicTeleportSecret = false;
+global.music_paused = false;
+global.volume_music = 0;
+global.music_playing = noone;
+global.music_teleport_secret = false;

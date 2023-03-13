@@ -9,4 +9,4 @@ response_gift_hate = "luco_gift_hate";
 response_mail_deny = "";
 
 
-event_register_script(event.rainStart, id, pyramid_confuse);
+event_register_script(event.rain_start, id, pyramid_confuse);

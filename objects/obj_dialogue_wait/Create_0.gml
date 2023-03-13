@@ -1,1 +1,2 @@
-frameCount = 0
+event_inherited()
+frame_count = 0

@@ -3,9 +3,9 @@
 depth = -bbox_bottom;
 z = 0
 jumping = false
-jumpHeight = 5
-jumpSpeed = 1
-yJump = y
+jump_height = 5
+jump_speed = 1
+y_jump = y
 
 accept_gift_love = false;
 accept_gift_like = false;
@@ -19,16 +19,16 @@ mail_response = "";
 
 reflection_inst = noone
 
-frameCount = 0;
+frame_count = 0;
 
-if charName != 0 && ds_map_exists(global.characterOptions, charName) && entityNPC
+if char_name != 0 && ds_map_exists(global.character_options, char_name) && entity_npc
 {
-	var _room = global.characterOptions[? charName][? "room"]
-	var _x = global.characterOptions[? charName][? "x"]
-	var _y = global.characterOptions[? charName][? "y"]
-	var _script = global.characterOptions[? charName][? "script"]
-	var _args = global.characterOptions[? charName][? "args"]
-	var _sprite = global.characterOptions[? charName][? "sprite"]
+	var _room = global.character_options[? char_name][? "room"]
+	var _x = global.character_options[? char_name][? "x"]
+	var _y = global.character_options[? char_name][? "y"]
+	var _script = global.character_options[? char_name][? "script"]
+	var _args = global.character_options[? char_name][? "args"]
+	var _sprite = global.character_options[? char_name][? "sprite"]
 	
 	// commented out for now
 	// prevents followers from staying spawned when enter new room
@@ -39,19 +39,19 @@ if charName != 0 && ds_map_exists(global.characterOptions, charName) && entityNP
 		if _y != y y = _y;
 	}
 	
-	if _script != entityActivateScript entityActivateScript = _script;
-	if _args != entityActivateArgs entityActivateArgs = _args;
+	if _script != entity_activate_script entity_activate_script = _script;
+	if _args != entity_activate_args entity_activate_args = _args;
 	if _sprite != sprite_index sprite_index = _sprite;
 }
 else
 {
-	global.characterOptions[? charName] = ds_map_create();
-	global.characterOptions[? charName][? "room"] = room
-	global.characterOptions[? charName][? "x"] = x
-	global.characterOptions[? charName][? "y"] = y
-	global.characterOptions[? charName][? "script"] = entityActivateScript
-	global.characterOptions[? charName][? "args"] = entityActivateArgs
-	global.characterOptions[? charName][? "sprite"] = sprite_index;
+	global.character_options[? char_name] = ds_map_create();
+	global.character_options[? char_name][? "room"] = room
+	global.character_options[? char_name][? "x"] = x
+	global.character_options[? char_name][? "y"] = y
+	global.character_options[? char_name][? "script"] = entity_activate_script
+	global.character_options[? char_name][? "args"] = entity_activate_args
+	global.character_options[? char_name][? "sprite"] = sprite_index;
 }
 
-event_register_script(event.playerEmoteBubbleHeart, id, npcHeartResponse, id)
+event_register_script(event.player_emote_bubble_heart, id, npcHeartResponse, id)

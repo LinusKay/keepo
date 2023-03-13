@@ -1,4 +1,4 @@
-if frameCount % irandom_range(100,250) == 0 {
+if frame_count % irandom_range(100,250) == 0 {
 	instance_create_layer(
 		-300,
 		irandom_range(0,room_height), 
@@ -6,4 +6,4 @@ if frameCount % irandom_range(100,250) == 0 {
 		obj_cloud
 	);
 }
-frameCount++;
+frame_count++;

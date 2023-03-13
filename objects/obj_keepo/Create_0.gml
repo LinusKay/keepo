@@ -154,7 +154,7 @@ global.debug_mode = false;
 global.high_contrast = false
 
 global.monument_teleport_unlocked = false;
-dashUnlocked = true;
+dash_unlocked = true;
 enum charoption
 {
 	x,
@@ -163,23 +163,23 @@ enum charoption
 	script,
 	args
 }
-global.characterOptions = ds_map_create()
-//global.characterOptions[? "luco"] = ds_map_create();
-//global.characterOptions[? "luco"][? "room"] = rm_outside;
-//global.characterOptions[? "luco"][? "x"] = 271;
-//global.characterOptions[? "luco"][? "y"] = 264;
-//global.characterOptions[? "luco"][? "script"] = dialogueResponses;
-//global.characterOptions[? "luco"][? "args"] = ["luco_ravioli_1"];
-//global.characterOptions[? "luco"][? "sprite"] = spr_luco;
+global.character_options = ds_map_create()
+//global.character_options[? "luco"] = ds_map_create();
+//global.character_options[? "luco"][? "room"] = rm_outside;
+//global.character_options[? "luco"][? "x"] = 271;
+//global.character_options[? "luco"][? "y"] = 264;
+//global.character_options[? "luco"][? "script"] = dialogue_responses;
+//global.character_options[? "luco"][? "args"] = ["luco_ravioli_1"];
+//global.character_options[? "luco"][? "sprite"] = spr_luco;
 
-global.latestGift = [];
+global.latest_gift = [];
 
 
 
-global.relationshipLevelDislike = -3;
-global.relationshipLevelNeutral = 0;
-global.relationshipLevelFriend = 5;
-global.relationshipLevelLove = 10;
+global.relationship_level_dislike = -3;
+global.relationship_level_neutral = 0;
+global.relationship_level_friend = 5;
+global.relationship_level_love = 10;
 
 //sleeves, luco, blue, hatman
 global.relationships = ds_map_create();
@@ -188,16 +188,16 @@ global.relationships[? "luco"] = 0;
 global.relationships[? "blue"] = 0;
 global.relationships[? "hat man"] = 0;
 
-global.tutorialMail = false;
-global.mailUnread = false;
+global.tutorial_mail = false;
+global.mail_unread = false;
 mail_init();
 //mail_create("???", "[its completely illegible]", 0, spr_letter, false, obj_pyramid, "luco", obj_sleeves, "sleeves", "sleeves_letter_2");
 
-global.roomTitle = "";
+global.room_title = "";
 
 global.inventory = ds_list_create();
 
-global.pickedUpItems = ds_list_create();
+global.picked_up_items = ds_list_create();
 
 global.coins = 0;
 
@@ -205,19 +205,19 @@ global.camera_target = PLAYER_OBJ;
 global.camera_width = 384;
 global.camera_height = 216;
 
-global.windowOpen = false;
-viewx = 0;
-viewy = 0;
-camWidth = camera_get_view_width(view_camera[0]);
-camHeight = camera_get_view_height(view_camera[0]);
-xModifier = 0;
-yModifier = 0;
-zoomModifier = 1;
-zoomSpeed = 0.1;
-viewSpeed = 0.1;
+global.window_open = false;
+view_x = 0;
+view_y = 0;
+cam_width = camera_get_view_width(view_camera[0]);
+cam_height = camera_get_view_height(view_camera[0]);
+x_modifier = 0;
+y_modifier = 0;
+zoom_modifier = 1;
+zoom_speed = 0.1;
+view_speed = 0.1;
 
-xspd = 0;
-yspd = 0;
+x_spd = 0;
+y_spd = 0;
 
 move_spd = 1;
 sprint_spd = 2;
@@ -405,7 +405,7 @@ enum trails
 	stars = 6,
 }
 
-global.trailColour = trail_array[trails.space_dust];
+global.trail_colour = trail_array[trails.space_dust];
 #endregion
 
 #region CHARACTER DIALOGUE PRESETS

@@ -8,9 +8,9 @@ function quest_scents_get_nose(){
 }
 
 function quest_scents_deliver_nose(){
-	if ds_list_find_value(global.latestGift[1], 0) == "nose"
+	if ds_list_find_value(global.latest_gift[1], 0) == "nose"
 	{
-		if object_get_name(global.latestGift[0].object_index) == "obj_old_man_small"
+		if object_get_name(global.latest_gift[0].object_index) == "obj_old_man_small"
 		{
 			global.quest_scents_deliver_nose = true;
 			return true;

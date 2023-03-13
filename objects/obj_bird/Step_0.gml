@@ -12,12 +12,12 @@ if !flying
 }
 else 
 {
-	if frameCount > 5
+	if frame_count > 5
 	{
 		if current_fly_speed < fly_speed { current_fly_speed += lerp(current_fly_speed, fly_speed, 0.0001); }
 		x += lengthdir_x(current_fly_speed, fly_direction);
 		y += lengthdir_y(current_fly_speed, fly_direction);
 		sprite_index = spr_bird_fly;
 	}
-	frameCount++;
+	frame_count++;
 }

@@ -6,25 +6,25 @@ function event_fire(){
 		var ev = argument[0];
 	
 		//check if there is an event entry
-		if(ds_map_exists(eventMap, ev))
+		if(ds_map_exists(event_map, ev))
 		{
 			//get listeners
-			var listenerList = eventMap[? ev];
+			var listener_list = event_map[? ev];
 			
-			var len = ds_list_size(listenerList);
+			var len = ds_list_size(listener_list);
 			
-			var listenerInfo, listener, script, args;
+			var listener_info, listener, script, args;
 			var i = 0; repeat(len)
 			{
 				//get variables for current listener
-				listenerInfo = listenerList[| i];
-				listener = listenerInfo[0];
-				script = listenerInfo[1];
+				listener_info = listener_list[| i];
+				listener = listener_info[0];
+				script = listener_info[1];
 				
-				var lenArgs = array_length(listenerInfo) - 2;
+				var len_args = array_length(listener_info) - 2;
 				var unregister = false;
 				
-				if(lenArgs <= 0)
+				if(len_args <= 0)
 				{
 					if(instance_exists(listener))
 					{
@@ -36,8 +36,8 @@ function event_fire(){
 				{
 					if(instance_exists(listener))
 					{
-						args = array_create(lenArgs, 0);
-						array_copy(args, 0, listenerInfo, 2, lenArgs);
+						args = array_create(len_args, 0);
+						array_copy(args, 0, listener_info, 2, len_args);
 						with(listener) unregister = scr_execute_alt(script, args);
 					}
 					else unregister = true;

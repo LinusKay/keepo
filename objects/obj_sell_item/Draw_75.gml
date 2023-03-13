@@ -7,11 +7,11 @@ draw_text(x1 + 200, y1 + 100, "Value: " + string(ds_list_find_value(item, 2)));
 
 
 // item selection
-keyUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
-keyDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
-choice += keyDown - keyUp;
-if keyUp play_sfx(snd_click4);
-if keyDown play_sfx(snd_click4, 0.8);
+key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
+key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
+choice += key_down - key_up;
+if key_up play_sfx(snd_click4);
+if key_down play_sfx(snd_click4, 0.8);
 	
 // if go up on first item select last
 if choice < 0 choice = 1;
@@ -44,14 +44,14 @@ if keyboard_check_pressed(vk_space)
 	PLAYER_OBJ.move_freeze = false;
 }
 
-//if global.coins >= itemCost
+//if global.coins >= item_cost
 //{
-//	global.coins -= itemCost
+//	global.coins -= item_cost
 //	play_sfx(snd_pop, random_range(0.8, 1.2));
-//	inventory_add(itemName, itemDescription, itemCost, sprite_index, canGift, false, lovedBy, likedBy, dislikedBy, hatedBy, questItem, questID, questStage);
-//	ds_list_add(global.pickedUpItems, item_room_id);
-//	event_fire(event.playerPickUpItem);
-//	notification("NEW ITEM: " + itemName);	
+//	inventory_add(item_name, item_description, item_cost, sprite_index, can_gift, false, loved_by, liked_by, disliked_by, hated_by, quest_item, questID, questStage);
+//	ds_list_add(global.picked_up_items, item_room_id);
+//	event_fire(event.player_pick_up_item);
+//	notification("NEW ITEM: " + item_name);	
 //}
 //else
 //{

@@ -5,19 +5,19 @@ draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 
 
-frameCount++;
+frame_count++;
 
 
 // draw dash cooldown bar
-if !global.windowOpen 
+if !global.window_open 
 	{
-		if dashUnlocked {
+		if dash_unlocked {
 			draw_sprite_ext(spr_dash_bar, (dash_countdown / dash_timer) * sprite_get_number(spr_dash_bar), 10, 10, 5, 5, 0, c_white, 1)
 		}
 	}
 }
 
-if global.musicPaused
+if global.music_paused
 {
 	draw_sprite_ext(spr_muted, 0, RESOLUTION_W - 70, 10, 5, 5, 0, c_white, 1);	
 }

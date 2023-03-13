@@ -1,4 +1,4 @@
-if frameCount = 1
+if frame_count = 1
 {
 	if variable_instance_exists(id, "dialogue_object") 
 		{
@@ -7,54 +7,54 @@ if frameCount = 1
 				if instance_exists(dialogue_object)
 				{
 					dialogue_object.sprite_index = sprite_change;
-					if charFocus camera_zoom_character(dialogue_object)
+					if char_focus camera_zoom_character(dialogue_object)
 				}
 			}
 	}
 	if variable_instance_exists(id, "sound") if sound != noone play_sfx(sound);
 }
-textProgress += global.textSpeed;
+text_progress += global.text_speed;
 close_windows_except(obj_textbox);
 
 if shake
 {
-	if frameCount % shakeInterval == 0 
+	if frame_count % shake_interval == 0 
 	{
-		if shakeLeft
+		if shake_left
 		{
-			x1 -= shakeDistance;
-			x2 -= shakeDistance;
+			x1 -= shake_distance;
+			x2 -= shake_distance;
 		}
 		else
 		{
-			x1 += shakeDistance;
-			x2 += shakeDistance;
+			x1 += shake_distance;
+			x2 += shake_distance;
 		}
-		shakeLeft = !shakeLeft;
-		shakeRight = !shakeRight;
+		shake_left = !shake_left;
+		shake_right = !shake_right;
 	}
 	
 }
-frameCount++;
+frame_count++;
 //cycle responses
-keyUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
-keyDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
-responseSelected += keyDown - keyUp;
+key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
+key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
+response_selected += key_down - key_up;
 
 var _max = array_length(responses) - 1;
 var _min = 0;
-if responseSelected > _max responseSelected = _min;
-if responseSelected < _min responseSelected = _max;
+if response_selected > _max response_selected = _min;
+if response_selected < _min response_selected = _max;
 
 //end message
 if (keyboard_check_pressed(vk_space))
 {
-	var _messageLength = string_length(message);
-	if textProgress >= _messageLength
+	var _message_length = string_length(message);
+	if text_progress >= _message_length
 	{
 		if responses[0] != -1
 		{
-			with originInstance	dialogueResponses(other.responseScripts[other.responseSelected]);
+			with origin_instance	dialogue_responses(other.response_scripts[other.response_selected]);
 		}
 		if instance_exists(obj_parent_queue)
 		{
@@ -74,9 +74,9 @@ if (keyboard_check_pressed(vk_space))
 	}
 	else
 	{
-		if textProgress > 2
+		if text_progress > 2
 		{
-			textProgress = _messageLength;	
+			text_progress = _message_length;	
 		}
 	}
 }

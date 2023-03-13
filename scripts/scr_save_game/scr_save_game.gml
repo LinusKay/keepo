@@ -7,34 +7,34 @@ function scr_save_game()
 	_map[? "playerX"] = PLAYER_OBJ.x;
 	_map[? "playerY"] = PLAYER_OBJ.y;
 	_map[? "coins"] = global.coins;
-	_map[? "musicTeleportSecret"] = global.musicTeleportSecret;
+	_map[? "music_teleport_secret"] = global.music_teleport_secret;
 	
 	if(instance_exists(obj_time)) {
 		_map[? "time"] = obj_time.time	
-		_map[? "timeDirection"] = obj_time.timeDirection
+		_map[? "time_direction"] = obj_time.time_direction
 	}
 	else {
 		_map[? "time"] = 0
-		_map[? "timeDirection"] = 0
+		_map[? "time_direction"] = 0
 	}
 	
 	ds_map_add_map(_map, "relationships", global.relationships);
 	
-	_map[? "tutorialMail"] = global.tutorialMail;
-	_map[? "mailUnread"] = global.mailUnread;
-	_map[? "autoSave"] = global.autoSave;
+	_map[? "tutorial_mail"] = global.tutorial_mail;
+	_map[? "mail_unread"] = global.mail_unread;
+	_map[? "auto_save"] = global.auto_save;
 	
 	_map[? "holdingItem"] = PLAYER_OBJ.holding_item;
 	if PLAYER_OBJ.holding_item	ds_map_add_list(_map, "heldItem", PLAYER_OBJ.held_item)
 	
 	//save character options
-	var dummyCharacterOptions = ds_map_create();
-	ds_map_copy(dummyCharacterOptions, global.characterOptions);
-	var keys = ds_map_keys_to_array(dummyCharacterOptions);
-	ds_map_add_map(_map, "characterOptions", dummyCharacterOptions);
+	var dummy_character_options = ds_map_create();
+	ds_map_copy(dummy_character_options, global.character_options);
+	var keys = ds_map_keys_to_array(dummy_character_options);
+	ds_map_add_map(_map, "character_options", dummy_character_options);
 	for(var i = 0; i < array_length(keys); i++)
 	{
-		_map[? "characterOptions"][? keys[i]] = json_encode(dummyCharacterOptions[? keys[i]]);
+		_map[? "character_options"][? keys[i]] = json_encode(dummy_character_options[? keys[i]]);
 	}
 	
 	//save quest progress
@@ -48,11 +48,11 @@ function scr_save_game()
 	_map[? "quests"] += "]";
 	
 	//save tracked quests
-	ds_map_add_list(_map, "questsTracked", global.trackedQuests);
+	ds_map_add_list(_map, "questsTracked", global.tracked_quests);
 	
-	var _pickedUpItems = ds_list_create();
-	ds_list_copy(_pickedUpItems, global.pickedUpItems);
-	ds_map_add_list(_map, "pickedUpItems", _pickedUpItems);
+	var _picked_up_items = ds_list_create();
+	ds_list_copy(_picked_up_items, global.picked_up_items);
+	ds_map_add_list(_map, "picked_up_items", _picked_up_items);
 	
 	// save inventory
 	_map[? "inventory"] = inventory_print();
@@ -60,7 +60,7 @@ function scr_save_game()
 	//save all to string
 	var _string = json_encode(_map);
 	
-	if global.verifySaveIntegrity
+	if global.verify_save_integrity
 	{
 		//Make an HMAC hash
 		var _hmac_hash = sha1_string_utf8_hmac(global.hmac_key, _string);
@@ -76,8 +76,8 @@ function scr_save_game()
 	
 	//destroy data
 	ds_map_destroy(_map);
-	ds_map_destroy(dummyCharacterOptions);
-	ds_list_destroy(_pickedUpItems);
+	ds_map_destroy(dummy_character_options);
+	ds_list_destroy(_picked_up_items);
 	print("Game saved!");
 	PLAYER_OBJ.save_message_timer = PLAYER_OBJ.save_message_timer_default;
 	notification("SAVED");

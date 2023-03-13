@@ -1,6 +1,6 @@
 /// @param response
-function dialogueResponses(){
-	event_fire(event.conversationStart)
+function dialogue_responses(){
+	event_fire(event.conversation_start)
 	switch(argument[0])
 	{
 		case 0: break
@@ -21,7 +21,7 @@ function dialogueResponses(){
 			dialogue_textbox("i'm kinda cold :(", 0, dialogue_presets.sleeves_sad, -1)
 			dialogue_textbox("could u bring me some soup?", 0, dialogue_presets.sleeves_default, -1)
 			dialogue_quest_start(1)
-			dialogue_change_obj_script(obj_sleeves, dialogueResponses, ["sleeves_cold_2"])
+			dialogue_change_obj_script(obj_sleeves, dialogue_responses, ["sleeves_cold_2"])
 			print(string(instance_number(obj_parent_queue)))
 			break
 		case "sleeves_cold_2":
@@ -31,7 +31,7 @@ function dialogueResponses(){
 			dialogue_textbox("soup!! u found some!!", 0, dialogue_presets.sleeves_happy)
 			dialogue_textbox("thank uuuuuu keepo :))", 0, dialogue_presets.sleeves_happy)
 			dialogue_textbox("*shluuuurpp*")
-			dialogue_change_obj_script(obj_sleeves, dialogueResponses, ["sleeves_soup_talk"])
+			dialogue_change_obj_script(obj_sleeves, dialogue_responses, ["sleeves_soup_talk"])
 			break
 		case "sleeves_soup_talk":
 			camera_zoom_character(obj_sleeves)
@@ -98,7 +98,7 @@ function dialogueResponses(){
 			dialogue_textbox("!!!")
 			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_walk_shock)
 			dialogue_move_obj(obj_pyramid_blank, rm_ext_town, 1296, 560)
-			dialogue_change_obj_script(obj_pyramid_blank, dialogueResponses, ["luco_discover_2"])
+			dialogue_change_obj_script(obj_pyramid_blank, dialogue_responses, ["luco_discover_2"])
 			dialogue_path_start(obj_pyramid_blank, pth_luco_run_1, 2, path_action_stop, true)
 			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank)
 			dialogue_fade_out(obj_pyramid_blank, 0.1)
@@ -112,7 +112,7 @@ function dialogueResponses(){
 			dialogue_textbox("!!!!!!")
 			dialogue_change_sprite(obj_pyramid_blank, spr_luco_blank_walk_shock)
 			dialogue_move_obj(obj_pyramid_blank, rm_ext_town, 1296, 560)
-			dialogue_change_obj_script(obj_pyramid_blank, dialogueResponses, ["luco_discover_3"])
+			dialogue_change_obj_script(obj_pyramid_blank, dialogue_responses, ["luco_discover_3"])
 			var _path = path_create( 
 				[
 					[obj_pyramid_blank.x, obj_pyramid_blank.y],
@@ -132,7 +132,7 @@ function dialogueResponses(){
 			dialogue_textbox("I have lost my ravioli recipe!!!", 0, dialogue_presets.luco_shock)
 			dialogue_textbox("I require my ravioli recipe!!!", 0, dialogue_presets.luco_shock)
 			dialogue_quest_start(2)
-			dialogue_change_obj_script(obj_pyramid, dialogueResponses, ["luco_ravioli_2"])
+			dialogue_change_obj_script(obj_pyramid, dialogue_responses, ["luco_ravioli_2"])
 			//dialogue_move_obj(obj_pyramid, rm_forest, 239, 239)
 			break
 		case "luco_ravioli_2": 
@@ -141,7 +141,7 @@ function dialogueResponses(){
 		case "luco_ravioli_3":
 			dialogue_textbox("MY RECIPE!!!", 0, dialogue_presets.luco_shock, -1)
 			dialogue_textbox("THANK YOU KEEPO!", 0, dialogue_presets.luco_default, -1)
-			dialogue_change_obj_script(obj_pyramid, dialogueResponses, ["luco_good_day"])
+			dialogue_change_obj_script(obj_pyramid, dialogue_responses, ["luco_good_day"])
 			break
 		case "luco_good_day": dialogue_textbox("Have a good day, keepo.", 0, dialogue_presets.luco_default, -1) break
 		case "luco_exclaim": dialogue_textbox("!!!", 0, dialogue_presets.luco_shock) break
@@ -204,11 +204,11 @@ function dialogueResponses(){
 			break
 		case "hat_man_1_what":
 			dialogue_textbox("HAT HAT HAT HAT HAT HAT HAT HAT HAT HAT HAT HAT", 0, dialogue_presets.hat_sad, -1, 10)
-			dialogue_change_obj_script(obj_hat_man, dialogueResponses, ["hat_man_sob"])
+			dialogue_change_obj_script(obj_hat_man, dialogue_responses, ["hat_man_sob"])
 			break
 		case "hat_man_1_hat":
 			dialogue_textbox("hat :)", 0, dialogue_presets.hat_happy)
-			dialogue_change_obj_script(obj_hat_man, dialogueResponses, ["hat_man_1_hat"])
+			dialogue_change_obj_script(obj_hat_man, dialogue_responses, ["hat_man_1_hat"])
 			break
 		case "hat_man_sob":
 			dialogue_textbox("they are sobbing and shaking into the brim of their hat")
@@ -345,11 +345,11 @@ function dialogueResponses(){
 		#region BULL
 		case "bull_stare":
 			scr_new_textbox("They are staring off into the horizon")
-			dialogue_change_obj_script(obj_bull, dialogueResponses, ["bull_stare_2"])
+			dialogue_change_obj_script(obj_bull, dialogue_responses, ["bull_stare_2"])
 			break
 		case "bull_stare_2":
 			dialogue_textbox("Do you mind? I am staring off into the horizon.", 0, dialogue_presets.bull_default)
-			dialogue_change_obj_script(obj_bull, dialogueResponses, ["bull_stare"])
+			dialogue_change_obj_script(obj_bull, dialogue_responses, ["bull_stare"])
 			break
 		#endregion
 			
@@ -375,7 +375,7 @@ function dialogueResponses(){
 			dialogue_textbox("We both LOOOOOOOooOoOOoOOOOoOoOoOoOOVe hotdogs", 0, dialogue_presets.hotdog_default)
 			dialogue_textbox("aint that right bud?", 0, dialogue_presets.hotdog_default)
 			dialogue_textbox("you betcha, bud", 0, dialogue_presets.star_smile)
-			dialogue_change_obj_script(obj_hotdog_friend, dialogueResponses, ["hotdog_friend_munch"])
+			dialogue_change_obj_script(obj_hotdog_friend, dialogue_responses, ["hotdog_friend_munch"])
 			break
 		#endregion
 		
@@ -391,7 +391,7 @@ function dialogueResponses(){
 			dialogue_textbox("I wish I could smell them again...", 0, dialogue_presets.old_man_small_default)
 			dialogue_textbox("But that's bein old for ya!", 0, dialogue_presets.old_man_small_default)
 			dialogue_quest_start(3)
-			dialogue_change_obj_script(obj_old_man_small, dialogueResponses, ["old_man_quest_middle"])
+			dialogue_change_obj_script(obj_old_man_small, dialogue_responses, ["old_man_quest_middle"])
 			break
 		case "old_man_quest_middle":
 			camera_zoom_character(obj_old_man_small)
@@ -409,7 +409,7 @@ function dialogueResponses(){
 			dialogue_textbox("I've never sniffed so good in my life!", 0, dialogue_presets.old_man_small_nose)
 			dialogue_textbox("Thank you so, so much, little one.", 0, dialogue_presets.old_man_small_nose)
 			dialogue_textbox("Giorgio! Giorgio! Lookame!!", 0, dialogue_presets.old_man_small_nose)
-			dialogue_change_obj_script(obj_old_man_small, dialogueResponses, ["old_man_sniff"])
+			dialogue_change_obj_script(obj_old_man_small, dialogue_responses, ["old_man_sniff"])
 			break
 		case "old_man_sniff":
 			dialogue_textbox("*sniff sniff*", 0, dialogue_presets.old_man_small_nose)
@@ -437,7 +437,7 @@ function dialogueResponses(){
 			dialogue_textbox("WHAT!!", 0, dialogue_presets.skull_default)
 			dialogue_textbox("WHADDYA MEAN NO??", 0, dialogue_presets.skull_default)
 			dialogue_textbox("LOOK GUY I DONT WANT YOUR HELP ANYWAY", 0, dialogue_presets.skull_default)
-			dialogue_change_obj_script(obj_skull, dialogueResponses, ["skull_intro_no"])
+			dialogue_change_obj_script(obj_skull, dialogue_responses, ["skull_intro_no"])
 			break
 		case "skull_intro_no":
 			dialogue_textbox("OH LOOKIE WHOS BACK IN TOWN", 0, dialogue_presets.skull_default)
@@ -452,7 +452,7 @@ function dialogueResponses(){
 			dialogue_textbox("*RATTLE RATTLE*", 0, dialogue_presets.skull_default)
 			dialogue_textbox("THANKS A LOT PAL!!!!!", 0, dialogue_presets.skull_default)
 			dialogue_quest_advance(quest.skull_delivery)
-			dialogue_change_obj_script(obj_skeleton, dialogueResponses, ["skeleton_rattle"])
+			dialogue_change_obj_script(obj_skeleton, dialogue_responses, ["skeleton_rattle"])
 			break
 		case "skeleton_rattle":
 			play_sfx(snd_rattle, irandom_range(0.8, 1.2))
@@ -479,7 +479,7 @@ function dialogueResponses(){
 			dialogue_item_remove("hotdog box")
 			dialogue_textbox("t h a n k  y o u ,  s m a l l", 0, dialogue_presets.kevin_default)
 			dialogue_quest_finish(quest.hotdog_hunt)
-			dialogue_change_obj_script(obj_hotdog_stand, dialogueResponses, ["kevin_intro"])
+			dialogue_change_obj_script(obj_hotdog_stand, dialogue_responses, ["kevin_intro"])
 			break
 		case "kevin_intro":
 			dialogue_textbox("t h a n k i n g  t h e  s m a l l", 0, dialogue_presets.kevin_default)
@@ -501,7 +501,7 @@ function dialogueResponses(){
 			dialogue_textbox("Mower's carked it. No idea where I'm gonna get a new one.", 0, dialogue_presets.tony_default)
 			dialogue_textbox("Let me know if you see one anywhere I guess...", 0, dialogue_presets.tony_default)
 			dialogue_quest_start(quest.mow_problem)
-			dialogue_change_obj_script(obj_tony, dialogueResponses, ["tony_intro"])
+			dialogue_change_obj_script(obj_tony, dialogue_responses, ["tony_intro"])
 			break
 		case "tony_give_lawnmower":
 			dialogue_textbox("G'day, champion. What's thi-", 0, dialogue_presets.tony_default)
@@ -518,7 +518,7 @@ function dialogueResponses(){
 			dialogue_textbox("It's enough to make an old man cry", 0, dialogue_presets.tony_default)
 			dialogue_textbox("...", 0, dialogue_presets.tony_cry)
 			dialogue_change_sprite(obj_tony, spr_tony)
-			dialogue_change_obj_script(obj_tony, dialogueResponses, ["tony_intro"])
+			dialogue_change_obj_script(obj_tony, dialogue_responses, ["tony_intro"])
 			break
 		#endregion
 		
@@ -556,14 +556,14 @@ function dialogueResponses(){
 			dialogue_textbox("uhh.... uh.h. ..", 0, dialogue_presets.man_default)
 			dialogue_textbox("wh- who-", 0, dialogue_presets.man_default)
 			dialogue_textbox("please leave my house...", 0, dialogue_presets.man_default)
-			dialogue_change_obj_script(obj_man, dialogueResponses, ["man_intro_2"])
+			dialogue_change_obj_script(obj_man, dialogue_responses, ["man_intro_2"])
 			break
 		case "man_intro_2":
 			dialogue_textbox("whuh", 0, dialogue_presets.man_default)
 			dialogue_textbox("oh...", 0, dialogue_presets.man_default)
 			dialogue_textbox("you're still here", 0, dialogue_presets.man_default)
 			dialogue_textbox("p-please leave", 0, dialogue_presets.man_default)
-			dialogue_change_obj_script(obj_man, dialogueResponses, ["man_intro_3"])
+			dialogue_change_obj_script(obj_man, dialogue_responses, ["man_intro_3"])
 			break
 		case "man_intro_3":
 			dialogue_textbox("ohhh man ok ok..", 0, dialogue_presets.man_default)
@@ -572,7 +572,7 @@ function dialogueResponses(){
 			dialogue_textbox("i... i'd like-", 0, dialogue_presets.man_default)
 			dialogue_emote_bubble(obj_man, obj_emote_frown)
 			dialogue_textbox("can you please go?", 0, dialogue_presets.man_default)
-			dialogue_change_obj_script(obj_man, dialogueResponses, ["man_intro_4"])
+			dialogue_change_obj_script(obj_man, dialogue_responses, ["man_intro_4"])
 			break
 		case "man_intro_4":
 			dialogue_textbox("ha ha..", 0, dialogue_presets.man_default)
@@ -580,7 +580,7 @@ function dialogueResponses(){
 			dialogue_textbox("...", 0, dialogue_presets.man_default)
 			dialogue_textbox("ok just dont break anything...", 0, dialogue_presets.man_default)
 			dialogue_quest_start(quest.dont_break_anything)
-			dialogue_change_obj_script(obj_man, dialogueResponses, ["man_intro_5"])
+			dialogue_change_obj_script(obj_man, dialogue_responses, ["man_intro_5"])
 			break
 		case "man_intro_5":
 			dialogue_textbox("...", 0, dialogue_presets.man_default)
@@ -605,15 +605,15 @@ function dialogueResponses(){
 			dialogue_textbox("bllblblbllbllblblbll", 0, dialogue_presets.boots)
 			dialogue_textbox("lllbllblbllbll, blblllb?", 0, dialogue_presets.boots)
 			dialogue_textbox(" 	♡( ◡‿◡ )", 0, dialogue_presets.boots_kaomoji)
-			dialogue_change_obj_script(obj_boots, dialogueResponses, ["boots_smooch"])
+			dialogue_change_obj_script(obj_boots, dialogue_responses, ["boots_smooch"])
 			break
 		case "boots_smooch":
 			dialogue_textbox("(っ˘з(˘⌣˘ ) ♡", 0, dialogue_presets.boots_kaomoji)
-			dialogue_change_obj_script(obj_boots, dialogueResponses, ["boots_cute"])
+			dialogue_change_obj_script(obj_boots, dialogue_responses, ["boots_cute"])
 			break
 		case "boots_cute":
 			dialogue_textbox("♡(｡- ω -)", 0, dialogue_presets.boots_kaomoji)
-			dialogue_change_obj_script(obj_boots, dialogueResponses, ["boots_smooch"])
+			dialogue_change_obj_script(obj_boots, dialogue_responses, ["boots_smooch"])
 			break
 		#endregion
 		
@@ -657,21 +657,21 @@ function dialogueResponses(){
 			break
 		case "drawer_1_open":
 			dialogue_textbox("its full of ___")
-			dialogue_change_obj_script(obj_drawers, dialogueResponses, ["drawer_2"])
+			dialogue_change_obj_script(obj_drawers, dialogue_responses, ["drawer_2"])
 			break
 		case "drawer_2":
 			dialogue_textbox("open the second draw?", 0, noone, ["drawer_2_open:sure", "blank:no way"])
 			break
 		case "drawer_2_open":
 			dialogue_textbox("its full of ___")
-			dialogue_change_obj_script(obj_drawers, dialogueResponses, ["drawer_3"])
+			dialogue_change_obj_script(obj_drawers, dialogue_responses, ["drawer_3"])
 			break
 		case "drawer_3":
 			dialogue_textbox("open the third draw?", 0, noone, ["drawer_3_open:sure", "blank:no way"])
 			break
 		case "drawer_3_open":
 			dialogue_textbox("there is no third draw")
-			dialogue_change_obj_script(obj_drawers, dialogueResponses, ["drawer_4"])
+			dialogue_change_obj_script(obj_drawers, dialogue_responses, ["drawer_4"])
 			break
 		case "drawer_4":
 			dialogue_textbox("...try to open the third draw anyway?", 0, noone, ["drawer_4_open:sure", "blank:no way"])
@@ -698,7 +698,7 @@ function dialogueResponses(){
 			dialogue_textbox("No new mail")
 			break
 		case "mail_hotdog":
-			dialogue_textbox("The mailbox is overflowing with hotdogs.")
+			dialogue_textbox("The mail_box is overflowing with hotdogs.")
 			break
 		case "vase_break":
 			dialogue_textbox("its a lovely vase filled with flowers")
@@ -719,7 +719,7 @@ function dialogueResponses(){
 			dialogue_textbox("...", 0, dialogue_presets.man_default)
 			dialogue_emote_bubble(obj_man, obj_emote_frown)
 			dialogue_textbox(":(", 0, dialogue_presets.man_default)
-			dialogue_change_obj_script(obj_man, dialogueResponses, ["man_intro_6"])
+			dialogue_change_obj_script(obj_man, dialogue_responses, ["man_intro_6"])
 			break
 	#endregion
 		

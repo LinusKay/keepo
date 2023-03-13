@@ -1,61 +1,3 @@
-/// @desc Create new textbox object
-/// @param message
-/// @param background
-/// @param character portrait sprite
-/// @param font
-/// @param responses[]
-/// @param character to change sprite of
-/// @param sprite to change to
-function scr_new_textbox(){
-	var _obj;
-	if instance_exists(obj_parent_queue_play) _obj = obj_text_queued; else _obj = obj_textbox;
-	if(!layer_exists("text")){ layer_create(0, "text") }
-	with instance_create_layer(0, 0, "text", _obj)
-	{
-		dialogue_object = noone;
-		sound = noone;
-		message = argument[0];
-		if instance_exists(other) originInstance = other.id else originInstance = noone;
-		if argument_count > 1 background = argument[1] else background = 0;
-		if argument_count > 2 portrait_spr = argument[2] else portrait_spr = noone;
-		if argument_count > 3 font = argument[3] else font = fnt_block_sans;
-		if argument_count > 4 && argument[4] != -1
-		{
-			// trim unique identifiers from responses and store
-			responses = argument[4];
-			for(var i = 0; i < array_length(responses); i++)
-			{
-				var _idPosition = string_pos(":", responses[i]);
-				responseScripts[i] = string_copy(responses[i], 1, _idPosition - 1);
-				responses[i] = string_delete(responses[i], 1, _idPosition);
-			}
-		}
-		else
-		{
-			responses = [-1];
-			responseScripts = [-1];
-		}
-		if argument_count > 5
-		{
-			objChangeSprite = argument[5];	
-			sprChangeSprite = argument[6];	
-		}
-		else
-		{
-			objChangeSprite = noone;
-			sprChangeSprite = noone;
-		}
-		if argument_count > 6 shake = argument[6] else shake = false;
-	}
-	with PLAYER_OBJ
-	{
-		if PLAYER_OBJ.move_freeze == false
-		{
-			PLAYER_OBJ.move_freeze = true;
-		}
-	}
-}
-
 ///@arg text
 ///@arg background
 ///@arg character dialogue preset
@@ -77,7 +19,7 @@ function dialogue_textbox(){
 	{
 		colour = noone
 		message = argument[0];
-		if instance_exists(other) originInstance = other.id else originInstance = noone;
+		if instance_exists(other) origin_instance = other.id else origin_instance = noone;
 		if argument_count > 1 background = argument[1] else background = 0;
 		if argument_count > 2 && argument[2] != -1 && argument[2] != noone
 		{
@@ -88,7 +30,7 @@ function dialogue_textbox(){
 			font = character_preset[2];
 			sprite_change = character_preset[3];
 			if preset_args > 4 sound = character_preset[4] else sound = noone;
-			if preset_args > 5 charFocus = character_preset[5] else charFocus = true;
+			if preset_args > 5 char_focus = character_preset[5] else char_focus = true;
 			if preset_args > 6 colour = character_preset[6];
 		}
 		else 
@@ -104,20 +46,20 @@ function dialogue_textbox(){
 			for(var i = 0; i < array_length(responses); i++)
 			{
 				var _idPosition = string_pos(":", responses[i]);
-				responseScripts[i] = string_copy(responses[i], 1, _idPosition - 1);
+				response_scripts[i] = string_copy(responses[i], 1, _idPosition - 1);
 				responses[i] = string_delete(responses[i], 1, _idPosition);
 			}
 		}
 		else
 		{
 			responses = [-1];
-			responseScripts = [-1];
+			response_scripts = [-1];
 		}
 		
 		if argument_count > 4 
 		{
 			shake = argument[4] 
-			if argument_count > 5 shakeDistance = argument[5] else shakeDistance = 10;
+			if argument_count > 5 shake_distance = argument[5] else shake_distance = 10;
 		}
 		else shake = false;
 
@@ -208,16 +150,16 @@ function dialogue_despawn(_object)
 ///@arg y
 ///@arg depth
 ///@arg object
-function dialogue_spawn(_x, _y, _objDepth, _object)
+function dialogue_spawn(_x, _y, _obj_depth, _object)
 {
 	var _obj;
 	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_spawn_queue; else _obj =  obj_dialogue_spawn;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
-		objX = _x 
-		objY = _y
-		objDepth = _objDepth
+		obj_x = _x 
+		obj_y = _y
+		obj_depth = _obj_depth
 		obj = _object
 	}
 }
@@ -239,55 +181,55 @@ function dialogue_script(_script, _args)
 }
 ///@description queue an item add into dialogue
 ///@description will create a queued item add object and run after preceding queued items
-///@arg itemName
-///@arg itemDescription
-///@arg itemCost
-///@arg itemSprite
-///@arg canGift
-///@arg lovedBy
-///@arg likedBy
-///@arg dislikedBy
-///@arg hatedBy
-function dialogue_item_add(_itemName, _itemDescription, _itemCost, _itemSprite, _canGift, _lovedBy, _likedBy, _dislikedBy, _hatedBy)
+///@arg item_name
+///@arg item_description
+///@arg item_cost
+///@arg item_sprite
+///@arg can_gift
+///@arg loved_by
+///@arg liked_by
+///@arg disliked_by
+///@arg hated_by
+function dialogue_item_add(_item_name, _item_description, _item_cost, _item_sprite, _can_gift, _lovedBy, _likedBy, _dislikedBy, _hatedBy)
 {
 	var _obj;
 	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_item_add_queue; else _obj =  obj_dialogue_item_add;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
-		itemName = _itemName;
-		if argument_count > 1 itemDescription = _itemDescription else itemDescription = "???"
-		if argument_count > 2 itemCost = _itemCost else itemCost = 0;
-		if argument_count > 3 itemSprite = _itemSprite else itemSprite = spr_item_rock;
-		if argument_count > 4 canGift = _canGift else canGift = false;
+		item_name = _item_name;
+		if argument_count > 1 item_description = _item_description else item_description = "???"
+		if argument_count > 2 item_cost = _item_cost else item_cost = 0;
+		if argument_count > 3 item_sprite = _item_sprite else item_sprite = spr_item_rock;
+		if argument_count > 4 can_gift = _can_gift else can_gift = false;
 		if argument_count > 5
 		{
-			lovedBy = _lovedBy;
-			likedBy = _likedBy;
-			dislikedBy = _dislikedBy;
-			hatedBy = _hatedBy;
+			loved_by = _lovedBy;
+			liked_by = _likedBy;
+			disliked_by = _dislikedBy;
+			hated_by = _hatedBy;
 		}
 		else
 		{
-			lovedBy = [ ];
-			likedBy = [ ]; 
-			dislikedBy = [ ];
-			hatedBy = [ ];
+			loved_by = [ ];
+			liked_by = [ ]; 
+			disliked_by = [ ];
+			hated_by = [ ];
 		}
 	}
 }
 
 ///@description queue an item remove into dialogue
 ///@description will create an item remove start object and run after preceding queued items
-///@arg itemName
-function dialogue_item_remove(_itemName)
+///@arg item_name
+function dialogue_item_remove(_item_name)
 {
 	var _obj;
 	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_item_remove_queue; else _obj =  obj_dialogue_item_remove;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj)
 	{
-		itemName = _itemName;
+		item_name = _item_name;
 	}
 }
 
@@ -339,9 +281,9 @@ function dialogue_move_obj(_object, _room, _x, _y)
 	with instance_create_layer(0, 0, "text", _obj)
 	{
 		object = _object;
-		newRoom = _room;
-		newX = _x;
-		newY = _y;
+		new_room = _room;
+		new_x = _x;
+		new_y = _y;
 	}
 }
 
@@ -404,10 +346,10 @@ function dialogue_fade_in(_object, _rate)
 ///@description queue an object to start following a path
 ///@arg object id
 ///@arg path path id 
-///@arg pathSpeed speed to follow path
-///@arg pathEndAction path action constant to follow on path end
-///@arg pathAbsolute whether path absolute or not
-function dialogue_path_start(_object, _path, _pathSpeed, _pathEndAction, _pathAbsolute) {
+///@arg path_speed speed to follow path
+///@arg path_end_action path action constant to follow on path end
+///@arg path_absolute whether path absolute or not
+function dialogue_path_start(_object, _path, _path_speed, _path_end_action, _path_absolute) {
 	var _obj;
 	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_path_start_queue; else _obj =  obj_dialogue_path_start;
 	if(!layer_exists("text")){ layer_create(0, "text") }
@@ -415,9 +357,9 @@ function dialogue_path_start(_object, _path, _pathSpeed, _pathEndAction, _pathAb
 	{
 		object = _object;
 		path = _path
-		pathSpeed = _pathSpeed
-		pathEndAction = _pathEndAction
-		pathAbsolute = _pathAbsolute
+		path_speed = _path_speed
+		path_end_action = _path_end_action
+		path_absolute = _path_absolute
 	}
 }
 
@@ -439,8 +381,8 @@ function dialogue_shake_start(_magnitude, _speed) {
 	if instance_exists(obj_parent_queue_play) _obj = obj_dialogue_shake_start_queue; else _obj =  obj_dialogue_shake_start;
 	if(!layer_exists("text")){ layer_create(0, "text") }
 	with instance_create_layer(0, 0, "text", _obj) {
-		shakeMagnitude = _magnitude
-		shakeSpeed = _speed
+		shake_magnitude = _magnitude
+		shake_speed = _speed
 	}
 }
 function dialogue_shake_stop() {

@@ -1,18 +1,18 @@
 event_inherited()
 
-frameIndex = 0;
-poseIndex = 1;
+frame_index = 0;
+pose_index = 1;
 
 outfits_num = array_length(global.unlocked_outfits);
 
-minOutfitsDisplay = 0;
+min_outfits_display = 0;
 
-if outfits_num < 15 { outfitCountDisplay =  outfits_num; }
-else { outfitCountDisplay =  15; }
+if outfits_num < 15 { outfit_count_display =  outfits_num; }
+else { outfit_count_display =  15; }
 
-maxOutfitsDisplay = minOutfitsDisplay + outfitCountDisplay;
+max_outfits_display = min_outfits_display + outfit_count_display;
 
-outfitSelected = 0;
+outfit_selected = 0;
 
 border = 20;
 

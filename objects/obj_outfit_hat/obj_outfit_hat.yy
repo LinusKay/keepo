@@ -32,7 +32,7 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemName","path":"objects/parent_outfit/parent_outfit.yy",},"objectId":{"name":"parent_outfit","path":"objects/parent_outfit/parent_outfit.yy",},"value":"christmas hat",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"item_name","path":"objects/parent_outfit/parent_outfit.yy",},"objectId":{"name":"parent_outfit","path":"objects/parent_outfit/parent_outfit.yy",},"value":"christmas hat",},
   ],
   "parent": {
     "name": "outfits",

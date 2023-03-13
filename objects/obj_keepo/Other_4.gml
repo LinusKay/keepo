@@ -19,4 +19,4 @@ if followers[0] != noone {
 		}
 	}
 }
-frameCount = -50;
+frame_count = -50;

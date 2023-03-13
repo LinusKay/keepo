@@ -1,1 +1,1 @@
-frameCount = -60
+frame_count = -60

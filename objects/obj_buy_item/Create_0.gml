@@ -1,11 +1,11 @@
-menuWidth = 900;
-menuHeight = 500;
+menu_width = 900;
+menu_height = 500;
 
-x1 = RESOLUTION_W/2 - menuWidth/2;
-x2 = RESOLUTION_W/2 + menuWidth/2;
+x1 = RESOLUTION_W/2 - menu_width/2;
+x2 = RESOLUTION_W/2 + menu_width/2;
 
 y1 = 250;
-y2 = y1 + menuHeight;
+y2 = y1 + menu_height;
 
 choice = 0;
 

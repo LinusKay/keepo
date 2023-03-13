@@ -19,16 +19,16 @@ else
 {
 	scr_nineslice_box_stretch(spr_textbox, x1, y1, x2, y2, _bg);
 
-	if frameCount % (60/sprite_get_speed(portrait_spr)) == 0 { frameIndex++; }
-	if sprite_get_height(portrait_spr) >= 64 draw_sprite_ext(portrait_spr, frameIndex, x1 + 50, y1 - 50, ((portraitSize/32) - portraitOffset)/2, ((portraitSize/32) - portraitOffset)/2, 0, c_white, 1);
-	else draw_sprite_ext(portrait_spr, frameIndex, x1 + 50, y1 - 50, (portraitSize/32) - portraitOffset, (portraitSize/32) - portraitOffset, 0, c_white, 1);
-	//else draw_sprite_ext(portrait_spr, frameIndex, x1, y1 - (sprite_get_height(portrait_spr)*10), (portraitSize/32) - portraitOffset, (portraitSize/32) - portraitOffset, 0, c_white, 1);
+	if frame_count % (60/sprite_get_speed(portrait_spr)) == 0 { frame_index++; }
+	if sprite_get_height(portrait_spr) >= 64 draw_sprite_ext(portrait_spr, frame_index, x1 + 50, y1 - 50, ((portrait_size/32) - portrait_offset)/2, ((portrait_size/32) - portrait_offset)/2, 0, c_white, 1);
+	else draw_sprite_ext(portrait_spr, frame_index, x1 + 50, y1 - 50, (portrait_size/32) - portrait_offset, (portrait_size/32) - portrait_offset, 0, c_white, 1);
+	//else draw_sprite_ext(portrait_spr, frame_index, x1, y1 - (sprite_get_height(portrait_spr)*10), (portrait_size/32) - portrait_offset, (portrait_size/32) - portrait_offset, 0, c_white, 1);
 }
 
 
 
 var _print = message;
-var messageLength = string_length(_print);
+var _message_length = string_length(_print);
 
 if responses[0] != -1
 {
@@ -38,7 +38,7 @@ if responses[0] != -1
 		var response = responses[i]
 		y_offset = (response_y_buffer * (i+1)) - response_y_buffer_gap
 		x_offset = (x2 - x1)/1.4
-		if (i == responseSelected) { 
+		if (i == response_selected) { 
 			x_offset -= response_selected_x_offset
 			response = "> " + response
 		}
@@ -47,13 +47,13 @@ if responses[0] != -1
 		draw_text_ext_color( x1 + x_offset + response_text_x_offset, y1 - y_offset + response_text_y_offset, response, 65, x2 - x1, _c, _c, _c, _c, 1)
 	}
 }
-messageLength = string_length(_print);
+_message_length = string_length(_print);
 
 
 // vvvvvvvvvvvvvvvvvv ported from old method vvvvvvvvvvvvvvvvvvvvvvvv
 if setup == false {
 	// handle individual letters
-	for (var c = 0; c <= messageLength; c++){
+	for (var c = 0; c <= _message_length; c++){
 		//store chars in array
 		var _char_pos = c + 1;
 		char[c] = string_char_at(_print, _char_pos);
@@ -84,7 +84,7 @@ if setup == false {
 
 if portrait_spr != noone 
 {
-	draw_text_ext_color((((x1 + portraitSize) + x2) / 2), y1 + 64, _print, 65, x2 - x1 - portraitSize - 10, _c, _c, _c, _c, 1)
+	draw_text_ext_color((((x1 + portrait_size) + x2) / 2), y1 + 64, _print, 65, x2 - x1 - portrait_size - 10, _c, _c, _c, _c, 1)
 }
 else 
 {

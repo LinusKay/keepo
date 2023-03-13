@@ -91,12 +91,12 @@ var quest_array = [
 
 ds_quests = create_ds_grid_from_array(quest_array);
 ds_quests_number = ds_grid_height(ds_quests);
-global.trackedQuests = ds_list_create();
+global.tracked_quests = ds_list_create();
 
 #region QUEST STAGE GLOBAL VARIABLES
 	#region TEST YOUR DASH
-	global.quest_dashTest = false;
-	global.quest_dashGap = false;
+	global.quest_dash_test = false;
+	global.quest_dash_gap = false;
 	#endregion
 	#region SOUP TIME
 	global.quest_soup_time_get_soup = false;

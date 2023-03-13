@@ -1,10 +1,10 @@
-if !audio_is_playing(bgmFile){
-	if !global.musicPaused
+if !audio_is_playing(bgm_file){
+	if !global.music_paused
 	{
 		audio_stop_all();
-		global.musicPlaying = audio_play_sound(bgmFile, global.volumeMusic, true);
-		audio_sound_gain(bgmFile, 0, 0);
-		audio_sound_gain(bgmFile, global.volumeMusic, 2000);
+		global.music_playing = audio_play_sound(bgm_file, global.volume_music, true);
+		audio_sound_gain(bgm_file, 0, 0);
+		audio_sound_gain(bgm_file, global.volume_music, 2000);
 	}
 }
-frameCount = 0;
+frame_count = 0;

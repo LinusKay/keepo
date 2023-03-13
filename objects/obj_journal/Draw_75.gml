@@ -6,105 +6,105 @@ var _count = 0;
 if active_quests_num > 0
 {
 	//display active quests
-	for (var i = minQuestsDisplay; i < minQuestsDisplay + maxQuestsDisplay; i++){
+	for (var i = min_quests_display; i < min_quests_display + max_quests_display; i++){
 			if quests[# 1, i] == -1 {  continue; }
 			else {
-				textx = x1 + border * 2
-				texty = y1 + titleSpace + border + (30 * (_count + 1))
-				if questSelected == i {	draw_text(textx, texty, " " + quests[# 0, i]); }
-				else{					draw_text(textx, texty,  + quests[# 0, i]);}
+				text_x = x1 + border * 2
+				text_y = y1 + title_space + border + (30 * (_count + 1))
+				if quest_selected == i {	draw_text(text_x, text_y, " " + quests[# 0, i]); }
+				else{					draw_text(text_x, text_y,  + quests[# 0, i]);}
 			}
 		_count++;
 	}
 
 	// quest selection
-	activeQuestSelected += keyDown - keyUp;
-	if keyUp play_sfx(snd_click4);
-	if keyDown play_sfx(snd_click4, 0.8);
+	active_quest_selected += key_down - key_up;
+	if key_up play_sfx(snd_click4);
+	if key_down play_sfx(snd_click4, 0.8);
 	
 	// if go up on first item select last
-	if activeQuestSelected < 0 {
-		activeQuestSelected = active_quests_num - 1;
+	if active_quest_selected < 0 {
+		active_quest_selected = active_quests_num - 1;
 	}
 	// if go down on last item select firsts
-	if activeQuestSelected > active_quests_num - 1{
-		activeQuestSelected = 0;	
-		minQuestsDisplay = 0;
+	if active_quest_selected > active_quests_num - 1{
+		active_quest_selected = 0;	
+		min_quests_display = 0;
 	}
 	// if moving down requires scrolling down to see, scroll
-	if activeQuestSelected >= minQuestsDisplay + maxQuestsDisplay {
-		minQuestsDisplay++;	
+	if active_quest_selected >= min_quests_display + max_quests_display {
+		min_quests_display++;	
 	}
 	// if moving up requires scrolling up to see, scroll
-	if activeQuestSelected < minQuestsDisplay {
-		minQuestsDisplay--;	
+	if active_quest_selected < min_quests_display {
+		min_quests_display--;	
 	}
 
-	questSelected = active_quests[activeQuestSelected];
+	quest_selected = active_quests[active_quest_selected];
 
-	draw_text_ext(x1 + sideLeftWidth, y1 + 50, quests[# 2, questSelected], 30, sideRightWidth);
+	draw_text_ext(x1 + side_left_width, y1 + 50, quests[# 2, quest_selected], 30, side_right_width);
 
 	//display quest steps/stages
-	var stage = quests[# 1, questSelected]
-	var quest_array = quests[# 3, questSelected];
-	if quests[# 1, questSelected] != -1
+	var stage = quests[# 1, quest_selected]
+	var quest_array = quests[# 3, quest_selected];
+	if quests[# 1, quest_selected] != -1
 	{
-		var _stagecount = 0;
+		var _stage_count = 0;
 		if stage > 0
 		{
 			for(var i = 0; i < stage; i++)
 			{
-				draw_text_ext_color(x1 + sideLeftWidth, y1 + 100 + (50  * (_stagecount+1)), quest_array[i], 30, x2 - x1 - 375 - border, c_gray, c_gray, c_gray, c_gray, 1);
-				_stagecount++;
+				draw_text_ext_color(x1 + side_left_width, y1 + 100 + (50  * (_stage_count+1)), quest_array[i], 30, x2 - x1 - 375 - border, c_gray, c_gray, c_gray, c_gray, 1);
+				_stage_count++;
 			}
 		}
-		draw_text_ext(x1 + sideLeftWidth, y1 + 100 + (50 * (_stagecount+1)), quest_array[stage], 30, x2 - x1 - 375 - border);
+		draw_text_ext(x1 + side_left_width, y1 + 100 + (50 * (_stage_count+1)), quest_array[stage], 30, x2 - x1 - 375 - border);
 	}
 
 	if keyboard_check_pressed(ord("F"))
 	{
-		if ds_list_find_index(global.trackedQuests, questSelected) == -1
+		if ds_list_find_index(global.tracked_quests, quest_selected) == -1
 		{
-			ds_list_add(global.trackedQuests, questSelected);
+			ds_list_add(global.tracked_quests, quest_selected);
 		}
 		else
 		{
-			ds_list_delete(global.trackedQuests, ds_list_find_index(global.trackedQuests, questSelected))
+			ds_list_delete(global.tracked_quests, ds_list_find_index(global.tracked_quests, quest_selected))
 		}
 	}
 	
-	var questRewards = quests[# 4, questSelected];
-	if !(questRewards[0] == -1 && questRewards[1] == -1 && questRewards[2] == -1)
+	var quest_rewards = quests[# 4, quest_selected];
+	if !(quest_rewards[0] == -1 && quest_rewards[1] == -1 && quest_rewards[2] == -1)
 	{
-		var rewardString = "";
-		var rewardCount = 0;
-		if questRewards[0] != -1 {
-			rewardString += (string(questRewards[0]) + " coins")
-			rewardCount++;
+		var reward_string = "";
+		var reward_count = 0;
+		if quest_rewards[0] != -1 {
+			reward_string += (string(quest_rewards[0]) + " coins")
+			reward_count++;
 		}
-		if questRewards[1] != -1 {
-			if rewardCount > 0 rewardString += "\n"
-			rewardString += (string(questRewards[1][0]))
-			rewardCount++;
+		if quest_rewards[1] != -1 {
+			if reward_count > 0 reward_string += "\n"
+			reward_string += (string(quest_rewards[1][0]))
+			reward_count++;
 		}
-		if questRewards[2] != -1 {
-			if rewardCount > 0 rewardString += "\n"
-			rewardString += (string(global.sprite_set_grid[# 0, questRewards[2]])) + " outfit";
-			rewardCount++;
+		if quest_rewards[2] != -1 {
+			if reward_count > 0 reward_string += "\n"
+			reward_string += (string(global.sprite_set_grid[# 0, quest_rewards[2]])) + " outfit";
+			reward_count++;
 		}
 	
-		draw_text_ext(x1 + sideLeftWidth, y2 - 20 - (50 * (rewardCount+1)), "REWARDS:", 30, x2 - x1 - 375 - border);
-		draw_text_ext(x1 + sideLeftWidth, y2 - 40 - (50 * rewardCount), rewardString , 30, x2 - x1 - 375 - border);
+		draw_text_ext(x1 + side_left_width, y2 - 20 - (50 * (reward_count+1)), "REWARDS:", 30, x2 - x1 - 375 - border);
+		draw_text_ext(x1 + side_left_width, y2 - 40 - (50 * reward_count), reward_string , 30, x2 - x1 - 375 - border);
 	
 	}
 	
-	if ds_list_find_index(global.trackedQuests, questSelected) == -1
+	if ds_list_find_index(global.tracked_quests, quest_selected) == -1
 	{
-	draw_text_ext(x1 + sideLeftWidth, y2 - 50, "F - track quest ", 30, x2 - x1 - 375 - border);
+	draw_text_ext(x1 + side_left_width, y2 - 50, "F - track quest ", 30, x2 - x1 - 375 - border);
 	}
 	else
 	{
-		draw_text_ext(x1 + sideLeftWidth, y2 - 50, "F - untrack quest ", 30, x2 - x1 - 375 - border);
+		draw_text_ext(x1 + side_left_width, y2 - 50, "F - untrack quest ", 30, x2 - x1 - 375 - border);
 	}
 
 }

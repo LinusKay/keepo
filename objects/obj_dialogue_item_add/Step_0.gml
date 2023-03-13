@@ -1,4 +1,4 @@
-inventory_add(itemName, itemDescription, itemCost, itemSprite, canGift, false, lovedBy, likedBy, dislikedBy, hatedBy);
+inventory_add(item_name, item_description, item_cost, item_sprite, can_gift, false, loved_by, liked_by, disliked_by, hated_by);
 if instance_exists(obj_parent_queue)
 {
 	with obj_parent_queue ticket--;	

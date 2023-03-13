@@ -1,8 +1,8 @@
 function quest_dash(){
-	global.quest_dashTest = true;
+	global.quest_dash_test = true;
 	return true;
 }
 function quest_dash_gap(){
-	global.quest_dashGap = true;
+	global.quest_dash_gap = true;
 	return true;
 }

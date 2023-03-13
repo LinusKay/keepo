@@ -1,7 +1,7 @@
-xStart = PLAYER_OBJ.viewx;
-yStart = PLAYER_OBJ.viewy
+x_start = PLAYER_OBJ.view_x;
+y_start = PLAYER_OBJ.view_y
 
-cameraWidth = camera_get_view_width(view_camera[0]);
-cameraHeight = camera_get_view_height(view_camera[0]);
+camera_width = camera_get_view_width(view_camera[0]);
+camera_height = camera_get_view_height(view_camera[0]);
 
-emitterSnow = part_emitter_create(obj_particle_setup.particle_system);
+emitter_snow = part_emitter_create(obj_particle_setup.particle_system);

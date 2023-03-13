@@ -1,16 +1,16 @@
 
 if keyboard_check_pressed(ord("M")){
-	if global.musicPaused{
-		global.musicPaused = false;
+	if global.music_paused{
+		global.music_paused = false;
 		audio_resume_sound(sound)
 	}
 	else {
-		global.musicPaused = true;
+		global.music_paused = true;
 		audio_pause_sound(sound);
 	}
 }
 
-if audio_sound_get_gain(sound) != global.volumeMusic
+if audio_sound_get_gain(sound) != global.volume_music
 {
-	audio_sound_gain(sound, global.volumeMusic, 0)	
+	audio_sound_gain(sound, global.volume_music, 0)	
 }

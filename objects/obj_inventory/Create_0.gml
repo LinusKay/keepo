@@ -1,12 +1,12 @@
 event_inherited()
 
-minItemsDisplay = 0;
+min_items_display = 0;
 
-if inventory_get_size() < 13 { itemCountDisplay =  inventory_get_size(); }
-else { itemCountDisplay =  13; }
+if inventory_get_size() < 13 { item_count_display =  inventory_get_size(); }
+else { item_count_display =  13; }
 
-maxItemsDisplay = minItemsDisplay + itemCountDisplay;
+max_items_display = min_items_display + item_count_display;
 
-itemSelected = 0;
+item_selected = 0;
 
 border = 20;

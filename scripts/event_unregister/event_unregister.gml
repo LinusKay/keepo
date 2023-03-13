@@ -9,21 +9,21 @@ function event_unregister(){
 		var objID = argument[1];
 		
 		//get listeners
-		if(ds_map_exists(eventMap, ev))
+		if(ds_map_exists(event_map, ev))
 		{
-			var listenerList = eventMap[? ev];
-			var len = ds_list_size(listenerList);
+			var listener_list = event_map[? ev];
+			var len = ds_list_size(listener_list);
 			var i = 0; repeat(len)
 			{
-				var listenerInfo = listenerList[| i];
-				if(listenerInfo[0] == objID)
+				var listener_info = listener_list[| i];
+				if(listener_info[0] == objID)
 				{
 					if(len == 1)
 					{
-						ds_list_destroy(listenerList);
-						ds_map_delete(eventMap, ev);
+						ds_list_destroy(listener_list);
+						ds_map_delete(event_map, ev);
 					}
-					else ds_list_delete(listenerList, i);
+					else ds_list_delete(listener_list, i);
 					break;
 				}
 			}

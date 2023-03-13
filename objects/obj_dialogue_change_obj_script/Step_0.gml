@@ -1,19 +1,19 @@
 if instance_exists(object)
 {
-	object.entityActivateScript = scr
-	object.entityActivateArgs = args
+	object.entity_activate_script = scr
+	object.entity_activate_args = args
 }
-if !ds_map_exists(global.characterOptions, object.charName) 
+if !ds_map_exists(global.character_options, object.char_name) 
 {
-	global.characterOptions[? object.charName] = ds_map_create();
-	global.characterOptions[? object.charName][? "room"] = room;
-	global.characterOptions[? object.charName][? "x"] = object.x;
-	global.characterOptions[? object.charName][? "y"] = object.y;
-	global.characterOptions[? object.charName][? "script"] = object.entityActivateScript;
-	global.characterOptions[? object.charName][? "args"] = object.entityActivateArgs;
+	global.character_options[? object.char_name] = ds_map_create();
+	global.character_options[? object.char_name][? "room"] = room;
+	global.character_options[? object.char_name][? "x"] = object.x;
+	global.character_options[? object.char_name][? "y"] = object.y;
+	global.character_options[? object.char_name][? "script"] = object.entity_activate_script;
+	global.character_options[? object.char_name][? "args"] = object.entity_activate_args;
 }
-global.characterOptions[? object.charName][? "script"] = scr
-global.characterOptions[? object.charName][? "args"] = args
+global.character_options[? object.char_name][? "script"] = scr
+global.character_options[? object.char_name][? "args"] = args
 
 if instance_exists(obj_parent_queue)
 {
