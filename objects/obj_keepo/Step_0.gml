@@ -350,14 +350,12 @@ if !move_freeze && (x_spd != 0 || y_spd != 0) {
 				sprite_index = global.sprite_set_grid[# sprite_set_positions.sprite_sprint_down, sprite_set];
 				break;
 		}
-		sprint_footstep_timer--;
-		if sprint_footstep_timer <= 0 && !dashing && sprinting{
-			//spawn footstep
-			instance_create_layer(x, y + irandom_range(3,7), "effects", obj_footstep);
-			sprint_footstep_timer = sprint_default_footstep_timer;
-			//if !audio_is_playing(snd_step) { play_sfx(snd_step, random_range(.8,1.2)) }
-		}
-	
+		
+		
+		
+		
+		
+		
 	}
 	//set walk sprites
 	else {
@@ -467,18 +465,31 @@ if !move_freeze && (x_spd != 0 || y_spd != 0) {
 	}
 	
 	else {
-		
+		// walk footsteps
 		if !place_meeting(x + x_spd, y + y_spd, obj_wall){	
 			x += x_spd;
 			y += y_spd;
 			if x_spd != 0 || y_spd != 0 
 			{
-				walk_footstep_timer--;
-				if walk_footstep_timer <= 0 && !sprinting{
-					//spawn footstep
-					instance_create_layer(x, y + irandom_range(3,7), "effects", obj_footstep);
-					walk_footstep_timer = walk_default_footstep_timer;
-					//if !audio_is_playing(snd_step) { play_sfx(snd_step, random_range(.8,1.2))}
+				if(sprinting) {
+					sprint_footstep_timer--;
+					if x_spd != 0 || y_spd != 0 {
+						if sprint_footstep_timer <= 0 && !dashing && sprinting{
+							//spawn footstep
+							instance_create_layer(x, y + irandom_range(3,7), "effects", obj_footstep);
+							sprint_footstep_timer = sprint_default_footstep_timer;
+							if !audio_is_playing(snd_step) { play_sfx(snd_step, random_range(.8,1.2)) }
+						}
+					}	
+				}
+				else { 
+					walk_footstep_timer--;
+					if walk_footstep_timer <= 0 && !sprinting{
+						//spawn footstep
+						instance_create_layer(x, y + irandom_range(3,7), "effects", obj_footstep);
+						walk_footstep_timer = walk_default_footstep_timer;
+						if !audio_is_playing(snd_step) { play_sfx(snd_step, random_range(.8,1.2))}
+					}
 				}
 			}		
 		}

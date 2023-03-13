@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "ts_outside_tiles_green",
   "spriteId": {
-    "name": "spr_tiles_outside_yellow",
-    "path": "sprites/spr_tiles_outside_yellow/spr_tiles_outside_yellow.yy",
+    "name": "spr_tiles_outside_green",
+    "path": "sprites/spr_tiles_outside_green/spr_tiles_outside_green.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
