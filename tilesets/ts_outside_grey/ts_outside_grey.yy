@@ -2,27 +2,8 @@
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
   "name": "ts_outside_grey",
-  "spriteId": {
-    "name": "spr_tiles_outside_grey",
-    "path": "sprites/spr_tiles_outside_grey/spr_tiles_outside_grey.yy",
-  },
-  "tileWidth": 16,
-  "tileHeight": 16,
-  "tilexoff": 0,
-  "tileyoff": 0,
-  "tilehsep": 0,
-  "tilevsep": 0,
-  "spriteNoExport": true,
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "out_columns": 14,
-  "tile_count": 200,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","closed_edge":false,"tiles":[
         21,
         54,
         53,
@@ -70,23 +51,30 @@
         0,
         0,
         0,
-      ],"closed_edge":false,},
-  ],
-  "tileAnimationFrames": [
-    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_2","frames":[
-        120,
-        130,
-        140,
-        150,
-      ],},
-    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_1","frames":[
-        121,
-        131,
-        141,
-        151,
       ],},
   ],
-  "tileAnimationSpeed": 15.0,
+  "macroPageTiles": {
+    "SerialiseHeight": 0,
+    "SerialiseWidth": 0,
+    "TileSerialiseData": [],
+  },
+  "out_columns": 14,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "Tile Sets",
+    "path": "folders/Tile Sets.yy",
+  },
+  "spriteId": {
+    "name": "spr_tiles_outside_grey",
+    "path": "sprites/spr_tiles_outside_grey/spr_tiles_outside_grey.yy",
+  },
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "tile_count": 200,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -892,13 +880,25 @@
     ],
     "SerialiseFrameCount": 4,
   },
-  "macroPageTiles": {
-    "SerialiseWidth": 0,
-    "SerialiseHeight": 0,
-    "TileSerialiseData": [],
-  },
-  "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
-  },
+  "tileAnimationFrames": [
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_2","frames":[
+        120,
+        130,
+        140,
+        150,
+      ],},
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"animation_1","frames":[
+        121,
+        131,
+        141,
+        151,
+      ],},
+  ],
+  "tileAnimationSpeed": 15.0,
+  "tileHeight": 16,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 16,
+  "tilexoff": 0,
+  "tileyoff": 0,
 }

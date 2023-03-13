@@ -429,7 +429,7 @@ if !move_freeze && (x_spd != 0 || y_spd != 0) {
 				}
 				for(var i = 0; i < irandom_range(1,3); i++)
 				{
-					instance_create_layer(x + irandom_range(-3, 3), y + 3 + irandom_range(-3, 3), "effects", obj_trail_sparks);
+					instance_create_layer(x + irandom_range(-3, 3), y + irandom_range(-3, 3), "effects", obj_trail_sparks);
 				}
 				trail_timer = default_trail_timer;
 			}
