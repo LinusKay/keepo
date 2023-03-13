@@ -39,6 +39,7 @@ temporarily trimmed a number of non-essential features
 - combat (this secretly existed but was bad. wont come back (in the same format))
 - unused rooms
 map changes
+trees now have a little sway to them
 
 [REMOVED] added combat system
 	shoot projectiles

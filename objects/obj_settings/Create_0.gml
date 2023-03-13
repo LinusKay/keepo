@@ -24,3 +24,5 @@ global.music_paused = false;
 global.volume_music = 0;
 global.music_playing = noone;
 global.music_teleport_secret = false;
+
+global.allow_sway = true

@@ -70,14 +70,14 @@ if global.auto_save auto_save_status = "on" else auto_save_status = "off"
 _item = 3
 if item_selected = _item 
 { 
-	draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " auto_save: " + auto_save_status, _c, _c, _c, _c, 1);
+	draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " Auto Save: " + auto_save_status, _c, _c, _c, _c, 1);
 	key_left = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"));
 	key_right = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"));
 	if key_left || key_right {
 		global.auto_save = !global.auto_save;
 	}
 }
-else draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "auto_save: " + auto_save_status, _c, _c, _c, _c, 1);
+else draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "Auto Save: " + auto_save_status, _c, _c, _c, _c, 1);
 
 _item = 4
 if global.high_contrast high_contrast_status = "on" else high_contrast_status = "off"
@@ -92,31 +92,42 @@ if item_selected = _item
 }
 else draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "High Contrast: " + high_contrast_status, _c, _c, _c, _c, 1);
 
-
-
-
+_item = 5
+if global.allow_sway allow_sway_status = "on" else allow_sway_status = "off"
+if item_selected = _item 
+{ 
+	draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " Allow Sway: " + allow_sway_status, _c, _c, _c, _c, 1);
+	key_left = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"));
+	key_right = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"));
+	if key_left || key_right {
+		global.allow_sway = !global.allow_sway;
+	}
+}
+else draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "Allow Sway: " + allow_sway_status, _c, _c, _c, _c, 1);
 
 
 // display save
-_item = 5
+_item = 6
 if item_selected = _item draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " Save Game", _c, _c, _c, _c, 1); 
 else { draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "Save Game", _c, _c, _c, _c, 1); }
 
 // display load
-_item = 6
+_item = 7
 if item_selected = _item { draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " Load Game", _c, _c, _c, _c, 1); }
 else { draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "Load Game", _c, _c, _c, _c, 1); }
 
-_item = 7
-if item_selected = 7 { draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " Exit Game", _c, _c, _c, _c, 1); }
+_item = 8
+if item_selected = _item { draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, " Exit Game", _c, _c, _c, _c, 1); }
 else { draw_text_colour(inv_x1 + border * 2, inv_y1 + border + 36 * _item, "Exit Game", _c, _c, _c, _c, 1); }
+
+
 
 if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("F"))
 {
 	if item_selected == 0 { close_windows_all(); PLAYER_OBJ.move_freeze = false; }
-	if item_selected == 5 { scr_save_game() }	
-	if item_selected == 6 { scr_load_game() }	
-	if item_selected == 7 { game_end() }	
+	if item_selected == 6 { scr_save_game() }	
+	if item_selected == 7 { scr_load_game() }	
+	if item_selected == 8 { game_end() }	
 }
 
 
