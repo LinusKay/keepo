@@ -642,6 +642,7 @@
     {"name":"inst_B33A75C","path":"rooms/rm_ext_town/rm_ext_town.yy",},
     {"name":"inst_5FD29092","path":"rooms/rm_ext_town/rm_ext_town.yy",},
     {"name":"inst_445E4A90","path":"rooms/rm_ext_town/rm_ext_town.yy",},
+    {"name":"inst_6F67183B","path":"rooms/rm_ext_town/rm_ext_town.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -1338,6 +1339,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_B8749D8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cloud_controller","path":"objects/obj_cloud_controller/obj_cloud_controller.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_cloud_controller","path":"objects/obj_cloud_controller/obj_cloud_controller.yy",},"propertyId":{"name":"spawn_layer","path":"objects/obj_cloud_controller/obj_cloud_controller.yy",},"value":"water_effects",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":48.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F67183B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":3.5624998,"scaleY":1.25,"x":98.0,"y":428.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"text","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_2","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":50,"SerialiseWidth":88,"TileCompressedData":[
