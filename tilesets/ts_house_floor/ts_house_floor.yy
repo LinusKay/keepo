@@ -2,27 +2,8 @@
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
   "name": "ts_house_floor",
-  "spriteId": {
-    "name": "spr_tiles_floors",
-    "path": "sprites/spr_tiles_floors/spr_tiles_floors.yy",
-  },
-  "tileWidth": 16,
-  "tileHeight": 16,
-  "tilexoff": 0,
-  "tileyoff": 0,
-  "tilehsep": 0,
-  "tilevsep": 0,
-  "spriteNoExport": true,
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "out_columns": 6,
-  "tile_count": 32,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","closed_edge":false,"tiles":[
         9,
         9,
         9,
@@ -70,10 +51,30 @@
         0,
         0,
         0,
-      ],"closed_edge":false,},
+      ],},
   ],
-  "tileAnimationFrames": [],
-  "tileAnimationSpeed": 4.0,
+  "macroPageTiles": {
+    "SerialiseHeight": 0,
+    "SerialiseWidth": 0,
+    "TileSerialiseData": [],
+  },
+  "out_columns": 6,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "Tile Sets",
+    "path": "folders/Tile Sets.yy",
+  },
+  "spriteId": {
+    "name": "spr_tiles_floors",
+    "path": "sprites/spr_tiles_floors/spr_tiles_floors.yy",
+  },
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "tile_count": 32,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -111,13 +112,12 @@
     ],
     "SerialiseFrameCount": 1,
   },
-  "macroPageTiles": {
-    "SerialiseWidth": 0,
-    "SerialiseHeight": 0,
-    "TileSerialiseData": [],
-  },
-  "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
-  },
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 4.0,
+  "tileHeight": 16,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 16,
+  "tilexoff": 0,
+  "tileyoff": 0,
 }
