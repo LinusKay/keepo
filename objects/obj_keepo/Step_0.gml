@@ -653,10 +653,10 @@ pos_y[0] = bottom_y;
 if distance_to_object(obj_water_circles) <= 25 
 {
 	if reflection_inst == noone {
-		reflection_inst = instance_create_layer(x, y + 32, "water_effects", obj_reflection)
+		reflection_inst = instance_create_layer(x, y, "water_effects", obj_reflection)
 	}
 	reflection_inst.x = x 
-	reflection_inst.y = y + 32
+	reflection_inst.y = y
 	reflection_inst.sprite_index = sprite_index
 	reflection_inst.image_index = image_index
 	reflection_inst.image_xscale = image_xscale

@@ -25,7 +25,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4c20e26-cbe9-47fd-b816-545329aa7c3d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 6,
+  "origin": 0,
   "parent": {
     "name": "plants",
     "path": "folders/Sprites/decor/plants.yy",
@@ -64,7 +64,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 0,
-    "yorigin": 24,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
