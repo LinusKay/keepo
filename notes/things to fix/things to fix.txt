@@ -1,6 +1,0 @@
-support for linux https://help.yoyogames.com/hc/en-us/articles/235186168-Setting-Up-For-Ubuntu
-rework inventory into simpler, easier to use structs
-rework notification system
-	- visual display for item get
-probably remove the friendship/"dating" aspect of the game. unnecessary complication for now
-make interiors more interesting to look at

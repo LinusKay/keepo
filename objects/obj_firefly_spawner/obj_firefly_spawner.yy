@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "firefly_spawner",
+  "name": "obj_firefly_spawner",
   "spriteId": null,
   "solid": false,
   "visible": true,

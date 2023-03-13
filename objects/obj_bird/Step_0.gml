@@ -6,6 +6,7 @@ if !flying
 	{
 		flying = true;
 		fly_direction = irandom_range(160, 20);
+		if(fly_direction > 90) { image_xscale = -1 } else { image_xscale= 1 }
 		fly_speed = random_range(1,4);
 		//if !audio_is_playing(snd_wings) audio_play_sound(snd_wings, 90, false);
 	}
