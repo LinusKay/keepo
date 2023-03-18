@@ -15,17 +15,23 @@ draw_text(x1 + border * 2, y1 + border, menu_title)
 draw_set_font(fnt_pixellari_small)
 
 // draw menu tabs
-//draw_sprite_ext(spr_arrow_left,	0,	x1 + border,  y2 + 45, 7, 7, 0, c_white, 1);
-//for(var i = 0; i < array_length(menu_list); i++) {
-//	boxx1 = x1 + tab_width + ((tab_width + tab_space) * i)
-//	boxy1 = y2 + border
-//	boxx2 = boxx1 + tab_width
-//	boxy2 = y2 + border + tab_width
-//	scr_nineslice_box_stretch(spr_textbox, boxx1,  boxy1,  boxx2 , boxy2, 0);
-//	if menu_item == i iconVariation = 1 else iconVariation = 2
-//	draw_sprite_ext(menu_list[i][iconVariation], 0, boxx1, boxy1, 7, 7, 0, c_white, 1)
-//}
-//draw_sprite_ext(spr_arrow_right,0,	x1 + tab_width + ((tab_width + tab_space) * array_length(menu_list)), y2 + 45, 7, 7, 0, c_white, 1);
+draw_sprite_ext(spr_arrow_left,	0,	x1 + border,  y2 + 45, 7, 7, 0, c_white, 1);
+
+icon_size = 3.5
+icon_sizes = [3.6, 3.2, 3.25, 4]
+for(var i = 0; i < array_length(menu_list); i++) {
+	left_edge_pos = x1 + tab_width + ((tab_width + tab_space) * i) // left edge position
+	top_edge_pos = y2 + border // top edge position
+	right_edge = left_edge_pos + tab_width // right edge
+	bottom_edge = top_edge_pos + tab_width // bottom edge
+	scr_nineslice_box_stretch(spr_textbox, left_edge_pos,  top_edge_pos, right_edge, bottom_edge, 0);
+	// only colour selected icon, otherwise remain greyed out
+	if menu_item == i iconVariation = 1 else iconVariation = 2
+	// draw icon
+	draw_sprite_ext(menu_list[i][iconVariation], 0, left_edge_pos+(tab_width/2), top_edge_pos+(tab_width/2), icon_sizes[i], icon_sizes[i], 0, c_white, 1)
+}
+
+draw_sprite_ext(spr_arrow_right,0,	x1 + tab_width + ((tab_width + tab_space) * array_length(menu_list)), y2 + 45, 7, 7, 0, c_white, 1);
 
 
 // swap between menus
