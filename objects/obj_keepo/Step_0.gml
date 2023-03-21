@@ -45,12 +45,6 @@ key_outfits = keyboard_check_pressed(ord("O"));
 
 key_pause = keyboard_check_pressed(vk_escape) || keyboard_check_pressed(ord("P"));
 
-key_click_left = mouse_check_button(mb_left);
-key_click_left_release = mouse_check_button_released(mb_left);
-key_click_right = mouse_check_button(mb_right);
-
-key_shoot_mode = keyboard_check_pressed(vk_lcontrol);
-
 centre_x = x + sprite_get_width(sprite_index)/2;
 centre_y = y + sprite_get_height(sprite_index)/2;
 

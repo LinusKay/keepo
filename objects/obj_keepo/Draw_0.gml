@@ -20,14 +20,3 @@ if global.debug_mode
 		}
 	}
 }
-
-if shoot_mode == "precise"
-{
-	if key_click_left && bullet_cooldown == 0
-		{
-			angle = point_direction(centre_x, centre_y, mouse_x, mouse_y);
-			aim_distance = clamp(point_distance(centre_x, centre_y, mouse_x, mouse_y), 0, global.bullet_range * global.bullet_speed);
-			draw_line_width_color(centre_x, centre_y, centre_x + lengthdir_x(aim_distance, angle), centre_y + lengthdir_y(aim_distance, angle), 1, c_red, c_red)
-		}
-}
-
