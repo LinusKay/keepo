@@ -485,7 +485,7 @@
     {"id":{"name":"spr_luco_blank_portrait_shock","path":"sprites/spr_luco_blank_portrait_shock/spr_luco_blank_portrait_shock.yy",},},
     {"id":{"name":"spr_tree","path":"sprites/spr_tree/spr_tree.yy",},},
     {"id":{"name":"obj_particle_leaves","path":"objects/obj_particle_leaves/obj_particle_leaves.yy",},},
-    {"id":{"name":"obj_moody","path":"objects/obj_moody/obj_moody.yy",},},
+    {"id":{"name":"obj_moki","path":"objects/obj_moki/obj_moki.yy",},},
     {"id":{"name":"spr_bird_big_fly","path":"sprites/spr_bird_big_fly/spr_bird_big_fly.yy",},},
     {"id":{"name":"spr_fridge","path":"sprites/spr_fridge/spr_fridge.yy",},},
     {"id":{"name":"spr_vase_broken_portrait","path":"sprites/spr_vase_broken_portrait/spr_vase_broken_portrait.yy",},},

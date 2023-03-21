@@ -20,8 +20,6 @@ function scr_save_game()
 	
 	ds_map_add_map(_map, "relationships", global.relationships);
 	
-	_map[? "tutorial_mail"] = global.tutorial_mail;
-	_map[? "mail_unread"] = global.mail_unread;
 	_map[? "auto_save"] = global.auto_save;
 	
 	_map[? "holdingItem"] = PLAYER_OBJ.holding_item;

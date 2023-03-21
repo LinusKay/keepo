@@ -507,7 +507,7 @@ if !move_freeze && (x_spd != 0 || y_spd != 0) {
 		{
 			with nearest_item
 			{
-				if forSale 
+				if for_sale 
 				{
 					with instance_create_depth(0, 0, -999, obj_buy_item)
 					{
@@ -517,7 +517,7 @@ if !move_freeze && (x_spd != 0 || y_spd != 0) {
 				else
 				{
 					play_sfx(snd_pop, random_range(0.8, 1.2));
-					inventory_add(item_name, item_description, item_cost, sprite_index, can_gift, false, loved_by, liked_by, disliked_by, hated_by, quest_item, questID, questStage);
+					inventory_add(item_name, item_description, item_cost, sprite_index, can_gift, false, loved_by, liked_by, disliked_by, hated_by, quest_item, quest_id, quest_stage);
 					ds_list_add(global.picked_up_items, item_room_id);
 					event_fire(event.player_pick_up_item);
 					var _item_name = item_name
@@ -598,7 +598,7 @@ if x_spd != 0 || y_spd != 0 {
 	sleeping = false;	
 }
 //animate
-if x_spd == 0 && y_spd == 0 && !sitting && !sleeping && !attacking{
+if x_spd == 0 && y_spd == 0 && !sitting && !sleeping {
 	dashing = false;
 	if place_meeting(x, y, obj_wall) {
 		x = dash_location_x;

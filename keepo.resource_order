@@ -276,7 +276,7 @@
     {"name":"fnt_pixellari_small","order":6,"path":"fonts/fnt_pixellari_small/fnt_pixellari_small.yy",},
     {"name":"obj_cauldron","order":11,"path":"objects/obj_cauldron/obj_cauldron.yy",},
     {"name":"spr_luco_blank_portrait_shock","order":6,"path":"sprites/spr_luco_blank_portrait_shock/spr_luco_blank_portrait_shock.yy",},
-    {"name":"obj_moody","order":11,"path":"objects/obj_moody/obj_moody.yy",},
+    {"name":"obj_moki","order":11,"path":"objects/obj_moki/obj_moki.yy",},
     {"name":"spr_bird_big_fly","order":10,"path":"sprites/spr_bird_big_fly/spr_bird_big_fly.yy",},
     {"name":"spr_fridge","order":8,"path":"sprites/spr_fridge/spr_fridge.yy",},
     {"name":"spr_vase_broken_portrait","order":18,"path":"sprites/spr_vase_broken_portrait/spr_vase_broken_portrait.yy",},

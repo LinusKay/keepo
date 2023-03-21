@@ -1,5 +1,5 @@
 event_inherited()
-if(distance_to_object(obj_keepo) < 50) {
+if(distance_to_object(PLAYER_OBJ) < 50) {
 	if(keyboard_check_pressed((ord("F")))) {
 		ringing = true	
 	}

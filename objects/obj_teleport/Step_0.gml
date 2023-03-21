@@ -10,6 +10,6 @@ if place_meeting(x, y, PLAYER_OBJ)
 		inst.target_y = target_y;
 		inst.target_rm = target_room;
 		audio_play_sound(snd_sweep, 8, 0);
-		obj_keepo.move_freeze = true;
+		PLAYER_OBJ.move_freeze = true;
 	}
 }

@@ -35,8 +35,6 @@ function scr_load_game(){
 		global.relationships[? "luco"] = load_relationships[? "luco"];
 		global.relationships[? "blue"] = load_relationships[? "blue"];
 		global.relationships[? "hat man"] = load_relationships[? "hat man"];
-		global.tutorial_mail = _json[? "tutorial_mail"]
-		global.mail_unread = _json[? "mail_unread"];
 		global.auto_save = _json[? "auto_save"];
 		if(instance_exists(obj_time)) {instance_find(obj_time, 0).time = _json[? "time"]}
 		
@@ -55,16 +53,10 @@ function scr_load_game(){
 		var keys = ds_map_keys_to_array(_json[? "character_options"]);
 		for(var i = 0; i < array_length(keys); i++)
 		{
-			print(string_upper(keys[i]));
-			print(_json[? "character_options"][? keys[i]])
-			print(json_decode(_json[? "character_options"][? keys[i]])[? "room"])
 			global.character_options[? keys[i]] = ds_map_create();
 			global.character_options[? keys[i]][? "room"] = json_decode(_json[? "character_options"][? keys[i]])[? "room"];
-			print(json_decode(_json[? "character_options"][? keys[i]])[? "x"])
 			global.character_options[? keys[i]][? "x"] = json_decode(_json[? "character_options"][? keys[i]])[? "x"];
-			print(json_decode(_json[? "character_options"][? keys[i]])[? "y"])
 			global.character_options[? keys[i]][? "y"] = json_decode(_json[? "character_options"][? keys[i]])[? "y"];
-			print(json_decode(_json[? "character_options"][? keys[i]])[? "script"])
 			global.character_options[? keys[i]][? "script"] = json_decode(_json[? "character_options"][? keys[i]])[? "script"];
 			//like look at this. 
 			//taking a json string as a string, splitting it, grabbing the value then turning it into a single-length array?
@@ -75,7 +67,6 @@ function scr_load_game(){
 			var _strend = string_delete(_strstart, 1, 13);
 			global.character_options[? keys[i]][? "args"] = [_strend]
 			
-			print(json_decode(_json[? "character_options"][? keys[i]])[? "sprite"])
 			global.character_options[? keys[i]][? "sprite"] = json_decode(_json[? "character_options"][? keys[i]])[? "sprite"];
 		}
 		
@@ -90,7 +81,6 @@ function scr_load_game(){
 		
 		// load inventory
 		inventory_empty();
-		print(_json[? "inventory"]);
 		if _json[? "inventory"] != "" 
 		{
 			var _inv_array = scr_string_split(_json[? "inventory"], "|")
@@ -100,7 +90,6 @@ function scr_load_game(){
 				//var _item_array = scr_string_split(_inv_array[i], ",");
 				var _item_array = json_parse(_inv_array[i]);
 				
-				print("loading item: " + string(_item_array));
 				for(var a = 0; a < array_length(_item_array); a++)
 				{	
 					_item_array[a] = scr_string_trim(_item_array[a]);

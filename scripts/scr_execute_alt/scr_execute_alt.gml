@@ -7,8 +7,6 @@ var s = argument0;
 var a = argument1;
 var len = array_length_1d(argument1);
 var val;
-print(s)
-print(a)
  
 switch(len){
     case 0:  val = script_execute(s); break;

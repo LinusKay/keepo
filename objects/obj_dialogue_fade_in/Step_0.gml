@@ -1,6 +1,5 @@
 if instance_exists(object)
 {
-	print(object.image_alpha);
 	if object.image_alpha < 1
 		object.image_alpha += rate;
 	else
