@@ -602,8 +602,6 @@ function dialogue_responses(){
 		
 		#region BOOTS
 		case "boots_calm":
-			dialogue_textbox("bllblblbllbllblblbll", 0, dialogue_presets.boots)
-			dialogue_textbox("lllbllblbllbll, blblllb?", 0, dialogue_presets.boots)
 			dialogue_textbox(" 	♡( ◡‿◡ )", 0, dialogue_presets.boots_kaomoji)
 			dialogue_change_obj_script(obj_boots, dialogue_responses, ["boots_smooch"])
 			break

@@ -263,6 +263,7 @@
     {"id":{"name":"spr_keepo_christmas_right","path":"sprites/spr_keepo_christmas_right/spr_keepo_christmas_right.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_keepo_sleeves_right","path":"sprites/spr_keepo_sleeves_right/spr_keepo_sleeves_right.yy",},},
+    {"id":{"name":"ParticleSystem1","path":"particles/ParticleSystem1/ParticleSystem1.yy",},},
     {"id":{"name":"ts_outside_tiles","path":"tilesets/ts_outside_tiles/ts_outside_tiles.yy",},},
     {"id":{"name":"obj_item_hat_purple","path":"objects/obj_item_hat_purple/obj_item_hat_purple.yy",},},
     {"id":{"name":"ts_outside_grey","path":"tilesets/ts_outside_grey/ts_outside_grey.yy",},},
@@ -888,8 +889,8 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
     {"roomId":{"name":"rm_ext_town","path":"rooms/rm_ext_town/rm_ext_town.yy",},},
-    {"roomId":{"name":"rm_lake","path":"rooms/rm_lake/rm_lake.yy",},},
     {"roomId":{"name":"rm_cliff_view","path":"rooms/rm_cliff_view/rm_cliff_view.yy",},},
+    {"roomId":{"name":"rm_lake","path":"rooms/rm_lake/rm_lake.yy",},},
     {"roomId":{"name":"rm_bed_room2","path":"rooms/rm_bed_room2/rm_bed_room2.yy",},},
     {"roomId":{"name":"rm_ext_keepo_house_south_bushes","path":"rooms/rm_ext_keepo_house_south_bushes/rm_ext_keepo_house_south_bushes.yy",},},
     {"roomId":{"name":"rm_forest_3","path":"rooms/rm_forest_3/rm_forest_3.yy",},},

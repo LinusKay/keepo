@@ -54,4 +54,4 @@ else
 	global.character_options[? char_name][? "sprite"] = sprite_index;
 }
 
-event_register_script(event.player_emote_bubble_heart, id, npcHeartResponse, id)
+event_register_script(event.player_emote_bubble_heart, id, npc_heart_response, id)
