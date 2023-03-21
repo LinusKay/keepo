@@ -209,8 +209,9 @@ if key_emote_2{
 	sitting = false;
 	if emote_timer <= 0{
 		//spawn trail
-		instance_create_layer(x + 8, y - 1, "effects", obj_emote_heart);
+		instance_create_layer(x, y - 16 , "effects", obj_emote_heart);
 		event_fire(event.player_emote_bubble_heart);
+		print("emote")
 		emote_timer = default_emote_timer;
 	}
 	
