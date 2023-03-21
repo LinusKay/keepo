@@ -44,9 +44,7 @@ global.relationships[? "luco"] = 0;
 global.relationships[? "blue"] = 0;
 global.relationships[? "hat man"] = 0;
 
-global.tutorial_mail = false;
-global.mail_unread = false;
-mail_init();
+
 //mail_create("???", "[its completely illegible]", 0, spr_letter, false, obj_pyramid, "luco", obj_sleeves, "sleeves", "sleeves_letter_2");
 
 global.room_title = "";
@@ -316,7 +314,7 @@ global.dialogue_presets_array = [
 	[obj_villain, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
 	[obj_villain, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
 	[obj_robot, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
-	[obj_moody, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
+	[obj_moki, spr_skull_portrait, fnt_pixellari, spr_skull, noone, true, c_black],
 ]
 
 enum dialogue_presets 
@@ -366,7 +364,7 @@ enum dialogue_presets
 	villain_happy,
 	villain_diabolical,
 	robot_default,
-	moody_default
+	moki_default
 }
 #endregion
 

@@ -8,7 +8,7 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_menu_parent","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"propertyId":{"name":"menuTitle","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"value":"Journal",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_menu_parent","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"propertyId":{"name":"menu_title","path":"objects/obj_menu_parent/obj_menu_parent.yy",},"value":"Journal",},
   ],
   "parent": {
     "name": "GUI",

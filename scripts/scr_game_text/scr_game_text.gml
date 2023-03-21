@@ -80,10 +80,6 @@ function dialogue_responses(){
 		#endregion
 		
 		#region LUCO
-		case "luco_presets_demo_awful":
-			scr_new_textbox("hmmmm :(", 0, obj_pyramid, fnt_pixellari_small, [], obj_pyramid, spr_luco)
-			scr_new_textbox("stink :(", 0, obj_pyramid, fnt_pixellari, [], obj_pyramid, spr_luco_shock)
-			break
 			
 		case "luco_presets_demo":
 			dialogue_textbox("...", 0, dialogue_presets.luco_blank)
@@ -216,50 +212,33 @@ function dialogue_responses(){
 			
 		case "hat_man_gift_hate": 
 			camera_zoom_character(obj_hat_man) 
-			scr_new_textbox(">:(", 0, spr_hat_man_portrait_sad)
-			scr_new_textbox(">:( >:(", 0, spr_hat_man_portrait_sad)
+			dialogue_textbox(">:(", 0, dialogue_presets.hat_sad)
+			dialogue_textbox(">:( >:(", 0, dialogue_presets.hat_sad)
 			break
 		case "hat_man_gift_dislike": 
 			camera_zoom_character(obj_hat_man) 
-			scr_new_textbox(":/ h", 0, spr_hat_man_portrait_sad)
+			dialogue_textbox(":/ h", 0, dialogue_presets.hat_sad)
 			break
 		case "hat_man_gift_like": 
 			camera_zoom_character(obj_hat_man) 
-			scr_new_textbox("h! hhh!! ", 0, spr_hat_man_portrait_happy)
-			scr_new_textbox(":) hatty", 0, spr_hat_man_portrait_happy)
+			dialogue_textbox("h! hhh!!", 0, dialogue_presets.hat_happy)
+			dialogue_textbox(":) hatty", 0, dialogue_presets.hat_happy)
 			break
 		case "hat_man_gift_love": 
 			camera_zoom_character(obj_hat_man) 
-			scr_new_textbox("HAT! HAHAHA", 0, spr_hat_man_portrait_happy)
-			scr_new_textbox(":,) hat", 0, spr_hat_man_portrait_happy)
-			scr_new_textbox(":_) hahrt", 0, spr_hat_man_portrait_happy)
-			scr_new_textbox(":______) hahahtt", 0, spr_hat_man_portrait_happy)
-			scr_new_textbox("*sobbing*", 0, spr_hat_man_portrait_happy)
+			dialogue_textbox("HAT! HAHAHA", 0, dialogue_presets.hat_happy)
+			dialogue_textbox(":,) hat", 0, dialogue_presets.hat_happy)
+			dialogue_textbox(":_) hahrt", 0, dialogue_presets.hat_happy)
+			dialogue_textbox(":______) hahahtt", 0, dialogue_presets.hat_sad)
+			dialogue_textbox("*sobbing*", 0, dialogue_presets.hat_happy)
 			break	
 		
-		case "hat_man_mail_accept":
-			break
-			
-		case "hat_man_mail_deny":
-			camera_zoom_character(obj_hat_man)
-			scr_new_textbox(":)", 0, spr_hat_man_portrait_shock)
-			scr_new_textbox("??????????????????????", 0, spr_hat_man_portrait_shock)
-			scr_new_textbox("this musn't be for them...")
-			break
-			
-		case "hat_man_letter_hotdog":
-			camera_zoom_character(obj_hat_man)
-			scr_new_textbox(":o", 0, spr_hat_man_portrait_shock)
-			scr_new_textbox("they seem confused")
-			scr_new_textbox(":)", 0, spr_hat_man_portrait_letter)
-			obj_hat_man.sprite_index = spr_hat_man_right_letter
-			break
 		#endregion
 		
 		#region VILLAIN
 		case "villain_store":
 			dialogue_textbox("little group of tiny idiots!!", 0, dialogue_presets.villain_default)
-			dialogue_textbox("...is that us?", 0, dialogue_presets.moody_default)
+			dialogue_textbox("...is that us?", 0, dialogue_presets.moki_default)
 			dialogue_textbox("yes!!", 0, dialogue_presets.villain_happy)
 			dialogue_textbox("hello!!", 0, dialogue_presets.sleeves_happy)
 			dialogue_textbox("would you know anyone who may be interested in some...", 0, dialogue_presets.villain_default)
@@ -267,29 +246,29 @@ function dialogue_responses(){
 			dialogue_textbox("free??? for us???", 0, dialogue_presets.sleeves_shock)
 			dialogue_textbox("yesss, free!!", 0, dialogue_presets.villain_default)
 			dialogue_textbox("would you like to sample my wa-", 0, dialogue_presets.villain_default)
-			dialogue_textbox("its poison.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("its poison.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("wh- uh", 0, dialogue_presets.villain_shock)
-			dialogue_textbox("poison. you're trying to poison us.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("poison. you're trying to poison us.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("i would never!", 0, dialogue_presets.villain_default)
 			dialogue_textbox("did i mention it was free?", 0, dialogue_presets.villain_default)
 			dialogue_textbox("would i poison you for free?", 0, dialogue_presets.villain_default)
-			dialogue_textbox("hmmm no you would probably try to rob us too", 0, dialogue_presets.moody_default)
+			dialogue_textbox("hmmm no you would probably try to rob us too", 0, dialogue_presets.moki_default)
 			dialogue_textbox("", 0, dialogue_presets.villain_default)
-			dialogue_textbox("that makes sense", 0, dialogue_presets.moody_default)
+			dialogue_textbox("that makes sense", 0, dialogue_presets.moki_default)
 			dialogue_textbox("exactly. now take the drink.", 0, dialogue_presets.villain_default)
-			dialogue_textbox("im not drinking poison.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("im not drinking poison.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("ITS NOT POISON", 0, dialogue_presets.villain_default)
-			dialogue_textbox("ok.", 0, dialogue_presets.moody_default)
-			dialogue_textbox("drink it.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("ok.", 0, dialogue_presets.moki_default)
+			dialogue_textbox("drink it.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("i- what-", 0, dialogue_presets.villain_default)
-			dialogue_textbox("drink the poison.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("drink the poison.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("...", 0, dialogue_presets.villain_default)
 			dialogue_textbox("robot, drink the juice", 0, dialogue_presets.villain_default)
 			dialogue_textbox("beep beep boop", 0, dialogue_presets.robot_default)
 			// the robot drinks it, and after a second of silence, falls back with a loud clang
-			dialogue_textbox("i told you", 0, dialogue_presets.moody_default)
+			dialogue_textbox("i told you", 0, dialogue_presets.moki_default)
 			dialogue_textbox("HAYFEVER", 0, dialogue_presets.villain_default)
-			dialogue_textbox("thats absolutely not how that works", 0, dialogue_presets.moody_default)
+			dialogue_textbox("thats absolutely not how that works", 0, dialogue_presets.moki_default)
 			dialogue_textbox("WE'RE CLOSED!!", 0, dialogue_presets.villain_default)
 			// the shutters on the stall close
 			// if you listen to the stall after close, you hear the robot get up, and immediately drink more, and immediately pass out again
@@ -298,9 +277,9 @@ function dialogue_responses(){
 			// an elderly woman approaches, dressed in elderly woman clothes, with a voice like a villain doing a bad impression of an elderly woman
 			dialogue_textbox("oh, heroes! oh my!", 0, dialogue_presets.villain_default)
 			dialogue_textbox("strong, powerful heroes!", 0, dialogue_presets.villain_default)
-			dialogue_textbox("wow. they forgot to insult us.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("wow. they forgot to insult us.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("glorious ugly heroes!", 0, dialogue_presets.villain_default)
-			dialogue_textbox("nevermind.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("nevermind.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("hi there!!", 0, dialogue_presets.sleeves_happy)
 			dialogue_textbox("my grandson is your biggest fan!", 0, dialogue_presets.villain_default)
 			dialogue_npc_jump(obj_sleeves)
@@ -311,9 +290,9 @@ function dialogue_responses(){
 			dialogue_textbox("oh that's so sad", 0, dialogue_presets.sleeves_sad)
 			dialogue_textbox("YES, i am fraught with sadness", 0, dialogue_presets.villain_default)
 			dialogue_textbox("so sad. and old.", 0, dialogue_presets.villain_default)
-			dialogue_textbox("are you actually buying this?", 0, dialogue_presets.moody_default)
+			dialogue_textbox("are you actually buying this?", 0, dialogue_presets.moki_default)
 			dialogue_textbox("all i ask is an autograph to give to them", 0, dialogue_presets.villain_default)
-			dialogue_textbox("im not signing that.", 0, dialogue_presets.moody_default)
+			dialogue_textbox("im not signing that.", 0, dialogue_presets.moki_default)
 			dialogue_textbox("we have to!!", 0, dialogue_presets.sleeves_sad)
 			// you sign the autograph
 			dialogue_textbox("HA HA HA HA HA", 0, dialogue_presets.villain_default)
@@ -336,15 +315,12 @@ function dialogue_responses(){
 	#endregion
 	#region SIDE CHARACTERS
 		#region ARTI
-		case "arti_placeholder":
-			camera_zoom_character(obj_arti)
-			scr_new_textbox("...", 0, spr_arti_portrait)
-			break
+
 		#endregion
 		
 		#region BULL
 		case "bull_stare":
-			scr_new_textbox("They are staring off into the horizon")
+			dialogue_textbox("They are staring off into the horizon")
 			dialogue_change_obj_script(obj_bull, dialogue_responses, ["bull_stare_2"])
 			break
 		case "bull_stare_2":
@@ -680,7 +656,7 @@ function dialogue_responses(){
 			dialogue_textbox("incredible")
 			break
 			
-		case "sign_hat": scr_new_textbox("hat") break
+		case "sign_hat": dialogue_textbox("hat") break
 		case "sign_hat_2": 
 			dialogue_textbox("a grand abstract painting hangs on the wall") 
 			dialogue_textbox("...")

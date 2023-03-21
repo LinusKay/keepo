@@ -4,8 +4,7 @@ y1 = RESOLUTION_H/2 - menu_height/2
 x2 = x1 + menu_width 
 y2 = y1 + menu_height
 
-tab_width = 100
-tab_space = 10
+
 border = 20
 
 side_left_width = 500

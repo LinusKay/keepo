@@ -44,7 +44,7 @@ if keyboard_check_pressed(vk_space)
 			{
 				global.coins -= item_cost
 				play_sfx(snd_pop, random_range(0.8, 1.2));
-				inventory_add(item_name, item_description, item_cost, sprite_index, can_gift, false, loved_by, liked_by, disliked_by, hated_by, quest_item, questID, questStage);
+				inventory_add(item_name, item_description, item_cost, sprite_index, can_gift, false, loved_by, liked_by, disliked_by, hated_by, quest_item, quest_id, quest_stage);
 				if !for_sale_unlimited ds_list_add(global.picked_up_items, item_room_id);
 				event_fire(event.player_pick_up_item);
 				notification("NEW ITEM: " + item_name);	
