@@ -316,6 +316,7 @@
     {"id":{"name":"spr_item_lapis","path":"sprites/spr_item_lapis/spr_item_lapis.yy",},},
     {"id":{"name":"obj_tree_medium","path":"objects/obj_tree_medium/obj_tree_medium.yy",},},
     {"id":{"name":"obj_dialogue_shake_stop","path":"objects/obj_dialogue_shake_stop/obj_dialogue_shake_stop.yy",},},
+    {"id":{"name":"obj_player_test","path":"objects/obj_player_test/obj_player_test.yy",},},
     {"id":{"name":"spr_emote_frog","path":"sprites/spr_emote_frog/spr_emote_frog.yy",},},
     {"id":{"name":"obj_frog","path":"objects/obj_frog/obj_frog.yy",},},
     {"id":{"name":"spr_keepo_sleeves_sleep_left","path":"sprites/spr_keepo_sleeves_sleep_left/spr_keepo_sleeves_sleep_left.yy",},},

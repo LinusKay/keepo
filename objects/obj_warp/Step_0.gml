@@ -4,7 +4,7 @@ if room == target_rm  {
 	PLAYER_OBJ.image_alpha = 1;
 	if image_index < 1 {
 		instance_destroy();
-		obj_keepo.move_freeze = false;
+		PLAYER_OBJ.move_freeze = false;
 	}
 }
 else {
