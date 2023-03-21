@@ -263,7 +263,6 @@
     {"id":{"name":"spr_keepo_christmas_right","path":"sprites/spr_keepo_christmas_right/spr_keepo_christmas_right.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_keepo_sleeves_right","path":"sprites/spr_keepo_sleeves_right/spr_keepo_sleeves_right.yy",},},
-    {"id":{"name":"ParticleSystem1","path":"particles/ParticleSystem1/ParticleSystem1.yy",},},
     {"id":{"name":"ts_outside_tiles","path":"tilesets/ts_outside_tiles/ts_outside_tiles.yy",},},
     {"id":{"name":"obj_item_hat_purple","path":"objects/obj_item_hat_purple/obj_item_hat_purple.yy",},},
     {"id":{"name":"ts_outside_grey","path":"tilesets/ts_outside_grey/ts_outside_grey.yy",},},
