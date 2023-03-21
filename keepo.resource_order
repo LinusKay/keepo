@@ -134,7 +134,6 @@
     {"name":"spr_item_lapis","order":6,"path":"sprites/spr_item_lapis/spr_item_lapis.yy",},
     {"name":"obj_tree_medium","order":1,"path":"objects/obj_tree_medium/obj_tree_medium.yy",},
     {"name":"obj_dialogue_shake_stop","order":1,"path":"objects/obj_dialogue_shake_stop/obj_dialogue_shake_stop.yy",},
-    {"name":"obj_player_test","order":3,"path":"objects/obj_player_test/obj_player_test.yy",},
     {"name":"spr_emote_frog","order":4,"path":"sprites/spr_emote_frog/spr_emote_frog.yy",},
     {"name":"obj_frog","order":4,"path":"objects/obj_frog/obj_frog.yy",},
     {"name":"spr_keepo_sleeves_sleep_left","order":1,"path":"sprites/spr_keepo_sleeves_sleep_left/spr_keepo_sleeves_sleep_left.yy",},

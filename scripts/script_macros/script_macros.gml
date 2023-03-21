@@ -3,7 +3,7 @@
 #macro LEFT 2
 #macro DOWN 3
 
-#macro PLAYER_OBJ obj_player_test
+#macro PLAYER_OBJ obj_keepo
 
 #macro RESOLUTION_W 1920	
 #macro RESOLUTION_H 1080
