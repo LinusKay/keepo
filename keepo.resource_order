@@ -210,7 +210,6 @@
     {"name":"spr_ts_jazzbar_floor","order":10,"path":"sprites/spr_ts_jazzbar_floor/spr_ts_jazzbar_floor.yy",},
     {"name":"spr_horse_top","order":14,"path":"sprites/spr_horse_top/spr_horse_top.yy",},
     {"name":"obj_dialogue_quest_finish","order":1,"path":"objects/obj_dialogue_quest_finish/obj_dialogue_quest_finish.yy",},
-    {"name":"ideas","order":2,"path":"notes/ideas/ideas.yy",},
     {"name":"spr_item_hat_purple","order":3,"path":"sprites/spr_item_hat_purple/spr_item_hat_purple.yy",},
     {"name":"obj_play_sound","order":1,"path":"objects/obj_play_sound/obj_play_sound.yy",},
     {"name":"snd_rollover4","order":9,"path":"sounds/snd_rollover4/snd_rollover4.yy",},
