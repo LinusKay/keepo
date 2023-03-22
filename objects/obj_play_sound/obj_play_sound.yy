@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "music",
-    "path": "folders/Objects/music.yy",
+    "path": "folders/Objects/util/music.yy",
   },
   "parentObjectId": null,
   "persistent": false,
