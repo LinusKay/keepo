@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = -bbox_bottom;
+
 z = 0
 jumping = false
 jump_height = 5

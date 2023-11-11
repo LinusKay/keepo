@@ -391,6 +391,7 @@
     {"amount":-1,"first":1079,"second":1098,},
   ],
   "last": 0,
+  "lineHeight": 0,
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
@@ -454,6 +455,7 @@
   ],
   "regenerateBitmap": false,
   "sampleText": "♡( ◡‿◡ )",
+  "sdfSpread": 8,
   "size": 51.0,
   "styleName": "Regular",
   "textureGroupId": {
@@ -461,4 +463,5 @@
     "path": "texturegroups/Default",
   },
   "TTFName": "",
+  "usesSDF": false,
 }

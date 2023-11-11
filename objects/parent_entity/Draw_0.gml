@@ -29,3 +29,5 @@ else {
 		reflection_inst	= noone
 	}
 }
+
+depth = -bbox_bottom;

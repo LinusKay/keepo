@@ -8,7 +8,6 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_1715BCFB","path":"rooms/rm_keepohouse_lounge/rm_keepohouse_lounge.yy",},
-    {"name":"inst_4B85C10","path":"rooms/rm_keepohouse_lounge/rm_keepohouse_lounge.yy",},
     {"name":"inst_4D831141","path":"rooms/rm_keepohouse_lounge/rm_keepohouse_lounge.yy",},
     {"name":"inst_63C2E1B2","path":"rooms/rm_keepohouse_lounge/rm_keepohouse_lounge.yy",},
     {"name":"inst_5D36B01D","path":"rooms/rm_keepohouse_lounge/rm_keepohouse_lounge.yy",},
@@ -71,7 +70,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_49EA4766","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},"propertyId":{"name":"bgm_file","path":"objects/obj_music/obj_music.yy",},"value":"bgm_juice",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4B85C10","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_keepo","path":"objects/obj_keepo/obj_keepo.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":64.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"effects","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"collisions","depth":400,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

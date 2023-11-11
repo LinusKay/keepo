@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings": [
     {"name":"outfits","order":1,"path":"folders/Objects/items/outfits.yy",},
-    {"name":"music","order":15,"path":"folders/Objects/util/music.yy",},
     {"name":"lighting","order":1,"path":"folders/Objects/util/lighting.yy",},
+    {"name":"music","order":15,"path":"folders/Objects/util/music.yy",},
     {"name":"keepohouse","order":13,"path":"folders/Rooms/inside/keepohouse.yy",},
   ],
   "ResourceOrderSettings": [
@@ -15,7 +15,6 @@
     {"name":"obj_signpost","order":9,"path":"objects/obj_signpost/obj_signpost.yy",},
     {"name":"ts_outside_path_light","order":17,"path":"tilesets/ts_outside_path_light/ts_outside_path_light.yy",},
     {"name":"spr_emote_exclaim","order":7,"path":"sprites/spr_emote_exclaim/spr_emote_exclaim.yy",},
-    {"name":"obj_sell_item","order":12,"path":"objects/obj_sell_item/obj_sell_item.yy",},
     {"name":"obj_blob_big","order":12,"path":"objects/obj_blob_big/obj_blob_big.yy",},
     {"name":"obj_journal","order":8,"path":"objects/obj_journal/obj_journal.yy",},
     {"name":"spr_big_blob","order":10,"path":"sprites/spr_big_blob/spr_big_blob.yy",},
@@ -29,7 +28,6 @@
     {"name":"spr_wall","order":7,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"obj_robot","order":1,"path":"objects/obj_robot/obj_robot.yy",},
     {"name":"bg_sky_dawn","order":6,"path":"sprites/bg_sky_dawn/bg_sky_dawn.yy",},
-    {"name":"obj_buy_item","order":11,"path":"objects/obj_buy_item/obj_buy_item.yy",},
     {"name":"fnt_kaomoji","order":8,"path":"fonts/fnt_kaomoji/fnt_kaomoji.yy",},
     {"name":"hex_string_byte","order":7,"path":"scripts/hex_string_byte/hex_string_byte.yy",},
     {"name":"obj_light_moving","order":1,"path":"objects/obj_light_moving/obj_light_moving.yy",},
@@ -221,7 +219,6 @@
     {"name":"spr_sparkle","order":5,"path":"sprites/spr_sparkle/spr_sparkle.yy",},
     {"name":"obj_luco_ravioli_recipe","order":23,"path":"objects/obj_luco_ravioli_recipe/obj_luco_ravioli_recipe.yy",},
     {"name":"spr_outfit_background","order":4,"path":"sprites/spr_outfit_background/spr_outfit_background.yy",},
-    {"name":"obj_cutscene_slideshow","order":12,"path":"objects/obj_cutscene_slideshow/obj_cutscene_slideshow.yy",},
     {"name":"Sprite116","order":19,"path":"sprites/Sprite116/Sprite116.yy",},
     {"name":"spr_hat_man_portrait","order":2,"path":"sprites/spr_hat_man_portrait/spr_hat_man_portrait.yy",},
     {"name":"rm_field","order":5,"path":"rooms/rm_field/rm_field.yy",},

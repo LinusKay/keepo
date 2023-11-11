@@ -148,6 +148,7 @@ view_x = clamp(lerp(view_x, global.camera_target.x, view_speed) + x_modifier, 0 
 view_y = clamp(lerp(view_y, global.camera_target.y, view_speed) - y_modifier, 0 + camera_get_view_height(view_camera[0])/2, room_height - camera_get_view_height(view_camera[0])/2);
 cam_width = lerp(cam_width, global.camera_width * zoom_modifier, zoom_speed);
 cam_height = lerp(cam_height, global.camera_height * zoom_modifier, zoom_speed);
+cam_height = lerp(cam_height, global.camera_height * zoom_modifier, zoom_speed);
 vm = matrix_build_lookat(view_x, view_y, -10, view_x, view_y,  0, 0, 1, 0);
 pm = matrix_build_projection_ortho(cam_width, cam_height, -9999, 9999);
 camera_set_view_mat(view_camera[0], vm);
@@ -640,8 +641,8 @@ for(var i = follow_movement_array_size-1; i > 0; i--){
     pos_x[i] = pos_x[i-1];
     pos_y[i] = pos_y[i-1];
 }
-pos_x[0] = centre_x;
-pos_y[0] = bottom_y;
+pos_x[0] = x;
+pos_y[0] = y;
 #endregion
 
 // reflections
